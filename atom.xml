@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-09-20T22:08:18&#43;08:00</updated>
+    <updated>2022-09-20T22:36:58&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -17,10 +17,47 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
+            <title type="text">Host碰撞</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/" />
+            <id>https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/</id>
+            <updated>2022-09-20T22:20:24&#43;08:00</updated>
+            <published>2022-09-20T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">提取相关ip cat ./* |grep -E &amp;#39;^&amp;lt;a href=&amp;#34;/&amp;#39;|grep -vE &amp;#39;ipchaxun.com&amp;lt;/a&amp;gt;$|&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;$&amp;#39;|awk -F &amp;#39;/&amp;#39; &amp;#39;{print$2}&amp;#39;|sort|uniq</summary>
+            
+                <content type="html">&lt;p&gt;提取相关ip&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat ./* |grep -E &amp;#39;^&amp;lt;a href=&amp;#34;/&amp;#39;|grep -vE &amp;#39;ipchaxun.com&amp;lt;/a&amp;gt;$|&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;$&amp;#39;|awk -F &amp;#39;/&amp;#39; &amp;#39;{print$2}&amp;#39;|sort|uniq
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2022-09-20T21:24:13&#43;08:00</updated>
+            <updated>2022-09-20T22:16:36&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -154,6 +191,487 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
                             
                             
                                 <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">m1 使用proxychains</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/" />
+            <id>https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</id>
+            <updated>2022-09-20T22:36:52&#43;08:00</updated>
+            <published>2022-06-28T20:53:48&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">m1直接使用brew安装proxychains-ng会报错 解决过程： github下载……</summary>
+            
+                <content type="html">&lt;p&gt;m1直接使用brew安装proxychains-ng会报错&lt;/p&gt;
+&lt;p&gt;解决过程：&lt;/p&gt;
+&lt;p&gt;github下载源码自己编译。&lt;/p&gt;
+&lt;p&gt;禁用sip，百度...不写&lt;/p&gt;
+&lt;p&gt;下载proxychains-ng &lt;a href=&#34;https://github.com/rofl0r/proxychains-ng&#34;&gt;https://github.com/rofl0r/proxychains-ng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解压　　tar -xvf proxychainsxxxxxx&lt;/p&gt;
+&lt;p&gt;重点来了 ，三次编译&lt;/p&gt;
+&lt;p&gt;第一次编译：&lt;/p&gt;
+&lt;p&gt;cd proxychains-ng-4.16
+make clean
+CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot; ./configure
+make&lt;/p&gt;
+&lt;p&gt;将libproxychains4.dylib复制到新建一个bak目录下&lt;/p&gt;
+&lt;p&gt;mkdir bak&lt;/p&gt;
+&lt;p&gt;cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第二次编译：&lt;/p&gt;
+&lt;p&gt;make clean&lt;/p&gt;
+&lt;p&gt;CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot; ./configure&lt;/p&gt;
+&lt;p&gt;make&lt;/p&gt;
+&lt;p&gt;将libproxychains4.dylib复制到bak目录下，覆盖&lt;/p&gt;
+&lt;p&gt;cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第三次编译：&lt;/p&gt;
+&lt;p&gt;make clean
+CFLAGS=&amp;quot;-arch arm64&amp;quot; LDFLAGS=&amp;quot;-arch arm64&amp;quot; ./configure
+sudo make install&lt;/p&gt;
+&lt;p&gt;使用install.sh复制./bak/libproxychains4.dylib 到/usr/local/lib/目录&lt;/p&gt;
+&lt;p&gt;sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
+&lt;p&gt;配置文件在/etc/proxychains.conf&lt;/p&gt;
+&lt;p&gt;sudo vi /etc/proxychains.conf&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">xray反连平台设置</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/xray%E5%8F%8D%E8%BF%9E%E5%B9%B3%E5%8F%B0/" />
+            <id>https://klearcc.github.io/post/xray%E5%8F%8D%E8%BF%9E%E5%B9%B3%E5%8F%B0/</id>
+            <updated>2022-09-20T22:35:11&#43;08:00</updated>
+            <published>2022-06-16T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备： 买一台公网主机。 一个域名。阿里云买。 配置域名： 创建两个dns服务器：比如ns1……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;准备&#34;&gt;准备：&lt;/h2&gt;
+&lt;p&gt;买一台公网主机。&lt;/p&gt;
+&lt;p&gt;一个域名。阿里云买。&lt;/p&gt;
+&lt;h2 id=&#34;配置域名&#34;&gt;配置域名：&lt;/h2&gt;
+&lt;p&gt;创建两个dns服务器：比如ns1 ns2&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235610.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235644.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;修改dns服务器，填刚刚创建的两个dns服务器名：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143532153-439053999.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;添加两条A记录。主记录填ns1 ns2，就是刚刚创建的dns服务器，记录值填公网ip：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143724538-1597006301.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;xray服务端配置&#34;&gt;xray服务端配置：&lt;/h2&gt;
+&lt;p&gt;下载最新xray。https://github.com/chaitin/xray&lt;/p&gt;
+&lt;p&gt;./xray config&lt;/p&gt;
+&lt;p&gt;根据下图配置config文件：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;　reverse:
+  db_file_path: &amp;#34;./xxx.db&amp;#34;                      # 反连平台数据库文件位置, 这是一个 KV 数据库
+  token: &amp;#34;xxxxx&amp;#34;                             # 和客户端一致。反连平台认证的 Token, 独立部署时不能为空
+  http:
+    enabled: true
+    listen_ip: 0.0.0.0 
+    listen_port: &amp;#34;4444&amp;#34;　　　　　　　　　　#和客户端一致
+    ip_header: &amp;#34;&amp;#34;                       # 在哪个 http header 中取 ip，为空代表从 REMOTE_ADDR 中取
+  dns:
+    enabled: true
+    listen_ip: 0.0.0.0 
+    domain: &amp;#34;xxxx.cn&amp;#34;                          # 自己购买域名，最好是阿里云，因为可以自定义dnshost。DNS 域名配置。
+    is_domain_name_server: false        # 是否修改了域名的 ns 为反连平台，如果是，那 nslookup 等就不需要指定 dns 了
+    resolve:                            # DNS 静态解析规则
+    - type: A                           # A, AAAA, TXT 三种
+      record: ns2
+      value: xx.xx.xx.xx　　　　　　　　　　#自己公网主机ip
+      ttl: 60
+    - type: A
+      record: ns1
+      value: 8
+　　　 xx.xx.xx.xx　　　　　　　　　　　　　　#自己公网主机ip
+　　　 ttl: 60 
+  client: 
+remote_server: false # 是否是独立的远程 server，如果是要在下面配置好远程的服务端地址 
+
+http_base_url: &amp;#34;http://xx.xx.xx.xx:4444&amp;#34; # 自己公网ip+端口。默认将根据 ListenIP 和 ListenPort 生成，该地址是存在漏洞的目标反连回来的地址, 当反连平台前面有反代、绑定域名、端口映射时需要自行配置 
+dns_server_ip: &amp;#34;xx.xx.xx.xx&amp;#34; #自己公网ip。 和 http_base_url 类似，实际用来访问 dns 服务器的地址
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;xray客户端配置&#34;&gt;xray客户端配置：&lt;/h2&gt;
+&lt;p&gt;xray根目录配置config文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reverse:
+db_file_path: &amp;#34;./xxxx.db&amp;#34; # 反连平台数据库文件位置, 这是一个 KV 数据库
+token: &amp;#34;xxxxx&amp;#34; # 随便填，自己记住，用于登录可视化界面校验 。反连平台认证的 Token, 独立部署时不能为空。
+http:
+enabled: false
+listen_ip: 0.0.0.0
+listen_port: &amp;#34;&amp;#34;
+ip_header: &amp;#34;&amp;#34; # 在哪个 http header 中取 ip，为空代表从 REMOTE_ADDR 中取
+dns:
+enabled: false
+listen_ip: 0.0.0.0
+domain: &amp;#34;&amp;#34; # DNS 域名配置
+is_domain_name_server: false # 是否修改了域名的 ns 为反连平台，如果是，那 nslookup 等就不需要指定 dns 了
+resolve: # DNS 静态解析规则
+- type: A # A, AAAA, TXT 三种
+record: localhost
+value: 127.0.0.1
+ttl: 60
+client:
+remote_server: true # 是否是独立的远程 server，如果是要在下面配置好远程的服务端地址
+http_base_url: &amp;#34;http://xx.xx.xx.xx:4444&amp;#34; # 自己公网ip+端口。默认将根据 ListenIP 和 ListenPort 生成，该地址是存在漏洞的目标反连回来的地址, 当反连平台前面有反代、绑定域名、端口映射时需要自行配置
+dns_server_ip: &amp;#34;xx.xx.xx.xx&amp;#34; # 自己公网ip。和 http_base_url 类似，实际用来访问 dns 服务器的地址
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;服务端开启&#34;&gt;服务端开启：&lt;/h2&gt;
+&lt;p&gt;./xray reverse&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235807.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;访问web，输入token：&lt;/p&gt;
+&lt;h3 id=&#34;测试dns&#34;&gt;测试dns&lt;/h3&gt;
+&lt;h4 id=&#34;右边的dns点击生成一个域名&#34;&gt;右边的DNS，点击生成一个域名&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616144850460-928180663.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;直接ping，在dns一栏有记录就没问题。&lt;/p&gt;
+&lt;h3 id=&#34;测试http&#34;&gt;测试http&lt;/h3&gt;
+&lt;p&gt;右边的http，点击生成一个域名&lt;/p&gt;
+&lt;p&gt;curl -v xxxx.xx.cn 　　&lt;/p&gt;
+&lt;p&gt;左边http一栏有记录就代表没问题。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">burp插件</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/burp%E6%8F%92%E4%BB%B6/" />
+            <id>https://klearcc.github.io/post/burp%E6%8F%92%E4%BB%B6/</id>
+            <updated>2022-09-20T22:34:05&#43;08:00</updated>
+            <published>2022-05-24T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">扫描增强插件， 建议所有请求做主动 burp开启手动配置 xss 开启 phantomjs xia SQL 开启监控proxy csrf……</summary>
+            
+                <content type="html">&lt;p&gt;扫描增强插件，
+建议所有请求做主动&lt;/p&gt;
+&lt;p&gt;burp开启手动配置
+xss 开启 phantomjs
+xia SQL 开启监控proxy
+csrf token tracker 开启同步
+log4j2 配置反连
+Autorize 打开&lt;/p&gt;
+&lt;p&gt;sql
+xia SQL，被动扫描，需配置监控proxy
+xss
+xssVaildator 手动探测，单个url测试。启动phantomjs，请求发送到intruder，设置负载xssvaildator，设置flag
+Reflector 被动探测，结果显示在issue
+LFI
+LFI scanner checks.主动扫描， 内置
+csrf
+csrf token tracker 被动探测，手动打开同步。绕过CSRF-TOKEN
+csrf scanner 被动扫描，但手动发送
+ssrf
+SSRF-King， 怎么说
+burpssrf4， 怎么说
+主动扫描
+shiro
+shiroscan，被动扫描，结果显示shrio标签页
+struts2
+strust2 被动扫描，结果显示在标签页
+fastjson
+fastjsonscan，被动扫描，结果显示标签页
+log4j2
+log4j2 RCE，被动扫描，需配置ceye，结果显示标签页+issue
+反序列化汇总
+Desericalization 被动主动都有，标签页手动测试，结果显示issus。
+越权
+Authz 手动探测，可以批量，自己设置cookie，对比返回包数据。
+Authorize 被动探测，手动打开插件，先搞一个低权限cookie，再登录高权限账号点一遍。
+可以着重先看橘黄色请求，
+敏感信息&lt;/p&gt;
+&lt;p&gt;收集信息
+DomainHunter
+小工具
+Knife 方便过滤domain等
+software vulnerability scanner 显示cve ，使用取消scope勾选
+Country Free 定制payload
+passive scan client 监听&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">记录：使用alias安装三版本jdk环境</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E5%A4%9Ajava%E7%8E%AF%E5%A2%83/" />
+            <id>https://klearcc.github.io/post/%E5%A4%9Ajava%E7%8E%AF%E5%A2%83/</id>
+            <updated>2022-09-20T22:32:05&#43;08:00</updated>
+            <published>2022-05-19T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">起因：正常使用zulu的jdk，因为它针对m1优化，速度快。 后果：默认zulujdk……</summary>
+            
+                <content type="html">&lt;p&gt;起因：正常使用zulu的jdk，因为它针对m1优化，速度快。&lt;/p&gt;
+&lt;p&gt;后果：默认zulujdk无法打开其他师傅的工具。&lt;/p&gt;
+&lt;p&gt;同时安装1.8 zulu1.8 zulu15&lt;/p&gt;
+&lt;p&gt;查看安装的jdk&lt;/p&gt;
+&lt;p&gt;ls /Library/Java/JavaVirtualMachines&lt;/p&gt;
+&lt;p&gt;~/.zshrc：&lt;/p&gt;
+&lt;p&gt;#java
+# 设置jdk8
+export JAVA_8_HOME=&amp;quot;$(/usr/libexec/java_home -v 1.8)&amp;quot;
+#设置zulu1.8
+export JAVA_88_HOME=&amp;quot;/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home&amp;quot;
+# 设置zulu15
+export JAVA_15_HOME=&amp;quot;$(/usr/libexec/java_home -v 15)&amp;quot;
+# alias命令动态切换jdk版本
+alias jdk8=&#39;export JAVA_HOME=$JAVA_8_HOME&#39;
+alias jdk15=&#39;export JAVA_HOME=$JAVA_15_HOME&#39;
+alias jdk7=&amp;quot;export JAVA_HOME=$JAVA_7_HOME&amp;quot;
+# 默认jdk为jdk8
+export JAVA_HOME=$JAVA_88_HOME&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">解决burp&#43;夜神 抓https包报错证书有问题</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E5%A4%9C%E7%A5%9E%E6%8A%93%E5%8C%85/" />
+            <id>https://klearcc.github.io/post/%E5%A4%9C%E7%A5%9E%E6%8A%93%E5%8C%85/</id>
+            <updated>2022-09-20T22:32:51&#43;08:00</updated>
+            <published>2022-03-31T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">原理 安卓高版本（7.0）之后，app可以只信任指定证书和系统内置的证书，后续用户安装……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;原理&#34;&gt;原理&lt;/h3&gt;
+&lt;p&gt;安卓高版本（7.0）之后，app可以只信任指定证书和系统内置的证书，后续用户安装的证书是不生效的，只能想办法装到系统内部。&lt;/p&gt;
+&lt;h3 id=&#34;操作&#34;&gt;操作：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;先配置代理环境，将代理换成物理机ip+burp端口&lt;/li&gt;
+&lt;li&gt;导出burp der证书，转换成pem格式，linux执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 转为pem格式
+openssl x509 -inform DER -in cacert.der -out cacert.pem
+# 重命名为&amp;lt;hash值&amp;gt;.0
+mv cacert.pem `openssl x509 -inform PEM -subject_hash_old -in cacert.pem |head -1`&amp;#39;.0&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将.0文件copy到当前目录，使用模拟器自带abd操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adb root
+adb remount
+adb push 9a5ba575.0 /system/etc/security/cacerts
+adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Spring-beans RCE漏洞复现</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/spring-beansrce%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" />
+            <id>https://klearcc.github.io/post/spring-beansrce%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</id>
+            <updated>2022-09-20T22:30:10&#43;08:00</updated>
+            <published>2022-03-25T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">环境 docker pull vulfocus/spring-core-rce-2022-03-29 路径 漏洞利用 发包 添加自定义请求头发包 成功写入 bash反弹shell url编……</summary>
+            
+                <content type="html">&lt;p&gt;环境&lt;/p&gt;
+&lt;p&gt;docker pull vulfocus/spring-core-rce-2022-03-29&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202203/2520529-20220331164623262-1882598796.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229829.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;路径&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229041.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;漏洞利用&lt;/p&gt;
+&lt;p&gt;发包&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202203/2520529-20220331185143573-1156304397.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;添加自定义请求头发包&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229298.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;成功写入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229611.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;bash反弹shell&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202203/2520529-20220331185715318-1101453209.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;url编码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229066.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;访问，收到shell&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202229514.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Dirty Pipe(CVE-2022-0874)漏洞复现</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/dirtypipecve-2022-0874%E5%A4%8D%E7%8E%B0/" />
+            <id>https://klearcc.github.io/post/dirtypipecve-2022-0874%E5%A4%8D%E7%8E%B0/</id>
+            <updated>2022-09-20T22:25:45&#43;08:00</updated>
+            <published>2022-03-09T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">漏洞简介 Dirty Pipe(CVE-2022-0874)，比脏牛利用简单，提权方便。 影响范围……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;漏洞简介&#34;&gt;&lt;strong&gt;漏洞简介&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Dirty Pipe(CVE-2022-0874)，比脏牛利用简单，提权方便。&lt;/p&gt;
+&lt;h3 id=&#34;影响范围&#34;&gt;影响范围：&lt;/h3&gt;
+&lt;p&gt;5.8&amp;lt;=Linux kernel&amp;lt;5.16.11/5.15.25/5.10.102&lt;/p&gt;
+&lt;h3 id=&#34;漏洞环境搭建&#34;&gt;&lt;strong&gt;漏洞环境搭建：&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;当前内核版本：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202222145.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;漏洞内核下载：https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.8.5/&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202222418.png&#34; alt=&#34;img&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202223960.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装内核： &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202223725.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更新启动引导程序：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202223381.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;重启：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202223143.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装gcc： &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202224329.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;创建新用户并切换至低权限用户：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202224516.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;漏洞利用&#34;&gt;&lt;strong&gt;漏洞利用&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;下载exp： &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202224206.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;利用：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202224295.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;-----------------------------------------------------------------------------------------------------&lt;/p&gt;
+&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://haxx.in/files/dirtypipez.c&#34;&gt;https://haxx.in/files/dirtypipez.c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.8.5/&#34;&gt;https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.8.5/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit&#34;&gt;https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;漏洞分析：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dirtypipe.cm4all.com/&#34;&gt;https://dirtypipe.cm4all.com/&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
                             
                         
                     
