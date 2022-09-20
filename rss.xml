@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Klear·blog</title>
-        <link>https://example.com/</link>
+        <link>https://klearcc.github.io/</link>
         <description>Klear的生活记录&amp;&amp;工作记录。</description>
         <generator>Hugo 0.103.1 https://gohugo.io/</generator>
         
@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 22:02:02 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 22:03:50 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
         
             <item>
                 <title>Iosapp抓包</title>
-                <link>https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</link>
-                <guid isPermaLink="true">https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</guid>
+                <link>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</guid>
                 <pubDate>Tue, 20 Sep 2022 21:22:27 &#43;0800</pubDate>
                 
                     <author>baicaix86@gmail.com (Klear)</author>
@@ -81,7 +81,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E6%8A%93%E5%8C%85/">抓包</category>
+                                    <category domain="https://klearcc.github.io/tags/%E6%8A%93%E5%8C%85/">抓包</category>
                                 
                             
                         
@@ -91,8 +91,8 @@
         
             <item>
                 <title>meme主题设置</title>
-                <link>https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
-                <guid isPermaLink="true">https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
+                <link>https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
                 <pubDate>Tue, 20 Sep 2022 20:53:48 &#43;0800</pubDate>
                 
                     <author>baicaix86@gmail.com (Klear)</author>
@@ -159,7 +159,7 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/tips/">Tips</category>
+                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
                                 
                             
                         

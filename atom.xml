@@ -4,13 +4,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-09-20T22:02:02&#43;08:00</updated>
-    <id>https://example.com/</id>
-    <link rel="alternate" type="text/html" href="https://example.com/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <updated>2022-09-20T22:03:50&#43;08:00</updated>
+    <id>https://klearcc.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
     <author>
             <name>Klear</name>
-            <uri>https://example.com/</uri>
+            <uri>https://klearcc.github.io/</uri>
             
                 <email>baicaix86@gmail.com</email>
             </author>
@@ -18,8 +18,8 @@
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
             <title type="text">Iosapp抓包</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/iosapp%E6%8A%93%E5%8C%85/" />
-            <id>https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</id>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
+            <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
             <updated>2022-09-20T21:24:13&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
@@ -72,7 +72,7 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E6%8A%93%E5%8C%85/" term="抓包" label="抓包" />
+                                <category scheme="https://klearcc.github.io/tags/%E6%8A%93%E5%8C%85/" term="抓包" label="抓包" />
                             
                         
                     
@@ -82,8 +82,8 @@
     
         <entry>
             <title type="text">meme主题设置</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" />
-            <id>https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</id>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" />
+            <id>https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</id>
             <updated>2022-09-20T21:37:34&#43;08:00</updated>
             <published>2022-09-20T20:53:48&#43;08:00</published>
             <author>
@@ -153,7 +153,7 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://example.com/tags/tips/" term="Tips" label="Tips" />
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
                             
                         
                     
