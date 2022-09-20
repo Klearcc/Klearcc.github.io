@@ -23,10 +23,101 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 19:42:10 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 21:08:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
+        
+            <item>
+                <title>B</title>
+                <link>https://example.com/post/b/</link>
+                <guid isPermaLink="true">https://example.com/post/b/</guid>
+                <pubDate>Tue, 20 Sep 2022 21:04:52 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;Asdasdasdasdastest&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Hugo</title>
+                <link>https://example.com/post/hugo/</link>
+                <guid isPermaLink="true">https://example.com/post/hugo/</guid>
+                <pubDate>Tue, 20 Sep 2022 20:53:48 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;meme主题搭建&lt;/p&gt;
+&lt;h3 id=&#34;hugo安装&#34;&gt;hugo安装&lt;/h3&gt;
+&lt;p&gt;下载hugo &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/&#34;&gt;https://github.com/gohugoio/hugo/releases/&lt;/a&gt;
+环境变量：ln -s xx/xx/xx/hugo /usr/local/bin/hugo
+hugo new site klearblog	##创建站点根目录&lt;/p&gt;
+&lt;h3 id=&#34;meme主题下载&#34;&gt;meme主题下载&lt;/h3&gt;
+&lt;p&gt;hugo不自带主题，俺选择meme
+进入klearblog目录	git clone &lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme.git&#34;&gt;https://github.com/reuixiy/hugo-theme-meme.git&lt;/a&gt; themes/meme	##直接cp下来:dog2:	（问题：安装了git却无限安装。原因：系统更新解决：进xcode更新）
+hugo new post/a.md	##创建个文件测试下
+echo asdasdasd &amp;gt;&amp;gt; content/post/a.md   ##文件内追加点东西
+Hugo server -v -D 	 	##本地看下效果,根据提示http://localhost:1313&lt;/p&gt;
+&lt;h3 id=&#34;提交至github&#34;&gt;提交至github&lt;/h3&gt;
+&lt;p&gt;新建仓库-&amp;gt;命名为 名字.github.io-&amp;gt;选择public-&amp;gt;点击创建 即可创建仓库
+来到博客根目录(klearblog) 执行Hugo -D 生成所需数据
+进入public目录，执行
+git init
+git remote add origin &lt;a href=&#34;mailto:git@github.com&#34;&gt;git@github.com&lt;/a&gt;:Klearcc/Klearcc.github.io.git
+git add .
+git commit -m&amp;quot;test&amp;quot;
+git push --set-upstream origin main
+(其中可能遇到各种问题，尤其在重复提交情况下，根据报错自行百度根据前辈建议操作即可解决)&lt;/p&gt;
+&lt;h3 id=&#34;ssh公钥配置&#34;&gt;ssh公钥配置&lt;/h3&gt;
+&lt;p&gt;自行百度&lt;/p&gt;
+&lt;h3 id=&#34;效果&#34;&gt;效果&lt;/h3&gt;
+&lt;p&gt;项目-&amp;gt;设置-&amp;gt;pages，点击预览站点即可。&lt;/p&gt;
+&lt;h3 id=&#34;后续文章变更&#34;&gt;后续文章变更：&lt;/h3&gt;
+&lt;p&gt;git init
+Git add .
+Git commit -m&amp;quot;123&amp;quot;
+git push
+为了方便（写个sh或githubdesktop）&lt;/p&gt;
+&lt;h3 id=&#34;typora提交图片问题&#34;&gt;Typora提交图片问题&lt;/h3&gt;
+&lt;p&gt;问题：自己截的图片提交时候不会自动提交到github上。
+解决：typora+picgo
+新建一个放图片的仓库，比如命名为pic
+typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202037266.png&#34; alt=&#34;image-20220920203722221&#34;&gt;picgo配置，仓库名为 名字+pic，
+设置token：github设置-developer settings
+存储路径随意设置
+自定义域名为jsdelivrCDN，填写规则如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202038248.png&#34; alt=&#34;image-20220920203832229&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202039972.png&#34; alt=&#34;image-20220920203916950&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>A</title>
