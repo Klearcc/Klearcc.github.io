@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 21:08:07 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 21:16:39 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
@@ -89,7 +89,8 @@ git push --set-upstream origin main
 &lt;h3 id=&#34;效果&#34;&gt;效果&lt;/h3&gt;
 &lt;p&gt;项目-&amp;gt;设置-&amp;gt;pages，点击预览站点即可。&lt;/p&gt;
 &lt;h3 id=&#34;后续文章变更&#34;&gt;后续文章变更：&lt;/h3&gt;
-&lt;p&gt;git init
+&lt;p&gt;cd klearblog &amp;amp;&amp;amp; Hugo -D &amp;amp;&amp;amp; cd public/
+git init
 Git add .
 Git commit -m&amp;quot;123&amp;quot;
 git push
