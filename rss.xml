@@ -7,23 +7,23 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hugo 主题 MemE</title>
+        <title>Klearのblog</title>
         <link>https://example.com/</link>
-        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
+        <description>Klear的生活记录&amp;&amp;工作记录。</description>
         <generator>Hugo 0.103.1 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
         
-            <managingEditor>reuixiy@gmail.com (reuixiy)</managingEditor>
+            <managingEditor>baicaix86@gmail.com (Klear)</managingEditor>
         
         
-            <webMaster>reuixiy@gmail.com (reuixiy)</webMaster>
+            <webMaster>baicaix86@gmail.com (Klear)</webMaster>
         
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 21:24:18 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 21:51:00 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
@@ -34,7 +34,7 @@
                 <guid isPermaLink="true">https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</guid>
                 <pubDate>Tue, 20 Sep 2022 21:22:27 &#43;0800</pubDate>
                 
-                    <author>reuixiy@gmail.com (reuixiy)</author>
+                    <author>baicaix86@gmail.com (Klear)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -95,7 +95,7 @@
                 <guid isPermaLink="true">https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
                 <pubDate>Tue, 20 Sep 2022 20:53:48 &#43;0800</pubDate>
                 
-                    <author>reuixiy@gmail.com (reuixiy)</author>
+                    <author>baicaix86@gmail.com (Klear)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -107,6 +107,7 @@ hugo new site klearblog	##创建站点根目录&lt;/p&gt;
 &lt;h3 id=&#34;meme主题下载&#34;&gt;meme主题下载&lt;/h3&gt;
 &lt;p&gt;hugo不自带主题，俺选择meme
 进入klearblog目录	git clone &lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme.git&#34;&gt;https://github.com/reuixiy/hugo-theme-meme.git&lt;/a&gt; themes/meme	##直接cp下来:dog2:	（问题：安装了git却无限安装。原因：系统更新解决：进xcode更新）
+rm config.toml &amp;amp;&amp;amp; cp themes/meme/config-examples/en/config.toml config.toml
 hugo new post/a.md	##创建个文件测试下
 echo asdasdasd &amp;gt;&amp;gt; content/post/a.md   ##文件内追加点东西
 Hugo server -v -D 	 	##本地看下效果,根据提示http://localhost:1313&lt;/p&gt;
