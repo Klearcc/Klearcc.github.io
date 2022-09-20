@@ -23,35 +23,10 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 21:16:39 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 21:20:32 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
-        
-            <item>
-                <title>B</title>
-                <link>https://example.com/post/b/</link>
-                <guid isPermaLink="true">https://example.com/post/b/</guid>
-                <pubDate>Tue, 20 Sep 2022 21:04:52 &#43;0800</pubDate>
-                
-                    <author>reuixiy@gmail.com (reuixiy)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;p&gt;Asdasdasdasdastest&lt;/p&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                    
-                
-            </item>
         
             <item>
                 <title>Hugo</title>
@@ -94,8 +69,10 @@ git init
 Git add .
 Git commit -m&amp;quot;123&amp;quot;
 git push
-为了方便（写个sh或githubdesktop）&lt;/p&gt;
-&lt;h3 id=&#34;typora提交图片问题&#34;&gt;Typora提交图片问题&lt;/h3&gt;
+为了方便（写个sh或者alias）
+例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-#github&#34; data-lang=&#34;#github&#34;&gt;alias hg=&amp;#34;cd ~/Desktop/博客/klearblog &amp;amp;&amp;amp; hugo -D &amp;amp;&amp;amp; cd ~/Desktop/博客/klearblog/public &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#39;update&amp;#39; &amp;amp;&amp;amp; git push&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;typora提交图片问题&#34;&gt;Typora提交图片问题&lt;/h3&gt;
 &lt;p&gt;问题：自己截的图片提交时候不会自动提交到github上。
 解决：typora+picgo
 新建一个放图片的仓库，比如命名为pic
@@ -116,30 +93,13 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
                         
                     
                         
-                    
-                
-            </item>
-        
-            <item>
-                <title>A</title>
-                <link>https://example.com/post/a/</link>
-                <guid isPermaLink="true">https://example.com/post/a/</guid>
-                <pubDate>Tue, 20 Sep 2022 17:40:53 &#43;0800</pubDate>
-                
-                    <author>reuixiy@gmail.com (reuixiy)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;p&gt;asdadtest&lt;/p&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
+                            
+                                
+                                
+                                
+                                    <category domain="https://example.com/tags/tips/">Tips</category>
+                                
+                            
                         
                     
                 

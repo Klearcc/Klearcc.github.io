@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Hugo 主题 MemE</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2022-09-20T21:16:39&#43;08:00</updated>
+    <updated>2022-09-20T21:20:32&#43;08:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
@@ -17,38 +17,10 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
-            <title type="text">B</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/b/" />
-            <id>https://example.com/post/b/</id>
-            <updated>2022-09-20T21:05:23&#43;08:00</updated>
-            <published>2022-09-20T21:04:52&#43;08:00</published>
-            <author>
-                    <name>reuixiy</name>
-                    <uri>https://io-oi.me/</uri>
-                    <email>reuixiy@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Asdasdasdasdastest</summary>
-            
-                <content type="html">&lt;p&gt;Asdasdasdasdastest&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
             <title type="text">Hugo</title>
             <link rel="alternate" type="text/html" href="https://example.com/post/hugo/" />
             <id>https://example.com/post/hugo/</id>
-            <updated>2022-09-20T21:12:29&#43;08:00</updated>
+            <updated>2022-09-20T21:20:24&#43;08:00</updated>
             <published>2022-09-20T20:53:48&#43;08:00</published>
             <author>
                     <name>reuixiy</name>
@@ -88,8 +60,10 @@ git init
 Git add .
 Git commit -m&amp;quot;123&amp;quot;
 git push
-为了方便（写个sh或githubdesktop）&lt;/p&gt;
-&lt;h3 id=&#34;typora提交图片问题&#34;&gt;Typora提交图片问题&lt;/h3&gt;
+为了方便（写个sh或者alias）
+例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-#github&#34; data-lang=&#34;#github&#34;&gt;alias hg=&amp;#34;cd ~/Desktop/博客/klearblog &amp;amp;&amp;amp; hugo -D &amp;amp;&amp;amp; cd ~/Desktop/博客/klearblog/public &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#39;update&amp;#39; &amp;amp;&amp;amp; git push&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;typora提交图片问题&#34;&gt;Typora提交图片问题&lt;/h3&gt;
 &lt;p&gt;问题：自己截的图片提交时候不会自动提交到github上。
 解决：typora+picgo
 新建一个放图片的仓库，比如命名为pic
@@ -110,33 +84,13 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
                     
                 
                     
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">A</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/a/" />
-            <id>https://example.com/post/a/</id>
-            <updated>2022-09-20T21:04:35&#43;08:00</updated>
-            <published>2022-09-20T17:40:53&#43;08:00</published>
-            <author>
-                    <name>reuixiy</name>
-                    <uri>https://io-oi.me/</uri>
-                    <email>reuixiy@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">asdadtest</summary>
-            
-                <content type="html">&lt;p&gt;asdadtest&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
                     
                 
             
