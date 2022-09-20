@@ -23,15 +23,76 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Sep 2022 21:20:32 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 21:24:18 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
         
         
             <item>
-                <title>Hugo</title>
-                <link>https://example.com/post/hugo/</link>
-                <guid isPermaLink="true">https://example.com/post/hugo/</guid>
+                <title>Iosapp抓包</title>
+                <link>https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</link>
+                <guid isPermaLink="true">https://example.com/post/iosapp%E6%8A%93%E5%8C%85/</guid>
+                <pubDate>Tue, 20 Sep 2022 21:22:27 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
+&lt;p&gt;mac抓ios实体机app数据包。&lt;/p&gt;
+&lt;h3 id=&#34;流量&#34;&gt;流量&lt;/h3&gt;
+&lt;p&gt;app-&amp;gt;Charles-&amp;gt;yakit&lt;/p&gt;
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;手机和mac连接同一网络。&lt;/p&gt;
+&lt;p&gt;手机wifi设置代理为mac ip:8888。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置yakit，作为改包手工测试工具
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202123878.png&#34; alt=&#34;image-20220920143821424&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;charles设置代理，作为ios代理服务器
+取消勾选macOS proxy，不抓本机流量：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202123659.png&#34; alt=&#34;image-20220920144104414&#34;&gt;监听端口随意设置：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202123711.png&#34; alt=&#34;image-20220920143232838&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/imgs202209201549271.png&#34; alt=&#34;image-20220920143356332&#34;&gt;&lt;/p&gt;
+&lt;p&gt;添加yakit监听端口（两处都填127.0.0.1:8083）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202124070.png&#34; alt=&#34;image-20220920143458377&#34;&gt;
+开启
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202124968.png&#34; alt=&#34;image-20220920143722615&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;电脑弹出对话框，选择access，手机端访问chls.pro/ssl安装证书，安装完之后在通用-关于本机-证书信任设置-对根证书启用完全信任&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://example.com/tags/%E6%8A%93%E5%8C%85/">抓包</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>meme主题设置</title>
+                <link>https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+                <guid isPermaLink="true">https://example.com/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
                 <pubDate>Tue, 20 Sep 2022 20:53:48 &#43;0800</pubDate>
                 
                     <author>reuixiy@gmail.com (reuixiy)</author>
