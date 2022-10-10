@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 01 Oct 2022 11:26:50 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 10 Oct 2022 21:24:51 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -656,6 +656,30 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
                                     <category domain="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/">漏洞</category>
                                 
                             
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://klearcc.github.io/post/yabaiskhd/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/yabaiskhd/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
                         
                     
                 

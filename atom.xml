@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-10-01T11:26:50&#43;08:00</updated>
+    <updated>2022-10-10T21:24:51&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -121,7 +121,7 @@
             <title type="text">meme主题设置</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" />
             <id>https://klearcc.github.io/post/meme%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</id>
-            <updated>2022-09-20T21:37:34&#43;08:00</updated>
+            <updated>2022-10-01T11:26:59&#43;08:00</updated>
             <published>2022-09-20T20:53:48&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -674,6 +674,33 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
                                 <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
                             
                         
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/yabaiskhd/" />
+            <id>https://klearcc.github.io/post/yabaiskhd/</id>
+            <updated>2022-10-10T21:23:38&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
                     
                 
             
