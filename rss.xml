@@ -23,10 +23,68 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 13 Oct 2022 18:24:48 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 13 Oct 2022 19:48:52 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>markdown语法简单使用</title>
+                <link>https://klearcc.github.io/post/markdown%E8%AF%AD%E6%B3%95/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/markdown%E8%AF%AD%E6%B3%95/</guid>
+                <pubDate>Thu, 13 Oct 2022 18:53:48 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;目录&lt;/p&gt;
+&lt;p&gt;语法： [toc]&lt;/p&gt;
+&lt;p&gt;标题&lt;/p&gt;
+&lt;h2 id=&#34;123&#34;&gt;123&lt;/h2&gt;
+&lt;h3 id=&#34;234&#34;&gt;234&lt;/h3&gt;
+&lt;p&gt;段落：
+enter
+shift+enter&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;块引用&lt;/code&gt;
+右尖括号&lt;/p&gt;
+&lt;p&gt;列表
+星号 1. 2.&lt;/p&gt;
+&lt;p&gt;任务列表
+语法: - [ ]     - [x]&lt;/p&gt;
+&lt;p&gt;代码块
+语法： &lt;code&gt;  /  高亮：&lt;/code&gt;+语言类型&lt;/p&gt;
+&lt;p&gt;一小段代码
+语法  一个&lt;code&gt;1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;表格
+语法  | 1 | 2 |&lt;/p&gt;
+&lt;p&gt;链接
+语法：&lt;a href=&#34;www.klear.com&#34;&gt;klear&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;字体
+斜体 		前后加&lt;em&gt;号
+粗体 		前后加两个&lt;/em&gt;号
+删除线	 前后加两个~&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title></title>
@@ -71,40 +129,6 @@
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210011124112.png&#34; alt=&#34;image-20221001112457037&#34;&gt;&lt;/p&gt;
 </description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>Host碰撞</title>
-                <link>https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/</link>
-                <guid isPermaLink="true">https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/</guid>
-                <pubDate>Tue, 20 Sep 2022 21:22:27 &#43;0800</pubDate>
-                
-                    <author>baicaix86@gmail.com (Klear)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;p&gt;提取相关ip&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat ./* |grep -E &amp;#39;^&amp;lt;a href=&amp;#34;/&amp;#39;|grep -vE &amp;#39;ipchaxun.com&amp;lt;/a&amp;gt;$|&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;$&amp;#39;|awk -F &amp;#39;/&amp;#39; &amp;#39;{print$2}&amp;#39;|sort|uniq
-&lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
                 
@@ -304,6 +328,114 @@ sudo make install&lt;/p&gt;
 &lt;p&gt;sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
 &lt;p&gt;配置文件在/etc/proxychains.conf&lt;/p&gt;
 &lt;p&gt;sudo vi /etc/proxychains.conf&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>iphone6 12.2越狱</title>
+                <link>https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</guid>
+                <pubDate>Thu, 16 Jun 2022 21:22:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h4 id=&#34;设备&#34;&gt;设备&lt;/h4&gt;
+&lt;p&gt;mac
+iphone6 版本:12.2
+手机数据线连接电脑&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;mac端下载unc0ver6.0.2，高版本越狱不成功。链接直达：https://unc0ver.dev/downloads/6.0.2/295da57f139b0b2e4151458ffc966477872d36dc/unc0ver_Release_6.0.2.ipa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mac端装爱思助手，用于签名和往手机装ipa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用爱思签名unc0ver_Release_6.0.2.ipa，过程挺简单的，需要一个appleID即可。签名好后带壳ipa会同步到爱思的下载中心，安装到设备：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131756298.png&#34; alt=&#34;image-20221013175625160&#34;&gt;
+安装后会有这个图标：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131801857.png&#34; alt=&#34;image-20221013180144818&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点进去长这样，点击Re-Jailbreak&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803548.png&#34; alt=&#34;image-20221013180340523&#34;&gt;
+中间可能有弹窗广告，点击左上角×掉就行，越狱成功后长这样&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803501.png&#34; alt=&#34;image-20221013180356478&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ssh&#34;&gt;ssh&lt;/h3&gt;
+&lt;p&gt;Cydua中搜索这几个安装&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807605.png&#34; alt=&#34;image-20221013180742568&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装成功后桌面会出现terminal&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807886.png&#34; alt=&#34;image-20221013180701846&#34;&gt;
+Mac端安装iproxy
+iproxy 2222 22  ##将设备22端口映射到本机2222端口
+连接：ssh &lt;a href=&#34;mailto:root@127.0.0.1&#34;&gt;root@127.0.0.1&lt;/a&gt; -p 2222&lt;/p&gt;
+&lt;p&gt;密码，我也忘记了.. 默认可能是alpine&lt;/p&gt;
+&lt;p&gt;没有密码或密码改过忘记的话可通过如下方式重置ssh密码。&lt;/p&gt;
+&lt;h3 id=&#34;重置ssh密码&#34;&gt;重置ssh密码&lt;/h3&gt;
+&lt;p&gt;Cydia安装Filza插件(iFile闪退)：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131818503.png&#34; alt=&#34;	&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装好之后桌面会出现Filza图标，就可以看到系统文件了&lt;/p&gt;
+&lt;p&gt;定位到/private/etc/master.password这个文件，找到以下两行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root:xxxxxxxxxxxxx:0:0::0:0:System Administrator:/var/root:/bin/sh mobile:xxxxxxxxxxxxx:501:501::0:0:Mobile User:/var/mobile:/bin/sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将root:以及mobile:后面的xxx字符修改为/smx7MYTQIi2M，修改保存后ssh密码即可恢复为alpine。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>test</title>
+                <link>https://klearcc.github.io/post/mitmproxy/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/mitmproxy/</guid>
+                <pubDate>Thu, 16 Jun 2022 21:22:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;使用&#34;&gt;使用&lt;/h4&gt;
+&lt;p&gt;Mitm -s script.py -p 8888&lt;/p&gt;
+&lt;h3 id=&#34;脚本规则request&#34;&gt;脚本规则request&lt;/h3&gt;
 </description>
                 
                 
@@ -720,103 +852,6 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
                                     <category domain="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/">漏洞</category>
                                 
                             
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title></title>
-                <link>https://klearcc.github.io/post/mitmproxy/</link>
-                <guid isPermaLink="true">https://klearcc.github.io/post/mitmproxy/</guid>
-                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-                
-                    <author>baicaix86@gmail.com (Klear)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;h4 id=&#34;使用&#34;&gt;使用&lt;/h4&gt;
-&lt;p&gt;Mitm -s script.py -p 8888&lt;/p&gt;
-&lt;h3 id=&#34;脚本规则request&#34;&gt;脚本规则request&lt;/h3&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title></title>
-                <link>https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</link>
-                <guid isPermaLink="true">https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</guid>
-                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-                
-                    <author>baicaix86@gmail.com (Klear)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;p&gt;title: &amp;quot;Ios12.2越狱&amp;quot;
-date: 2022-10-13T18:22:27+08:00
-Tags: [&amp;quot;Tips&amp;quot;]
-Caegories: [&amp;quot;渗透测试&amp;quot;]
-draft: false&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;设备&#34;&gt;设备&lt;/h4&gt;
-&lt;p&gt;mac
-iphone6 版本:12.2
-手机数据线连接电脑&lt;/p&gt;
-&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;mac端下载unc0ver6.0.2，高版本越狱不成功。链接直达：https://unc0ver.dev/downloads/6.0.2/295da57f139b0b2e4151458ffc966477872d36dc/unc0ver_Release_6.0.2.ipa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;mac端装爱思助手，用于签名和往手机装ipa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用爱思签名unc0ver_Release_6.0.2.ipa，过程挺简单的，需要一个appleID即可。签名好后带壳ipa会同步到爱思的下载中心，安装到设备：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131756298.png&#34; alt=&#34;image-20221013175625160&#34;&gt;
-安装后会有这个图标：
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131801857.png&#34; alt=&#34;image-20221013180144818&#34;&gt;&lt;/p&gt;
-&lt;p&gt;点进去长这样，点击Re-Jailbreak&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803548.png&#34; alt=&#34;image-20221013180340523&#34;&gt;
-中间可能有弹窗广告，点击左上角×掉就行，越狱成功后长这样&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803501.png&#34; alt=&#34;image-20221013180356478&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;ssh&#34;&gt;ssh&lt;/h3&gt;
-&lt;p&gt;Cydua中搜索这几个安装&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807605.png&#34; alt=&#34;image-20221013180742568&#34;&gt;&lt;/p&gt;
-&lt;p&gt;安装成功后桌面会出现terminal&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807886.png&#34; alt=&#34;image-20221013180701846&#34;&gt;
-Mac端安装iproxy
-iproxy 2222 22  ##将设备22端口映射到本机2222端口
-连接：ssh &lt;a href=&#34;mailto:root@127.0.0.1&#34;&gt;root@127.0.0.1&lt;/a&gt; -p 2222&lt;/p&gt;
-&lt;p&gt;密码，我也忘记了.. 默认可能是alpine&lt;/p&gt;
-&lt;p&gt;没有密码或密码改过忘记的话可通过如下方式重置ssh密码。&lt;/p&gt;
-&lt;h3 id=&#34;重置ssh密码&#34;&gt;重置ssh密码&lt;/h3&gt;
-&lt;p&gt;Cydia安装Filza插件(iFile闪退)：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131818503.png&#34; alt=&#34;	&#34;&gt;&lt;/p&gt;
-&lt;p&gt;安装好之后桌面会出现Filza图标，就可以看到系统文件了&lt;/p&gt;
-&lt;p&gt;定位到/private/etc/master.password这个文件，找到以下两行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;root:xxxxxxxxxxxxx:0:0::0:0:System Administrator:/var/root:/bin/sh mobile:xxxxxxxxxxxxx:501:501::0:0:Mobile User:/var/mobile:/bin/sh&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;将root:以及mobile:后面的xxx字符修改为/smx7MYTQIi2M，修改保存后ssh密码即可恢复为alpine。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
                         
                     
                 
