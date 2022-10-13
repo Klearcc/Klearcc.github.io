@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 13 Oct 2022 23:32:16 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 13 Oct 2022 23:36:11 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -75,11 +75,11 @@
                     <description>&lt;h3 id=&#34;获取小程序的wxapkg文件&#34;&gt;获取小程序的.wxapkg文件&lt;/h3&gt;
 &lt;p&gt;书接上文&lt;a href=&#34;https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/&#34;&gt;iphone6 12.2越狱+ssh&lt;/a&gt;，越狱机已安装Filza、ssh。&lt;/p&gt;
 &lt;h4 id=&#34;前情提要&#34;&gt;前情提要&lt;/h4&gt;
-&lt;p&gt;​	在微信开发者工具中开发完小程序后，点击“上传”按钮，微信开发者工具会进行“编译”，对 JS 代码进行压缩混淆以及对 &lt;code&gt;wxml&lt;/code&gt;、&lt;code&gt;wxss&lt;/code&gt; 和资源文件等进行整合打包成一个 &lt;code&gt;.wxapkg&lt;/code&gt; 文件上传给微信服务器。所以要“反编译”小程序，首先我们要获取到小程序对应的 &lt;code&gt;.wxapkg&lt;/code&gt; 包&lt;/p&gt;
+&lt;p&gt;​	在微信开发者工具中开发完小程序后，点击“上传”按钮，微信开发者工具会进行“编译”，对 JS 代码进行压缩混淆以及对 &lt;code&gt;wxml&lt;/code&gt;、&lt;code&gt;wxss&lt;/code&gt; 和资源文件等进行整合打包成一个 &lt;code&gt;.wxapkg&lt;/code&gt; 文件上传给微信服务器。所以要“反编译”小程序，首先要获取到小程序对应的 &lt;code&gt;.wxapkg&lt;/code&gt; 包&lt;/p&gt;
 &lt;h4 id=&#34;获取wxapkg文件&#34;&gt;获取wxapkg文件&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;打开Filza，找到本地app安装目录：&lt;code&gt;/var/mobile/Containers/Data/Application/&lt;/code&gt;
+&lt;p&gt;打开Filza，找到本地app安装目录:&lt;code&gt;/var/mobile/Containers/Data/Application/&lt;/code&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132246769.png&#34; alt=&#34;image-20221013224600719&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
