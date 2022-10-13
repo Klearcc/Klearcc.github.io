@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-10-13T19:48:52&#43;08:00</updated>
+    <updated>2022-10-13T23:32:16&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,203 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">host碰撞提ip</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/" />
+            <id>https://klearcc.github.io/post/host%E7%A2%B0%E6%92%9E/</id>
+            <updated>2022-10-13T19:48:01&#43;08:00</updated>
+            <published>2022-10-13T21:22:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">提取相关ip cat ./* |grep -E &amp;#39;^&amp;lt;a href=&amp;#34;/&amp;#39;|grep -vE &amp;#39;ipchaxun.com&amp;lt;/a&amp;gt;$|&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;$&amp;#39;|awk -F &amp;#39;/&amp;#39; &amp;#39;{print$2}&amp;#39;|sort|uniq</summary>
+            
+                <content type="html">&lt;p&gt;提取相关ip&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat ./* |grep -E &amp;#39;^&amp;lt;a href=&amp;#34;/&amp;#39;|grep -vE &amp;#39;ipchaxun.com&amp;lt;/a&amp;gt;$|&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;$&amp;#39;|awk -F &amp;#39;/&amp;#39; &amp;#39;{print$2}&amp;#39;|sort|uniq
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">小程序解包</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F1/" />
+            <id>https://klearcc.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F1/</id>
+            <updated>2022-10-13T23:32:11&#43;08:00</updated>
+            <published>2022-10-13T20:09:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">获取小程序的.wxapkg文件 书接上文iphone6 12.2越狱+ssh，越狱机已安……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;获取小程序的wxapkg文件&#34;&gt;获取小程序的.wxapkg文件&lt;/h3&gt;
+&lt;p&gt;书接上文&lt;a href=&#34;https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/&#34;&gt;iphone6 12.2越狱+ssh&lt;/a&gt;，越狱机已安装Filza、ssh。&lt;/p&gt;
+&lt;h4 id=&#34;前情提要&#34;&gt;前情提要&lt;/h4&gt;
+&lt;p&gt;​	在微信开发者工具中开发完小程序后，点击“上传”按钮，微信开发者工具会进行“编译”，对 JS 代码进行压缩混淆以及对 &lt;code&gt;wxml&lt;/code&gt;、&lt;code&gt;wxss&lt;/code&gt; 和资源文件等进行整合打包成一个 &lt;code&gt;.wxapkg&lt;/code&gt; 文件上传给微信服务器。所以要“反编译”小程序，首先我们要获取到小程序对应的 &lt;code&gt;.wxapkg&lt;/code&gt; 包&lt;/p&gt;
+&lt;h4 id=&#34;获取wxapkg文件&#34;&gt;获取wxapkg文件&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开Filza，找到本地app安装目录：&lt;code&gt;/var/mobile/Containers/Data/Application/&lt;/code&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132246769.png&#34; alt=&#34;image-20221013224600719&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到微信目录，对应(我的是680ExxxxxxxF6199118);在当前目录搜索wxapkg&lt;/p&gt;
+&lt;p&gt;可以发现小程序包存放的完整目录为：&lt;code&gt;/var/mobile/Containers/Data/Application/&amp;lt;wechat sandbox&amp;gt;/Library/WechatPrivate/&amp;lt;userid&amp;gt;/WeApp/LocalCache/release/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;code&gt;wechat sandbox&lt;/code&gt;为上面的id，userid为微信账号id的md5。&lt;/p&gt;
+&lt;p&gt;进入后有很多wx...开头的文件夹，其为每个小程序对应的AppId。每个文件夹中都存放着对应小程序的wxapkg包。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132246881.png&#34; alt=&#34;image-20221013224618840&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Appid获取：&lt;/p&gt;
+&lt;p&gt;1、抓包详见&lt;a href=&#34;https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/&#34;&gt;Appid获取,&lt;/a&gt;，随便找个app抓个包&lt;/p&gt;
+&lt;p&gt;2、删掉其他小程序，只留待测的&lt;/p&gt;
+&lt;p&gt;3、待测小程序删掉重进，看修改日期&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132304506.png&#34; alt=&#34;image-20221013230456471&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将wxapkg包cp到本机来&lt;/p&gt;
+&lt;p&gt;方法一：ssh&lt;/p&gt;
+&lt;p&gt;手打路径很麻烦，可以在Filza设置中启用webdav服务，启用后mac浏览器访问手机11111端口，可以浏览手机目录结构
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132235460.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iproxy &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@127.0.0.1 -p &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -P &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt; root@127.0.0.1:/var/mobile/Containers/Data/Application/680E3A76-7E1E-41DA-9E6C-F6199118A9EC/Library/WechatPrivate/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;微信用户id的md5值&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/WeApp/LocalCache/release/wxdfa85454f56610e4/82/Module/f6de052da5316347d90f07ff05982386.wxapkg  ~/Downloads/a.wxapkg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;方法二：iFunBox
+mac下载iFunBox，手机上用Cydia装Apple File Conduit &amp;quot;2&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210132243741.png&#34; alt=&#34;image-20221013224352704&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;解包&#34;&gt;解包&lt;/h3&gt;
+&lt;p&gt;工具：&lt;a href=&#34;https://github.com/xuedingmiaojun/wxappUnpacker&#34;&gt;wxappUnpacker，命令行版不收费&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;解包主包：./bingo.sh testpkg/master-xxx.wxapkg
+解包子包：./bingo.sh testpkg/sub-1-xxx.wxapkg -s=../master-xxx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;待续...&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" term="小程序" label="小程序" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">iphone6 12.2越狱&#43;ssh</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/" />
+            <id>https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</id>
+            <updated>2022-10-13T20:16:15&#43;08:00</updated>
+            <published>2022-10-13T20:00:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">设备 mac iphone6 版本:12.2 手机数据线连接电脑 安装 mac端下载unc0ver6.0.2，高……</summary>
+            
+                <content type="html">&lt;h4 id=&#34;设备&#34;&gt;设备&lt;/h4&gt;
+&lt;p&gt;mac
+iphone6 版本:12.2
+手机数据线连接电脑&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;mac端下载unc0ver6.0.2，高版本越狱不成功。链接直达：https://unc0ver.dev/downloads/6.0.2/295da57f139b0b2e4151458ffc966477872d36dc/unc0ver_Release_6.0.2.ipa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mac端装爱思助手，用于签名和往手机装ipa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用爱思签名unc0ver_Release_6.0.2.ipa，过程挺简单的，需要一个appleID即可。签名好后带壳ipa会同步到爱思的下载中心，安装到设备：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131756298.png&#34; alt=&#34;image-20221013175625160&#34;&gt;
+安装后会有这个图标：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131801857.png&#34; alt=&#34;image-20221013180144818&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点进去长这样，点击Re-Jailbreak&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803548.png&#34; alt=&#34;image-20221013180340523&#34;&gt;
+中间可能有弹窗广告，点击左上角×掉就行，越狱成功后长这样&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803501.png&#34; alt=&#34;image-20221013180356478&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ssh&#34;&gt;ssh&lt;/h3&gt;
+&lt;p&gt;Cydua中搜索这几个安装&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807605.png&#34; alt=&#34;image-20221013180742568&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装成功后桌面会出现terminal&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807886.png&#34; alt=&#34;image-20221013180701846&#34;&gt;
+Mac端安装iproxy
+iproxy 2222 22  ##将设备22端口映射到本机2222端口
+连接：ssh &lt;a href=&#34;mailto:root@127.0.0.1&#34;&gt;root@127.0.0.1&lt;/a&gt; -p 2222&lt;/p&gt;
+&lt;p&gt;密码，我也忘记了.. 默认可能是alpine&lt;/p&gt;
+&lt;p&gt;没有密码或密码改过忘记的话可通过如下方式重置ssh密码。&lt;/p&gt;
+&lt;h3 id=&#34;重置ssh密码&#34;&gt;重置ssh密码&lt;/h3&gt;
+&lt;p&gt;Cydia安装Filza插件(iFile闪退)：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131818503.png&#34; alt=&#34;	&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装好之后桌面会出现Filza图标，就可以看到系统文件了&lt;/p&gt;
+&lt;p&gt;定位到/private/etc/master.password这个文件，找到以下两行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root:xxxxxxxxxxxxx:0:0::0:0:System Administrator:/var/root:/bin/sh mobile:xxxxxxxxxxxxx:501:501::0:0:Mobile User:/var/mobile:/bin/sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将root:以及mobile:后面的xxx字符修改为/smx7MYTQIi2M，修改保存后ssh密码即可恢复为alpine。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" term="小程序" label="小程序" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">markdown语法简单使用</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/markdown%E8%AF%AD%E6%B3%95/" />
@@ -78,10 +275,10 @@ shift+enter&lt;/p&gt;
         </entry>
     
         <entry>
-            <title type="text"></title>
+            <title type="text">解决google内置翻译失效</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%A7%A3%E5%86%B3google%E5%86%85%E7%BD%AE%E7%BF%BB%E8%AF%91%E5%A4%B1%E6%95%88/" />
             <id>https://klearcc.github.io/post/%E8%A7%A3%E5%86%B3google%E5%86%85%E7%BD%AE%E7%BF%BB%E8%AF%91%E5%A4%B1%E6%95%88/</id>
-            <updated>2022-10-13T18:24:46&#43;08:00</updated>
+            <updated>2022-10-13T20:15:56&#43;08:00</updated>
             <published>2022-10-01T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -148,7 +345,7 @@ shift+enter&lt;/p&gt;
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2022-09-20T22:16:36&#43;08:00</updated>
+            <updated>2022-10-13T23:03:29&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -331,81 +528,6 @@ sudo make install&lt;/p&gt;
 &lt;p&gt;sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
 &lt;p&gt;配置文件在/etc/proxychains.conf&lt;/p&gt;
 &lt;p&gt;sudo vi /etc/proxychains.conf&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">iphone6 12.2越狱</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/" />
-            <id>https://klearcc.github.io/post/%E8%B6%8A%E7%8B%B1/</id>
-            <updated>2022-10-13T19:48:46&#43;08:00</updated>
-            <published>2022-06-16T21:22:27&#43;08:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">设备 mac iphone6 版本:12.2 手机数据线连接电脑 安装 mac端下载unc0ver6.0.2，高……</summary>
-            
-                <content type="html">&lt;h4 id=&#34;设备&#34;&gt;设备&lt;/h4&gt;
-&lt;p&gt;mac
-iphone6 版本:12.2
-手机数据线连接电脑&lt;/p&gt;
-&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;mac端下载unc0ver6.0.2，高版本越狱不成功。链接直达：https://unc0ver.dev/downloads/6.0.2/295da57f139b0b2e4151458ffc966477872d36dc/unc0ver_Release_6.0.2.ipa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;mac端装爱思助手，用于签名和往手机装ipa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用爱思签名unc0ver_Release_6.0.2.ipa，过程挺简单的，需要一个appleID即可。签名好后带壳ipa会同步到爱思的下载中心，安装到设备：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131756298.png&#34; alt=&#34;image-20221013175625160&#34;&gt;
-安装后会有这个图标：
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131801857.png&#34; alt=&#34;image-20221013180144818&#34;&gt;&lt;/p&gt;
-&lt;p&gt;点进去长这样，点击Re-Jailbreak&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803548.png&#34; alt=&#34;image-20221013180340523&#34;&gt;
-中间可能有弹窗广告，点击左上角×掉就行，越狱成功后长这样&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131803501.png&#34; alt=&#34;image-20221013180356478&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;ssh&#34;&gt;ssh&lt;/h3&gt;
-&lt;p&gt;Cydua中搜索这几个安装&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807605.png&#34; alt=&#34;image-20221013180742568&#34;&gt;&lt;/p&gt;
-&lt;p&gt;安装成功后桌面会出现terminal&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131807886.png&#34; alt=&#34;image-20221013180701846&#34;&gt;
-Mac端安装iproxy
-iproxy 2222 22  ##将设备22端口映射到本机2222端口
-连接：ssh &lt;a href=&#34;mailto:root@127.0.0.1&#34;&gt;root@127.0.0.1&lt;/a&gt; -p 2222&lt;/p&gt;
-&lt;p&gt;密码，我也忘记了.. 默认可能是alpine&lt;/p&gt;
-&lt;p&gt;没有密码或密码改过忘记的话可通过如下方式重置ssh密码。&lt;/p&gt;
-&lt;h3 id=&#34;重置ssh密码&#34;&gt;重置ssh密码&lt;/h3&gt;
-&lt;p&gt;Cydia安装Filza插件(iFile闪退)：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210131818503.png&#34; alt=&#34;	&#34;&gt;&lt;/p&gt;
-&lt;p&gt;安装好之后桌面会出现Filza图标，就可以看到系统文件了&lt;/p&gt;
-&lt;p&gt;定位到/private/etc/master.password这个文件，找到以下两行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;root:xxxxxxxxxxxxx:0:0::0:0:System Administrator:/var/root:/bin/sh mobile:xxxxxxxxxxxxx:501:501::0:0:Mobile User:/var/mobile:/bin/sh&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;将root:以及mobile:后面的xxx字符修改为/smx7MYTQIi2M，修改保存后ssh密码即可恢复为alpine。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </content>
             
             
