@@ -23,10 +23,52 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 13 Oct 2022 23:37:41 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 18 Oct 2022 22:51:13 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>解决idea报错[java.lang.ClassNotFoundException: com.mysql.jdbc.Driver]</title>
+                <link>https://klearcc.github.io/post/jdbcdriver%E6%9C%AA%E6%89%BE%E5%88%B0/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/jdbcdriver%E6%9C%AA%E6%89%BE%E5%88%B0/</guid>
+                <pubDate>Tue, 18 Oct 2022 21:22:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h3 id=&#34;报错&#34;&gt;报错&lt;/h3&gt;
+&lt;p&gt;java.lang.ClassNotFoundException: com.mysql.jdbc.Driver&lt;/p&gt;
+&lt;h3 id=&#34;解决&#34;&gt;解决&lt;/h3&gt;
+&lt;p&gt;maven等等依赖都添加还是报错：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目WEB-INF目录下新建lib文件夹&lt;/li&gt;
+&lt;li&gt;将mysql-connector-java-x.xx.xx.jar包复制到lib文件夹下。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;还是不行的话，从文件夹复制文件到lib目录下。我的直接从idea Libraries拖到lib文件夹下不起作用，手动复制jar包后成功解决。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210182250503.png&#34; alt=&#34;image-20221018225048409&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/java/">java</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>host碰撞提ip</title>
