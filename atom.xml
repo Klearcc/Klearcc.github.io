@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-10-18T22:51:13&#43;08:00</updated>
+    <updated>2022-10-20T11:38:58&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -17,10 +17,141 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
+            <title type="text">m1 划词翻译</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/goldendict/" />
+            <id>https://klearcc.github.io/post/goldendict/</id>
+            <updated>2022-10-20T11:38:47&#43;08:00</updated>
+            <published>2022-10-20T10:33:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Date: Thu Oct 20 10:44:28 CST 2022 前情提要 之前win用星际译王划词翻译很爽，突发奇想mac装试试。经过尝……</summary>
+            
+                <content type="html">&lt;p&gt;Date: Thu Oct 20 10:44:28 CST 2022&lt;/p&gt;
+&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
+&lt;p&gt;之前win用星际译王划词翻译很爽，突发奇想mac装试试。经过尝试，huzheng的包装不了，自己编译用到很多依赖，各种module报错。时间不够强烈建议直接放弃。&lt;/p&gt;
+&lt;p&gt;替代品：GoldenDict。
+和StarDict高度相似，功能、体验可以说比星际译王还要棒。
+功能：屏幕划词翻译，屏幕段落翻译。OCR没弄。&lt;/p&gt;
+&lt;h3 id=&#34;效果&#34;&gt;效果&lt;/h3&gt;
+&lt;p&gt;cn &amp;gt; en&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201047960.png&#34; alt=&#34;image-20221020104721898&#34;&gt;
+en &amp;gt; cn
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201048996.png&#34; alt=&#34;image-20221020104848968&#34;&gt;&lt;/p&gt;
+&lt;p&gt;段落：&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201138712.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;goldendict安装使用&#34;&gt;GoldenDict安装&amp;amp;&amp;amp;使用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载mac版[GoldenDict；下载&lt;a href=&#34;http://download.huzheng.org/zh_CN/&#34;&gt;词典&lt;/a&gt;，鄙人用的&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2&#34;&gt;朗道英汉&lt;/a&gt;和[朗道汉英&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ce-gb-2.4.2.tar.bz2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开GoldenDict，设置中文界面
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201118702.png&#34; alt=&#34;image-20221020111820664&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压字典至任意目录，打开GodneDict &amp;gt; 编辑 &amp;gt; 词典 &amp;gt; 词典来源 &amp;gt; 文件 &amp;gt; 添加 &amp;gt; 两个字典所在文件夹 &amp;gt; Apply &amp;gt; 重新扫描
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201052546.png&#34; alt=&#34;image-20221020105251523&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GodneDict &amp;gt; 编辑 &amp;gt; 词典 &amp;gt; 词典
+词典上下位置对应翻译窗口内 对应词典翻译 的位置。
+词典群组设置可以根据自己喜好设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置划词翻译，GoldenDict &amp;gt; 偏好设置 &amp;gt; 屏幕取词&lt;/p&gt;
+&lt;p&gt;我的设置&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201101709.png&#34; alt=&#34;image-20221020110140684&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用
+鼠标移动到词上，会自动翻译，建议在safari下尝试。某些程序内不能使用屏幕取词，比如google、sublime、idea。
+这时候可以用command + C + C。GoldenDict会自动翻译剪切板内的文本。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201107953.png&#34; alt=&#34;image-20221020110704921&#34;&gt;
+另外内置wiki百科的词典，但是挂梯子才可使用：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201110981.png&#34; alt=&#34;image-20221020111002945&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;至此，可以日常使用词典翻译了。但不能翻译短语长句。可以使用 google-translate-for-goldendict 解决，使用需要挂梯子。项目地址：https://github.com/xinebf/google-translate-for-goldendict
+安装python&amp;gt;3.8，&lt;a href=&#34;www.baidu.com&#34;&gt;如何安装&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;终端运行：
+&lt;code&gt;python -m pip install --upgrade pip &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install google-translate-for-goldendict&lt;/code&gt;
+测试：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python -m googletranslate.googletranslate zh-CN &amp;quot;dont give up&amp;quot; -p 127.0.0.1:1087 &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;提示：代理只支持http
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201122916.png&#34; alt=&#34;image-20221020112227876&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201120646.png&#34; alt=&#34;image-20221020112028619&#34;&gt;&lt;/p&gt;
+&lt;p&gt;打开：GodneDict &amp;gt; 编辑 &amp;gt; 词典 &amp;gt; 词典来源 &amp;gt; 程序
+坑：命令行中python必须使用绝对路径，否则会报255错。绝对路径查看：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201129068.png&#34; alt=&#34;image-20221020112959046&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;key&lt;/th&gt;
+&lt;th&gt;value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;已启用&lt;/td&gt;
+&lt;td&gt;✔️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;类型&lt;/td&gt;
+&lt;td&gt;Html&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;名称&lt;/td&gt;
+&lt;td&gt;Google Translate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;命令行&lt;/td&gt;
+&lt;td&gt;/Users/baicai/.pyenv/versions/3.9.1/bin/python -m googletranslate.googletranslate zh-CN %GDWORD% -p 127.0.0.1:1087&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;图标&lt;/td&gt;
+&lt;td&gt;”随意，别太大“&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;至此结束，效果：&lt;/p&gt;
+&lt;p&gt;再提示：鼠标自动取词翻译获取的内容不正确的话，可以使用Command + c + c翻译。
+查单词：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201135064.png&#34; alt=&#34;image-20221020113513027&#34;&gt;&lt;/p&gt;
+&lt;p&gt;查段落：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201135429.png&#34; alt=&#34;image-20221020113550398&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">解决idea报错[java.lang.ClassNotFoundException: com.mysql.jdbc.Driver]</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/jdbcdriver%E6%9C%AA%E6%89%BE%E5%88%B0/" />
             <id>https://klearcc.github.io/post/jdbcdriver%E6%9C%AA%E6%89%BE%E5%88%B0/</id>
-            <updated>2022-10-18T22:51:06&#43;08:00</updated>
+            <updated>2022-10-20T10:31:46&#43;08:00</updated>
             <published>2022-10-18T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
