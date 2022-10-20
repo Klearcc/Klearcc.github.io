@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-10-20T11:40:16&#43;08:00</updated>
+    <updated>2022-10-20T12:44:28&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">m1 划词翻译</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/goldendict/" />
             <id>https://klearcc.github.io/post/goldendict/</id>
-            <updated>2022-10-20T11:40:10&#43;08:00</updated>
+            <updated>2022-10-20T12:44:25&#43;08:00</updated>
             <published>2022-10-20T10:33:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -44,7 +44,7 @@ en &amp;gt; cn
 &lt;h3 id=&#34;goldendict安装使用&#34;&gt;GoldenDict安装&amp;amp;&amp;amp;使用&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;下载mac版[GoldenDict；下载&lt;a href=&#34;http://download.huzheng.org/zh_CN/&#34;&gt;词典&lt;/a&gt;，鄙人用的&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2&#34;&gt;朗道英汉&lt;/a&gt;和[朗道汉英&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ce-gb-2.4.2.tar.bz2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载mac版&lt;a href=&#34;https://sourceforge.net/projects/goldendict/files/early%20access%20builds/MacOS/GoldenDict-1.5.0-RC2-372-gc3ff15f%28Qt_5121%29.dmg/download&#34;&gt;GoldenDict&lt;/a&gt;；下载&lt;a href=&#34;http://download.huzheng.org/zh_CN/&#34;&gt;词典&lt;/a&gt;，鄙人用的&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2&#34;&gt;朗道英汉&lt;/a&gt;和&lt;a href=&#34;http://download.huzheng.org/zh_CN/stardict-langdao-ce-gb-2.4.2.tar.bz2&#34;&gt;朗道汉英&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;打开GoldenDict，设置中文界面
@@ -125,8 +125,8 @@ en &amp;gt; cn
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201135429.png&#34; alt=&#34;image-20221020113550398&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;参考：
-&lt;a href=&#34;https://www.cnblogs.com/keatonlao/p/12702571.html&#34;&gt;https://www.cnblogs.com/keatonlao/p/12702571.html&lt;/a&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/keatonlao/p/12702571.html&#34;&gt;https://www.cnblogs.com/keatonlao/p/12702571.html&lt;/a&gt;
 &lt;a href=&#34;https://github.com/xinebf/google-translate-for-goldendict&#34;&gt;https://github.com/xinebf/google-translate-for-goldendict&lt;/a&gt;&lt;/p&gt;
 </content>
             
