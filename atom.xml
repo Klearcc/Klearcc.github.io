@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-10-20T11:38:58&#43;08:00</updated>
+    <updated>2022-10-20T11:40:16&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">m1 划词翻译</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/goldendict/" />
             <id>https://klearcc.github.io/post/goldendict/</id>
-            <updated>2022-10-20T11:38:47&#43;08:00</updated>
+            <updated>2022-10-20T11:40:10&#43;08:00</updated>
             <published>2022-10-20T10:33:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -125,6 +125,9 @@ en &amp;gt; cn
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202210201135429.png&#34; alt=&#34;image-20221020113550398&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;参考：
+&lt;a href=&#34;https://www.cnblogs.com/keatonlao/p/12702571.html&#34;&gt;https://www.cnblogs.com/keatonlao/p/12702571.html&lt;/a&gt;
+&lt;a href=&#34;https://github.com/xinebf/google-translate-for-goldendict&#34;&gt;https://github.com/xinebf/google-translate-for-goldendict&lt;/a&gt;&lt;/p&gt;
 </content>
             
             
