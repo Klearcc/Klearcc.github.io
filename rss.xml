@@ -23,10 +23,198 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 20 Oct 2022 12:44:28 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 03 Nov 2022 19:27:28 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>gophish抓用户输入例子</title>
+                <link>https://klearcc.github.io/post/%E9%92%93%E9%B1%BC%E9%A1%B5%E9%9D%A2/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/%E9%92%93%E9%B1%BC%E9%A1%B5%E9%9D%A2/</guid>
+                <pubDate>Thu, 03 Nov 2022 19:24:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h3 id=&#34;例苏宁易购&#34;&gt;例：苏宁易购&lt;/h3&gt;
+&lt;p&gt;源站：https://passport.suning.com/ids/login
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211022349528.png&#34; alt=&#34;image-20221102234938406&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;gophish直接import之后不能读取到用户输入。因为源码为div内嵌input，而gophish只支持获取form表单内input标签下内容。&lt;/p&gt;
+&lt;h3 id=&#34;思路&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;查看元素发现username-login控制表单的提交，其中包含熟悉的&lt;code&gt;&amp;lt;input id=xxx type=xxx&amp;gt;&lt;/code&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211030003516.png&#34; alt=&#34;&#34;&gt;
+源码搜索”username-login“，定位到这里
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211022357104.png&#34; alt=&#34;image-20221102235741074&#34;&gt;
+可以看到这里控制登录相关内容。gophish获取用户输入需要form表单，
+因此思路为把这里设置为无效隐藏，将代码转移到form表单内。&lt;/p&gt;
+&lt;h6 id=&#34;删除隐藏原来用户名密码输入界面&#34;&gt;删除隐藏原来用户名密码输入界面&lt;/h6&gt;
+&lt;p&gt;注释掉原本表单&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031845934.png&#34; alt=&#34;image-20221103184535869&#34;&gt;&lt;/p&gt;
+&lt;h6 id=&#34;添加新的用户名密码输入表单&#34;&gt;添加新的用户名密码输入表单&lt;/h6&gt;
+&lt;p&gt;因为gophish只能按照form表单获取用户输入，因此搜索form，定位到这里
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211030000985.png&#34; alt=&#34;image-20221103000032949&#34;&gt;&lt;/p&gt;
+&lt;p&gt;复制原来控制用户名密码的div input到form表单中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031849631.png&#34; alt=&#34;image-20221103184906566&#34;&gt;
+这里a标签不能用了，要换成一个和原来一样的 橙色的登录 提交button
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031851321.png&#34; alt=&#34;image-20221103185152275&#34;&gt;
+发现直接注释原来按钮的话页面上的二维码没了，因此需要隐藏原来的按钮不能删除
+删掉class，添加type=&amp;quot;hidden&amp;quot;隐藏掉框，删除登录二字&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031854648.png&#34; alt=&#34;image-20221103185424582&#34;&gt;
+现在的界面
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031856569.png&#34; alt=&#34;image-20221103185644464&#34;&gt;
+有个黑框，style=&amp;quot;border: 0;&amp;quot;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031858776.png&#34; alt=&#34;image-20221103185814709&#34;&gt;
+现在的样子和管网高度相似了，二维码也显示正常&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031858115.png&#34; alt=&#34;image-20221103185852065&#34;&gt;
+到这里试下gophish获取输入情况，发现不能抓到username
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031906502.png&#34; alt=&#34;image-20221103190608449&#34;&gt;
+看下源码，发现passwordbox中没有name=xxx，添加name=&amp;quot;username&amp;quot;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031911877.png&#34; alt=&#34;image-20221103191152823&#34;&gt;
+这样就可以抓到了
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031912058.png&#34; alt=&#34;image-20221103191241000&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;结果&#34;&gt;结果&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031913451.png&#34; alt=&#34;image-20221103191351382&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031914231.png&#34; alt=&#34;image-20221103191426146&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031914726.png&#34; alt=&#34;image-20221103191452657&#34;&gt;
+![image-20221103191509343](/Users/baicai/Library/Application Support/typora-user-images/image-20221103191509343.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211031918177.png&#34; alt=&#34;image-20221103191844085&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/%E9%92%93%E9%B1%BC/">钓鱼</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>fastjson&lt;=1.2.4 反序列化漏洞分析</title>
+                <link>https://klearcc.github.io/post/javasec_fastjson1.2.24/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/javasec_fastjson1.2.24/</guid>
+                <pubDate>Thu, 20 Oct 2022 17:08:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h5 id=&#34;记录学习过程强烈建议仅仅做参考学习请移至httpssu18orghttpssu18orgsu18yyds&#34;&gt;记录学习过程，强烈建议仅仅做参考。学习请移至&lt;a href=&#34;https://su18.org/&#34;&gt;https://su18.org/&lt;/a&gt;，su18yyds.&lt;/h5&gt;
+&lt;h2 id=&#34;fastjson简介&#34;&gt;Fastjson简介&lt;/h2&gt;
+&lt;p&gt;Fastjson是ali的开源JSON解析库，他可以解析JSON格式的字符串。支持将javabean序列化为JSON字符串，童也支持将JSON字符串反序列化为Java Bean。&lt;/p&gt;
+&lt;h2 id=&#34;fastjson使用&#34;&gt;Fastjson使用&lt;/h2&gt;
+&lt;h5 id=&#34;将json反序列化为类&#34;&gt;将json反序列化为类&lt;/h5&gt;
+&lt;p&gt;常用方法parse()、parseObject()、parseArray() 。每个方法又有几个重载方法，带有不同参数，具体请查看源码。其中：
+类的类型：java.lang.reflect.Type。可以使用@type指定反序列化任意类或者说此属性指定json数据应该被反序列化为什么类型的对象
+fastjson功能要点：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 使用JSON.parse(jsonString)和JSON.parseObject(jsonString,Target.class)，两者调用链一致，parse会在jsonString中解析字符串获取@type指定的类，parseObject会直接使用参数中的class
+1. 使用JSON.parseObject(jsonString)将会返回JSONObeject对象，并且类中的set&amp;amp;&amp;amp;get方法都会被调用(指定@type的情况下)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fastjson1224反序列化漏洞&#34;&gt;Fastjson&amp;lt;=1.2.24反序列化漏洞&lt;/h2&gt;
+&lt;h3 id=&#34;漏洞介绍&#34;&gt;漏洞介绍&lt;/h3&gt;
+&lt;p&gt;影响版本：fastjson &amp;lt;= 1.2.24
+描述：fastjson默认使用@type指定反序列化任意类，攻击者可以通过 在Java常见环境中 寻找能够构造恶意类的方法，通过反序列化过程中调用的getter|setter方法 和 目标成员变量的注入 来达到传参的目的，最后组成利用链。&lt;/p&gt;
+&lt;h3 id=&#34;fastjson简单体验&#34;&gt;fastjson简单体验&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;新建maven项目，引入fastjson依赖&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;fastjson&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.2.23&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;先建一个javabean User.java&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/**
+ * @author: 秦始皇
+ * @date: 10/20/22 15:56
+ * @description:
+ */
+public class User {
+    private String name;
+
+    public String getName() {
+        System.out.println(&amp;#34;getName is running ...&amp;#34;);
+        return name;
+    }
+
+    public void setName(String name) {
+        System.out.println(&amp;#34;setName is running ...&amp;#34;);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return &amp;#34;User{&amp;#34; +
+                &amp;#34;name=&amp;#39;&amp;#34; + name + &amp;#39;\&amp;#39;&amp;#39; +
+                &amp;#39;}&amp;#39;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用fastjson将json数据反序列化为对象&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import com.alibaba.fastjson.JSON;
+
+/**
+ * @author: 秦始皇
+ * @date: 10/20/22 15:58
+ * @description:
+ */
+public class Test {
+    public static void main(String[] args) {
+        String json = &amp;#34;{\&amp;#34;@type\&amp;#34;:\&amp;#34;User\&amp;#34;, \&amp;#34;name\&amp;#34;:\&amp;#34;秦始皇\&amp;#34;}&amp;#34;;
+        Object obj = JSON.parse(json);
+        System.out.println(obj);
+
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结果&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;setName is running ...
+User{name=&amp;#39;秦始皇&amp;#39;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;@type起的作用：上面代码(Test)的obj对象是Object类型的对象，但是从输出结果来看是User类型的对象。
+terminal输出setName is running，说明整个过程中setName方法也被调用了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/fastjson/">fastjson</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>m1 划词翻译</title>
@@ -1141,6 +1329,78 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
                                     <category domain="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/">漏洞</category>
                                 
                             
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://klearcc.github.io/post/javasec_fastjson/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/javasec_fastjson/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://klearcc.github.io/post/javasec_shiro/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/javasec_shiro/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://klearcc.github.io/post/javasec_struts2/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/javasec_struts2/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
                         
                     
                 
