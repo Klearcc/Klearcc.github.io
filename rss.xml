@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 16 Nov 2022 16:35:39 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 16 Nov 2022 16:36:42 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -105,7 +105,7 @@
             </item>
         
             <item>
-                <title>fastjson全版本反序列化漏洞分析</title>
+                <title>全版本fastjson反序列化漏洞分析</title>
                 <link>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</link>
                 <guid isPermaLink="true">https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</guid>
                 <pubDate>Thu, 20 Oct 2022 17:08:27 &#43;0800</pubDate>
