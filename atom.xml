@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-11-15T12:25:06&#43;08:00</updated>
+    <updated>2022-11-16T09:35:10&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -99,7 +99,7 @@
             <title type="text">fastjson&lt;=1.2.4 反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson1.2.24/" />
             <id>https://klearcc.github.io/post/javasec_fastjson1.2.24/</id>
-            <updated>2022-11-15T11:30:07&#43;08:00</updated>
+            <updated>2022-11-16T09:35:03&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -267,6 +267,83 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
     &amp;#34;properties&amp;#34;:{&amp;#34;data_source&amp;#34;:&amp;#34;ldap://127.0.0.1:1389/VulClass&amp;#34;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;fastjson-1247&#34;&gt;Fastjson-1.2.47&lt;/h2&gt;
+&lt;h5 id=&#34;影响版本&#34;&gt;影响版本&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;1.2.25-1.2.32版本：未开启AutoTypeSupport时能成功利用，开启AutoTypeSupport不能利用&lt;/li&gt;
+&lt;li&gt;1.2.33-1.2.47版本：无论是否开启AutoTypeSupport，都能成功利用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;分析&#34;&gt;分析&lt;/h5&gt;
+&lt;p&gt;版本：fastjson1.2.47
+问题还是在com.alibaba.fastjson.parser.ParserConfig#checkAutoType，前面的代码还是对&lt;code&gt;[&lt;/code&gt;,&lt;code&gt;L&lt;/code&gt;,&lt;code&gt;;&lt;/code&gt;的过滤，紧接着为是否开启autoTypeSupport
+1.2.47校验逻辑&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (this.autoTypeSupport || expectClass != null) { ##如果开启了autoTyoeSupport
+                    long hash = h3;
+                    for(int i = 3; i &amp;lt; className.length(); ++i) {
+                        hash ^= (long)className.charAt(i);
+                        hash *= 1099511628211L;
+                        ##先白名单
+                        if (Arrays.binarySearch(this.acceptHashCodes, hash) &amp;gt;= 0) {
+                            clazz = TypeUtils.loadClass(typeName, this.defaultClassLoader, false);
+                            if (clazz != null) {
+                                return clazz;
+                            }
+                        }
+                        ##再黑名单，如果匹配到黑名单并且缓存中没有这个类的话抛出异常
+                        if (Arrays.binarySearch(this.denyHashCodes, hash) &amp;gt;= 0 &amp;amp;&amp;amp; TypeUtils.getClassFromMapping(typeName) == null) {
+                            throw new JSONException(&amp;#34;autoType is not support. &amp;#34; + typeName);
+                        }
+                    }
+                }
+
+if (clazz == null) {
+    ##在TypeUtils.mappings中寻找缓存的class
+    clazz = TypeUtils.getClassFromMapping(typeName);
+}
+if (clazz == null) {
+    ##在deserializers中寻找这个类
+    clazz = this.deserializers.findClass(typeName);
+}
+##如果clazz有了值则返回clazz，如果没有 抛出异常
+if (clazz != null) {
+    if (expectClass != null &amp;amp;&amp;amp; clazz != HashMap.class &amp;amp;&amp;amp; !expectClass.isAssignableFrom(clazz)) {
+        throw new JSONException(&amp;#34;type not match. &amp;#34; + typeName + &amp;#34; -&amp;gt; &amp;#34; + expectClass.getName());
+    } else {
+        return clazz;
+    }
+} else {
+	  ##autoTypeSupport没开启的情况
+    if (!this.autoTypeSupport) {
+        long hash = h3;
+
+        for(int i = 3; i &amp;lt; className.length(); ++i) {
+            char c = className.charAt(i);
+            hash ^= (long)c;
+            hash *= 1099511628211L;
+            ##先匹配黑名单，如果匹配到直接抛出异常
+            if (Arrays.binarySearch(this.denyHashCodes, hash) &amp;gt;= 0) {
+                throw new JSONException(&amp;#34;autoType is not support. &amp;#34; + typeName);
+            }
+
+            if (Arrays.binarySearch(this.acceptHashCodes, hash) &amp;gt;= 0) {
+                if (clazz == null) {
+                    clazz = TypeUtils.loadClass(typeName, this.defaultClassLoader, false);
+                }
+
+                if (expectClass != null &amp;amp;&amp;amp; expectClass.isAssignableFrom(clazz)) {
+                    throw new JSONException(&amp;#34;type not match. &amp;#34; + typeName + &amp;#34; -&amp;gt; &amp;#34; + expectClass.getName());
+                }
+
+                return clazz;
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1.2.32校验逻辑
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211160902080.png&#34; alt=&#34;image-20221116090226996&#34;&gt;
+这里出现了逻辑问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开启autoTypeSupport时：先匹配白名单，匹配到的话直接return clazz；如果没有匹配到则匹配黑名单，当匹配到黑名单并且mappings中没有这个类的缓存的话才会抛出异常。对比1.2.32的校验逻辑，只要匹配到黑名单就会抛出异常。因此1.2.25-1.2.32版本受autoTypeSupport的影响&lt;/li&gt;
+&lt;li&gt;不开启autoTypeSupport时，直接匹配黑名单，匹配到的话抛出异常&lt;/li&gt;
+&lt;/ol&gt;
 </content>
             
             
