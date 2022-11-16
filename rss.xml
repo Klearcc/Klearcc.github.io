@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 16 Nov 2022 17:37:05 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 16 Nov 2022 17:40:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -115,6 +115,7 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h5 id=&#34;记录学习过程强烈建议仅仅做参考学习请移至httpssu18orghttpssu18orgsu18yyds&#34;&gt;记录学习过程，强烈建议仅仅做参考。学习请移至&lt;a href=&#34;https://su18.org/&#34;&gt;https://su18.org/&lt;/a&gt;，su18yyds.&lt;/h5&gt;
+&lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&#34;fastjson简介&#34;&gt;Fastjson简介&lt;/h2&gt;
 &lt;p&gt;Fastjson是ali的开源JSON解析库，他可以解析JSON格式的字符串。支持将javabean序列化为JSON字符串，童也支持将JSON字符串反序列化为Java Bean。&lt;/p&gt;
 &lt;h2 id=&#34;fastjson使用&#34;&gt;Fastjson使用&lt;/h2&gt;

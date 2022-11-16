@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-11-16T17:37:05&#43;08:00</updated>
+    <updated>2022-11-16T17:40:04&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -99,7 +99,7 @@
             <title type="text">全版本fastjson反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/" />
             <id>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</id>
-            <updated>2022-11-16T16:37:41&#43;08:00</updated>
+            <updated>2022-11-16T17:40:01&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -109,6 +109,7 @@
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">记录学习过程，强烈建议仅仅做参考。学习请……</summary>
             
                 <content type="html">&lt;h5 id=&#34;记录学习过程强烈建议仅仅做参考学习请移至httpssu18orghttpssu18orgsu18yyds&#34;&gt;记录学习过程，强烈建议仅仅做参考。学习请移至&lt;a href=&#34;https://su18.org/&#34;&gt;https://su18.org/&lt;/a&gt;，su18yyds.&lt;/h5&gt;
+&lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&#34;fastjson简介&#34;&gt;Fastjson简介&lt;/h2&gt;
 &lt;p&gt;Fastjson是ali的开源JSON解析库，他可以解析JSON格式的字符串。支持将javabean序列化为JSON字符串，童也支持将JSON字符串反序列化为Java Bean。&lt;/p&gt;
 &lt;h2 id=&#34;fastjson使用&#34;&gt;Fastjson使用&lt;/h2&gt;
