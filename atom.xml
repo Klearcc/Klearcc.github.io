@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-11-17T08:45:35&#43;08:00</updated>
+    <updated>2022-11-17T08:51:43&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -99,7 +99,7 @@
             <title type="text">全版本fastjson反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/" />
             <id>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</id>
-            <updated>2022-11-17T08:45:28&#43;08:00</updated>
+            <updated>2022-11-17T08:51:31&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -134,7 +134,8 @@
 - &lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#%E7%BB%95%E8%BF%87%E9%9C%80%E5%BC%80%E5%90%AFautotypesupport-3&#34;&gt;绕过（需开启AutoTypeSupport）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#fastjson-1247&#34;&gt;Fastjson-1.2.47&lt;/a&gt;
 - &lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#%E5%BD%B1%E5%93%8D%E7%89%88%E6%9C%AC&#34;&gt;影响版本&lt;/a&gt;
-- &lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#%E5%88%86%E6%9E%90&#34;&gt;分析&lt;/a&gt;&lt;/li&gt;
+- &lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#%E5%88%86%E6%9E%90&#34;&gt;分析&lt;/a&gt;
+- &lt;a href=&#34;https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/#payload&#34;&gt;payload&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;记录学习过程强烈建议仅仅做参考学习请移至httpssu18orghttpssu18orgsu18yyds&#34;&gt;记录学习过程，强烈建议仅仅做参考。学习请移至&lt;a href=&#34;https://su18.org/&#34;&gt;https://su18.org/&lt;/a&gt;，su18yyds.&lt;/h5&gt;
 &lt;h2 id=&#34;fastjson简介&#34;&gt;Fastjson简介&lt;/h2&gt;
@@ -466,8 +467,8 @@ autoTypeSupport检测完后，现在clazz不为空，DedaultHSONParser#parseObje
 现在恶意类已经被加载到mappings，再次用恶意类进行@type请求时就可以绕过。所以payload
 以上为第一个test解析过程;test2解析时很简单了,mappings中有了缓存，直接从缓存中getClass
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161614252.png&#34; alt=&#34;image-20221116161423207&#34;&gt;
-然后return clazz -&amp;gt; setResolveStatus(2) -&amp;gt; 根据clazz类型分配deserialzer ......参考之前版本的反序列化流程
-payload&lt;/p&gt;
+然后return clazz -&amp;gt; setResolveStatus(2) -&amp;gt; 根据clazz类型分配deserialzer ......参考之前版本的反序列化流程&lt;/p&gt;
+&lt;h5 id=&#34;payload&#34;&gt;payload&lt;/h5&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
     &amp;#34;test&amp;#34;: {
         &amp;#34;@type&amp;#34;: &amp;#34;java.lang.Class&amp;#34;,
