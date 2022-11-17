@@ -245,7 +245,7 @@
 
             
 
-            <div class="post-body e-content">
+            <nav class="contents"></nav><div class="post-body e-content">
                 <p>提取相关ip</p>
 <pre tabindex="0"><code>cat ./* |grep -E &#39;^&lt;a href=&#34;/&#39;|grep -vE &#39;ipchaxun.com&lt;/a&gt;$|&#34;&gt;&lt;/a&gt;$&#39;|awk -F &#39;/&#39; &#39;{print$2}&#39;|sort|uniq
 </code></pre>
