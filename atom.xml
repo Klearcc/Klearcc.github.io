@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-27T18:26:35&#43;08:00</updated>
+    <updated>2022-12-27T18:28:22&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">log4j2反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/log4j2/" />
             <id>https://klearcc.github.io/post/log4j2/</id>
-            <updated>2022-12-27T18:24:16&#43;08:00</updated>
+            <updated>2022-12-27T18:28:18&#43;08:00</updated>
             <published>2022-12-27T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
