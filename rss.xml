@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 13 Dec 2022 17:47:42 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 27 Dec 2022 17:11:52 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -68,6 +68,11 @@ _A:
 转到福好处执行指令&lt;/p&gt;
 &lt;p&gt;ret
 跳转到lr(x30)地址 的地方&lt;/p&gt;
+&lt;h5 id=&#34;函数的参数和局部变量&#34;&gt;函数的参数和局部变量&lt;/h5&gt;
+&lt;p&gt;叶子函数不用开辟栈空间
+arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入栈。
+函数的返回值是放在x0寄存器内&lt;/p&gt;
+&lt;h5 id=&#34;标记寄存器&#34;&gt;标记寄存器&lt;/h5&gt;
 </description>
                 
                 

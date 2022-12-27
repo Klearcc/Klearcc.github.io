@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-13T17:47:42&#43;08:00</updated>
+    <updated>2022-12-27T17:11:52&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">ios慢慢学</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/" />
             <id>https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/</id>
-            <updated>2022-12-12T14:47:20&#43;08:00</updated>
+            <updated>2022-12-15T21:48:10&#43;08:00</updated>
             <published>2022-12-07T21:14:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -59,6 +59,11 @@ _A:
 转到福好处执行指令&lt;/p&gt;
 &lt;p&gt;ret
 跳转到lr(x30)地址 的地方&lt;/p&gt;
+&lt;h5 id=&#34;函数的参数和局部变量&#34;&gt;函数的参数和局部变量&lt;/h5&gt;
+&lt;p&gt;叶子函数不用开辟栈空间
+arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入栈。
+函数的返回值是放在x0寄存器内&lt;/p&gt;
+&lt;h5 id=&#34;标记寄存器&#34;&gt;标记寄存器&lt;/h5&gt;
 </content>
             
             
@@ -91,7 +96,7 @@ _A:
             <title type="text">cc链分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/cc/" />
             <id>https://klearcc.github.io/post/cc/</id>
-            <updated>2022-12-03T15:16:12&#43;08:00</updated>
+            <updated>2022-12-14T21:03:17&#43;08:00</updated>
             <published>2022-12-03T15:14:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
