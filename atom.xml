@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-27T18:24:19&#43;08:00</updated>
+    <updated>2022-12-27T18:26:35&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -150,82 +150,6 @@ DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;
                             
                             
                                 <category scheme="https://klearcc.github.io/tags/java/" term="java" label="java" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">ios慢慢学</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/" />
-            <id>https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/</id>
-            <updated>2022-12-15T21:48:10&#43;08:00</updated>
-            <published>2022-12-07T21:14:27&#43;08:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">One 数据存取 cpu先将数据存储到低32位寄……</summary>
-            
-                <content type="html">&lt;h2 id=&#34;one&#34;&gt;One&lt;/h2&gt;
-&lt;h5 id=&#34;数据存取&#34;&gt;数据存取&lt;/h5&gt;
-&lt;p&gt;cpu先将数据存储到低32位寄存器	x0-x28 fp lr sp&lt;/p&gt;
-&lt;h5 id=&#34;pc寄存器&#34;&gt;pc寄存器&lt;/h5&gt;
-&lt;p&gt;指向 当前要执行的指令&lt;/p&gt;
-&lt;h5 id=&#34;sp寄存器&#34;&gt;SP寄存器&lt;/h5&gt;
-&lt;p&gt;Arm64位寄存器占8个字节&lt;/p&gt;
-&lt;p&gt;栈：程序从内存中开辟空间时 从高地址往低地址开辟。
-堆：从低地址向高地址开辟&lt;/p&gt;
-&lt;p&gt;在哪里 那里就是栈。32位POP PUSH已经取消了
-读/写数据都是往高地址读写	
-str 将数据从寄存器读出来，写到内存中
-Stp 可以操作两个寄存器
-ldr 相反&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;.text
-.global _A
-_A:
-    sub sp,sp,#20;  //sp寄存器的内存地址减32
-    stp x0,x1,[sp,#0x10]；   //将x0 x1寄存器的值 存到 sp地址+0x10的 内存区域。arm64 一个寄存器占8个字节
-    ldp x1,x0,[sp,#0x10];   //将位于sp地址+0x10 的内存区域的值，存到x1 x0寄存器内
-    add sp,sp,#20;  //复位
-    ret
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;fp寄存器&#34;&gt;FP寄存器&lt;/h5&gt;
-&lt;p&gt;很少用&lt;/p&gt;
-&lt;h5 id=&#34;bl和ret&#34;&gt;bl和ret&lt;/h5&gt;
-&lt;p&gt;bl
-将下一条指令的地址放到lr(x30)寄存器  即：返回地址
-转到福好处执行指令&lt;/p&gt;
-&lt;p&gt;ret
-跳转到lr(x30)地址 的地方&lt;/p&gt;
-&lt;h5 id=&#34;函数的参数和局部变量&#34;&gt;函数的参数和局部变量&lt;/h5&gt;
-&lt;p&gt;叶子函数不用开辟栈空间
-arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入栈。
-函数的返回值是放在x0寄存器内&lt;/p&gt;
-&lt;h5 id=&#34;标记寄存器&#34;&gt;标记寄存器&lt;/h5&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/ios/" term="IOS" label="IOS" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/%E9%80%86%E5%90%91/" term="逆向" label="逆向" />
                             
                         
                     
@@ -2343,6 +2267,68 @@ docker volume create arl_db
 docker-compose pull
 docker-compose up -d&lt;/p&gt;
 &lt;p&gt;默认端口5003 (https), 默认用户名密码admin/arlpass&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/" />
+            <id>https://klearcc.github.io/post/ios%E9%80%86%E5%90%91/</id>
+            <updated>2022-12-27T18:26:30&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">One 数据存取 cpu先将数据存储到低32位寄……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;one&#34;&gt;One&lt;/h2&gt;
+&lt;h5 id=&#34;数据存取&#34;&gt;数据存取&lt;/h5&gt;
+&lt;p&gt;cpu先将数据存储到低32位寄存器	x0-x28 fp lr sp&lt;/p&gt;
+&lt;h5 id=&#34;pc寄存器&#34;&gt;pc寄存器&lt;/h5&gt;
+&lt;p&gt;指向 当前要执行的指令&lt;/p&gt;
+&lt;h5 id=&#34;sp寄存器&#34;&gt;SP寄存器&lt;/h5&gt;
+&lt;p&gt;Arm64位寄存器占8个字节&lt;/p&gt;
+&lt;p&gt;栈：程序从内存中开辟空间时 从高地址往低地址开辟。
+堆：从低地址向高地址开辟&lt;/p&gt;
+&lt;p&gt;在哪里 那里就是栈。32位POP PUSH已经取消了
+读/写数据都是往高地址读写	
+str 将数据从寄存器读出来，写到内存中
+Stp 可以操作两个寄存器
+ldr 相反&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;.text
+.global _A
+_A:
+    sub sp,sp,#20;  //sp寄存器的内存地址减32
+    stp x0,x1,[sp,#0x10]；   //将x0 x1寄存器的值 存到 sp地址+0x10的 内存区域。arm64 一个寄存器占8个字节
+    ldp x1,x0,[sp,#0x10];   //将位于sp地址+0x10 的内存区域的值，存到x1 x0寄存器内
+    add sp,sp,#20;  //复位
+    ret
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;fp寄存器&#34;&gt;FP寄存器&lt;/h5&gt;
+&lt;p&gt;很少用&lt;/p&gt;
+&lt;h5 id=&#34;bl和ret&#34;&gt;bl和ret&lt;/h5&gt;
+&lt;p&gt;bl
+将下一条指令的地址放到lr(x30)寄存器  即：返回地址
+转到福好处执行指令&lt;/p&gt;
+&lt;p&gt;ret
+跳转到lr(x30)地址 的地方&lt;/p&gt;
+&lt;h5 id=&#34;函数的参数和局部变量&#34;&gt;函数的参数和局部变量&lt;/h5&gt;
+&lt;p&gt;叶子函数不用开辟栈空间
+arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入栈。
+函数的返回值是放在x0寄存器内&lt;/p&gt;
+&lt;h5 id=&#34;标记寄存器&#34;&gt;标记寄存器&lt;/h5&gt;
 </content>
             
             
