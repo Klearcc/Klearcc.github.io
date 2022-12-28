@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-28T16:28:36&#43;08:00</updated>
+    <updated>2022-12-28T16:52:08&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">log4j2反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/log4j2/" />
             <id>https://klearcc.github.io/post/log4j2/</id>
-            <updated>2022-12-28T16:28:26&#43;08:00</updated>
+            <updated>2022-12-28T16:52:05&#43;08:00</updated>
             <published>2022-12-27T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -183,6 +183,95 @@ DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;
 //            strLookupMap.put(&amp;quot;lower&amp;quot;, new LowerLookup());
 //            strLookupMap.put(&amp;quot;upper&amp;quot;, new UpperLookup());
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;检测&#34;&gt;检测&lt;/h2&gt;
+&lt;p&gt;标头&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Accept-Charset
+Accept-Datetime
+Accept-Encoding
+Accept-Language
+Authorization
+Cache-Control
+Cf-Connecting_ip
+Client-Ip
+Contact
+Cookie
+DNT
+Forwarded
+Forwarded-For
+Forwarded-For-Ip
+Forwarded-Proto
+From
+If-Modified-Since
+Max-Forwards
+Origin
+Originating-Ip
+Pragma
+Referer
+TE
+True-Client-IP
+True-Client-Ip
+Upgrade
+User-Agent
+Via
+Warning
+X-ATT-DeviceId
+X-Api-Version
+X-Att-Deviceid
+X-CSRFToken
+X-Client-Ip
+X-Correlation-ID
+X-Csrf-Token
+X-Do-Not-Track
+X-Foo
+X-Foo-Bar
+X-Forward-For
+X-Forward-Proto
+X-Forwarded
+X-Forwarded-By
+X-Forwarded-For
+X-Forwarded-For-Original
+X-Forwarded-Host
+X-Forwarded-Port
+X-Forwarded-Proto
+X-Forwarded-Protocol
+X-Forwarded-Scheme
+X-Forwarded-Server
+X-Forwarded-Ssl
+X-Forwarder-For
+X-Frame-Options
+X-From
+X-Geoip-Country
+X-HTTP-Method-Override
+X-Http-Destinationurl
+X-Http-Host-Override
+X-Http-Method
+X-Http-Method-Override
+X-Http-Path-Override
+X-Https
+X-Htx-Agent
+X-Hub-Signature
+X-If-Unmodified-Since
+X-Imbo-Test-Config
+X-Insight
+X-Ip
+X-Ip-Trail
+X-Leakix
+X-Originating-Ip
+X-ProxyUser-Ip
+X-Real-Ip
+X-Remote-Addr
+X-Remote-Ip
+X-Request-ID
+X-Requested-With
+X-UIDH
+X-Wap-Profile
+X-XSRF-TOKEN
+Authorization: Basic 
+Authorization: Bearer 
+Authorization: Oauth 
+Authorization: Token
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;burp插件：https://github.com/tangxiaofeng7/BurpLog4j2Scan
+yakit插件：Log4Shell 漏洞检测（自动检测版）&lt;/p&gt;
 &lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tttang.com/archive/1378/#toc_0x00&#34;&gt;https://tttang.com/archive/1378/#toc_0x00&lt;/a&gt;
 &lt;a href=&#34;https://www.cnpanda.net/sec/1114.html&#34;&gt;https://www.cnpanda.net/sec/1114.html&lt;/a&gt;&lt;/p&gt;
