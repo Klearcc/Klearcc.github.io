@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-28T16:11:06&#43;08:00</updated>
+    <updated>2022-12-28T16:21:32&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">log4j2反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/log4j2/" />
             <id>https://klearcc.github.io/post/log4j2/</id>
-            <updated>2022-12-28T16:11:02&#43;08:00</updated>
+            <updated>2022-12-28T16:21:30&#43;08:00</updated>
             <published>2022-12-27T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -119,7 +119,7 @@ jndiLookup允许通过LDAP检索变量，使用：&lt;/p&gt;
 第二个关键点 MessagePatternConverter#fomat
 这里寻找&lt;code&gt;${&lt;/code&gt;，如果找到就会对{中间的字符}解析并replace
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271525406.png&#34; alt=&#34;image-20221227152557347&#34;&gt;&lt;/p&gt;
-&lt;p&gt;-&amp;gt; substitute -&amp;gt; resolveVariable
+&lt;p&gt;-&amp;gt; substitute
 先看下当前类(StrSubstitutor)类中定义的几个变量：
 DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;，后缀是&lt;code&gt;}&lt;/code&gt;，还有两个赋值分隔符&lt;code&gt;:-&lt;/code&gt;、&lt;code&gt;:\\-&lt;/code&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271642768.png&#34; alt=&#34;image-20221227163025902&#34;&gt;
@@ -131,7 +131,8 @@ DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;
 然后多个if匹配赋值分割符&lt;code&gt;:-&lt;/code&gt;、&lt;code&gt;:\-&lt;/code&gt;，这些可以用来绕过waf
 - &lt;code&gt;:-&lt;/code&gt; 如果程序处理到 &lt;code&gt;${aaaa:-bbbb}&lt;/code&gt; 这样的字符串，处理的结果将会是 &lt;code&gt;bbbb&lt;/code&gt;，&lt;code&gt;:-&lt;/code&gt; 关键字将会被截取掉，而之前的字符串都会被舍弃掉。
 - &lt;code&gt;:\-&lt;/code&gt; 如果一个用 &lt;code&gt;a:b&lt;/code&gt; 表示的键值对的 key &lt;code&gt;a&lt;/code&gt; 中包含 &lt;code&gt;:&lt;/code&gt;，则需要使用转义来配合处理，例如 &lt;code&gt;${aaa:\\-bbb:-ccc}&lt;/code&gt;，代表 key 是，&lt;code&gt;aaa:bbb&lt;/code&gt;，value 是 &lt;code&gt;ccc&lt;/code&gt;。
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271643081.png&#34; alt=&#34;image-20221227164315019&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271643081.png&#34; alt=&#34;image-20221227164315019&#34;&gt;&lt;/p&gt;
+&lt;p&gt;-&amp;gt; resolveVariable
 处理完毕后，调用resolveVariable方法解析满足Lookup功能的语法，执行相应的lookup，将返回的结果替换原字符串后，再调佣subsitute递归循环处理。&lt;/p&gt;
 &lt;p&gt;-&amp;gt; lookup -&amp;gt; Interpolator#lookup
 先截取字符串的前缀值并转换为小写&lt;code&gt;jndi&lt;/code&gt;(也可以用来绕过过滤)，然后用name接收剩下的字符串&lt;code&gt;ldap://127.0.0.1:23457/Command8&lt;/code&gt;

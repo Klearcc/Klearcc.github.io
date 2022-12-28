@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 28 Dec 2022 16:11:06 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 28 Dec 2022 16:21:32 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -128,7 +128,7 @@ jndiLookup允许通过LDAP检索变量，使用：&lt;/p&gt;
 第二个关键点 MessagePatternConverter#fomat
 这里寻找&lt;code&gt;${&lt;/code&gt;，如果找到就会对{中间的字符}解析并replace
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271525406.png&#34; alt=&#34;image-20221227152557347&#34;&gt;&lt;/p&gt;
-&lt;p&gt;-&amp;gt; substitute -&amp;gt; resolveVariable
+&lt;p&gt;-&amp;gt; substitute
 先看下当前类(StrSubstitutor)类中定义的几个变量：
 DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;，后缀是&lt;code&gt;}&lt;/code&gt;，还有两个赋值分隔符&lt;code&gt;:-&lt;/code&gt;、&lt;code&gt;:\\-&lt;/code&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271642768.png&#34; alt=&#34;image-20221227163025902&#34;&gt;
@@ -140,7 +140,8 @@ DEFAULT_EACAPE是&lt;code&gt;$&lt;/code&gt;,前缀是&lt;code&gt;${&lt;/code&gt;
 然后多个if匹配赋值分割符&lt;code&gt;:-&lt;/code&gt;、&lt;code&gt;:\-&lt;/code&gt;，这些可以用来绕过waf
 - &lt;code&gt;:-&lt;/code&gt; 如果程序处理到 &lt;code&gt;${aaaa:-bbbb}&lt;/code&gt; 这样的字符串，处理的结果将会是 &lt;code&gt;bbbb&lt;/code&gt;，&lt;code&gt;:-&lt;/code&gt; 关键字将会被截取掉，而之前的字符串都会被舍弃掉。
 - &lt;code&gt;:\-&lt;/code&gt; 如果一个用 &lt;code&gt;a:b&lt;/code&gt; 表示的键值对的 key &lt;code&gt;a&lt;/code&gt; 中包含 &lt;code&gt;:&lt;/code&gt;，则需要使用转义来配合处理，例如 &lt;code&gt;${aaa:\\-bbb:-ccc}&lt;/code&gt;，代表 key 是，&lt;code&gt;aaa:bbb&lt;/code&gt;，value 是 &lt;code&gt;ccc&lt;/code&gt;。
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271643081.png&#34; alt=&#34;image-20221227164315019&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202212271643081.png&#34; alt=&#34;image-20221227164315019&#34;&gt;&lt;/p&gt;
+&lt;p&gt;-&amp;gt; resolveVariable
 处理完毕后，调用resolveVariable方法解析满足Lookup功能的语法，执行相应的lookup，将返回的结果替换原字符串后，再调佣subsitute递归循环处理。&lt;/p&gt;
 &lt;p&gt;-&amp;gt; lookup -&amp;gt; Interpolator#lookup
 先截取字符串的前缀值并转换为小写&lt;code&gt;jndi&lt;/code&gt;(也可以用来绕过过滤)，然后用name接收剩下的字符串&lt;code&gt;ldap://127.0.0.1:23457/Command8&lt;/code&gt;
