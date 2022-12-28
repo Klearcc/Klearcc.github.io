@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-28T14:03:18&#43;08:00</updated>
+    <updated>2022-12-28T16:11:06&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,17 +20,16 @@
             <title type="text">log4j2反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/log4j2/" />
             <id>https://klearcc.github.io/post/log4j2/</id>
-            <updated>2022-12-28T14:02:58&#43;08:00</updated>
+            <updated>2022-12-28T16:11:02&#43;08:00</updated>
             <published>2022-12-27T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">log4j2反序列化(CVE-2021-……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">介绍 Apache Log4j2 是 Apache 软件基金会下的一个开源的基于……</summary>
             
-                <content type="html">&lt;h2 id=&#34;log4j2反序列化cve-2021-44228漏洞分析&#34;&gt;log4j2反序列化(CVE-2021-44228)漏洞分析&lt;/h2&gt;
-&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://logging.apache.org/log4j/2.x/index.html&#34;&gt;Apache Log4j2&lt;/a&gt; 是 Apache 软件基金会下的一个&lt;a href=&#34;https://github.com/apache/logging-log4j2&#34;&gt;开源&lt;/a&gt;的基于 Java 的日志记录工具。Log4j2 是一个 Log4j 1.x 的重写，并且引入了大量丰富的特性。该日志框架被大量用于业务系统开发，用来记录日志信息。由于其优异的性能而被广泛的应用于各种常见的 Web 服务中。&lt;/p&gt;
 &lt;p&gt;2021 年 12 月 9 日晚，Log4j2 的一个远程代码执行漏洞的利用细节被公开。攻击者使用 &lt;code&gt;${}&lt;/code&gt; 关键标识符触发 JNDI 注入漏洞，当程序将用户输入的数据进行日志记录时，即可触发此漏洞，成功利用此漏洞可以在目标服务器上执行任意代码.&lt;/p&gt;
 &lt;p&gt;目前，已经为此漏洞颁发了 CVE 编号：&lt;a href=&#34;https://www.cve.org/CVERecord?id=CVE-2021-44228&#34;&gt;CVE-2021-44228&lt;/a&gt;，根据&lt;a href=&#34;https://logging.apache.org/log4j/2.x/security.html&#34;&gt;官方安全公告&lt;/a&gt;，以下为相关信息：
