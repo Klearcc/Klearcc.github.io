@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2022-12-28T17:46:10&#43;08:00</updated>
+    <updated>2023-02-04T22:54:15&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,49 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">github-copilot报错、无法连接解决</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/github-copilot/" />
+            <id>https://klearcc.github.io/post/github-copilot/</id>
+            <updated>2023-02-04T22:53:47&#43;08:00</updated>
+            <published>2023-02-04T21:14:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">date：2023年 2月 4日 週六 22時4……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;date2023年-2月-4日-週六-22時49分59秒-cst&#34;&gt;date：2023年 2月 4日 週六 22時49分59秒 CST&lt;/h3&gt;
+&lt;p&gt;idea安装最新版本github-copilot插件&lt;/p&gt;
+&lt;p&gt;下载github-copilot-intellij-1.1.24.1610版本的插件，&lt;/p&gt;
+&lt;p&gt;将包内lib目录下core-1.1.24.jar拷贝到~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib下替换，再将文件名改为core-1.2.1.jar即可连接至github。&lt;/p&gt;
+&lt;p&gt;（若账户已有github-copilot许可但提示无许可，打开https://github.com/settings/copilot选择allow保存，等2min~重新连接）&lt;/p&gt;
+&lt;p&gt;（IntelliJIdea2022.2、core-1.2.1.jar的版本按需修改。）&lt;/p&gt;
+&lt;p&gt;插件链接https://plugins.jetbrains.com/plugin/17718-github-copilot/versions/stable&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%8F%92%E4%BB%B6/" term="插件" label="插件" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">log4j2反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/log4j2/" />
@@ -400,7 +443,7 @@ yakit插件：Log4Shell 漏洞检测（自动检测版）&lt;/p&gt;
             <title type="text">shiro-550漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_shiro/" />
             <id>https://klearcc.github.io/post/javasec_shiro/</id>
-            <updated>2022-12-03T15:27:45&#43;08:00</updated>
+            <updated>2023-01-10T13:58:10&#43;08:00</updated>
             <published>2022-11-23T21:14:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -443,6 +486,7 @@ yakit插件：Log4Shell 漏洞检测（自动检测版）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;shiro550&#34;&gt;Shiro550&lt;/h2&gt;
 &lt;p&gt;影响版本：1.x &amp;lt; 1.2.5&lt;/p&gt;
+&lt;p&gt;待续/&lt;/p&gt;
 </content>
             
             
@@ -2546,6 +2590,78 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
             
                 <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/xwin%E4%BF%A1%E6%81%AF/" />
+            <id>https://klearcc.github.io/post/xwin%E4%BF%A1%E6%81%AF/</id>
+            <updated>2023-01-08T14:53:02&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/x%E5%86%85%E5%AD%98%E9%A9%AC/" />
+            <id>https://klearcc.github.io/post/x%E5%86%85%E5%AD%98%E9%A9%AC/</id>
+            <updated>2023-01-06T12:25:30&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">扫盲 分类 • 动态注册servlet/fil……</summary>
+            
+                <content type="html">&lt;h1 id=&#34;扫盲&#34;&gt;扫盲&lt;/h1&gt;
+&lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
+&lt;p&gt;• 动态注册servlet/filter/listener（使用 servlet-api 的具体实现）&lt;/p&gt;
+&lt;p&gt;• 动态注册interceptor/controller（使用框架如 spring/struts2）&lt;/p&gt;
+&lt;p&gt;• 动态注册使用职责链设计模式的中间件、框架的实现（例如 Tomcat的Pipeline&amp;amp;Valve，Grizzly的FilterChain&amp;amp;Filter等等）&lt;/p&gt;
+&lt;p&gt;• 使用java agent技术写入字节码&lt;/p&gt;
+&lt;h2 id=&#34;类-变量-作用&#34;&gt;类 变量 作用&lt;/h2&gt;
+&lt;p&gt;FilterMaps： FilterMaps中的&lt;code&gt;FilterMap&lt;/code&gt;则记录了不同filter与&lt;code&gt;UrlPattern&lt;/code&gt;的映射关系&lt;/p&gt;
+&lt;p&gt;FilterDefs：FilterDefs成员变量是一个HashMap对象，存储了filter名称与相应&lt;code&gt;FilterDef&lt;/code&gt;的对象的键值对，而&lt;code&gt;FilterDef&lt;/code&gt;对象则存储了Filter包括名称、描述、类名、Filter实例在内等与filter自身相关的数据&lt;/p&gt;
+&lt;p&gt;FilterConfigs：是一个HashMap对象，里面存储了filter名称与对应的&lt;code&gt;ApplicationFilterConfig&lt;/code&gt;对象的键值对，在&lt;code&gt;ApplicationFilterConfig&lt;/code&gt;对象中则存储了Filter实例以及该实例在web.xml中的注册信息。&lt;/p&gt;
+&lt;p&gt;FilterChain：过滤器链，该对象上的 doFilter 方法能依次调用链上的 Filter&lt;/p&gt;
+&lt;p&gt;ApplicationFilterChain：调用过滤器链&lt;/p&gt;
+&lt;p&gt;ApplicationFilterConfig：获取过滤器&lt;/p&gt;
+&lt;p&gt;ApplicationFilterFactory：组装过滤器链&lt;/p&gt;
+&lt;p&gt;WebXml：存放 web.xml 中内容的类&lt;/p&gt;
+&lt;p&gt;ContextConfig：Web应用的上下文配置类&lt;/p&gt;
+&lt;p&gt;StandardContext：Context接口的标准实现类，一个 Context 代表一个 Web 应用，其下可以包含多个 Wrapper&lt;/p&gt;
+&lt;p&gt;StandardWrapperValve：一个 Wrapper 的标准实现类，一个 Wrapper 代表一个Servlet&lt;/p&gt;
+</content>
             
             
             
