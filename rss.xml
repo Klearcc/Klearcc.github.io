@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 06 Feb 2023 15:20:02 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 06 Feb 2023 15:27:12 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -48,11 +48,11 @@
 &lt;p&gt;&lt;del&gt;插件链接https://plugins.jetbrains.com/plugin/17718-github-copilot/versions/stable&lt;/del&gt;&lt;/p&gt;
 &lt;h3 id=&#34;date2023年-2月-6日-週一-15時03分17秒-cst&#34;&gt;date：2023年 2月 6日 週一 15時03分17秒 CST&lt;/h3&gt;
 &lt;h3 id=&#34;goland-idea-pycharm都已尝试亲测有效无效砍头&#34;&gt;goland idea pycharm都已尝试，亲测有效，无效砍头&lt;/h3&gt;
-&lt;p&gt;挂不挂代理都可，随心情
-1、下载github-copilot-intellij-1.1.35.2063&lt;code&gt;https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=243369&lt;/code&gt;和1417版&lt;code&gt;https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=172765&lt;/code&gt;
-2、idea正常安装2063版本的&lt;code&gt;copilot&lt;/code&gt;
-3、关掉idea，将包内1417版本&lt;code&gt;copilot&lt;/code&gt;内lib目录下&lt;code&gt;core-1.1.20.jar&lt;/code&gt;拷贝到&lt;code&gt;~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib&lt;/code&gt;下替换，再将文件名改为&lt;code&gt;core-1.1.35.jar&lt;/code&gt;
-4、进入idea插件设置，会提示要更新&lt;code&gt;copilot&lt;/code&gt;，点击更新+重启idea后即可正常使用&lt;/p&gt;
+&lt;p&gt;挂不挂代理都可，随心情&lt;/p&gt;
+&lt;p&gt;1、下载github-copilot-intellij-1.1.35.2063&lt;code&gt;https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=243369&lt;/code&gt;和1417版&lt;code&gt;https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=172765&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、idea正常安装2063版本的&lt;code&gt;copilot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、关掉idea，将包内1417版本&lt;code&gt;copilot&lt;/code&gt;内lib目录下&lt;code&gt;core-1.1.20.jar&lt;/code&gt;拷贝到&lt;code&gt;~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib&lt;/code&gt;下替换，再将文件名改为&lt;code&gt;core-1.1.35.jar&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4、进入idea插件设置，会提示要更新&lt;code&gt;copilot&lt;/code&gt;，点击更新+重启idea后即可正常使用&lt;/p&gt;
 &lt;p&gt;重启idea即可正常使用：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202302061433333.png&#34; alt=&#34;image-20230206143308282&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202302061508006.png&#34; alt=&#34;image-20230206150838973&#34;&gt;&lt;/p&gt;
