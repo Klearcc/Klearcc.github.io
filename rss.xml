@@ -23,13 +23,13 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 04 Feb 2023 22:54:15 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 06 Feb 2023 15:04:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
         
             <item>
-                <title>github-copilot报错、无法连接解决</title>
+                <title>github-copilot报错、无法连接、不自动提示问题解决</title>
                 <link>https://klearcc.github.io/post/github-copilot/</link>
                 <guid isPermaLink="true">https://klearcc.github.io/post/github-copilot/</guid>
                 <pubDate>Sat, 04 Feb 2023 21:14:27 &#43;0800</pubDate>
@@ -40,12 +40,21 @@
                 
                     <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;date2023年-2月-4日-週六-22時49分59秒-cst&#34;&gt;date：2023年 2月 4日 週六 22時49分59秒 CST&lt;/h3&gt;
-&lt;p&gt;idea安装最新版本github-copilot插件&lt;/p&gt;
-&lt;p&gt;下载github-copilot-intellij-1.1.24.1610版本的插件，&lt;/p&gt;
-&lt;p&gt;将包内lib目录下core-1.1.24.jar拷贝到~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib下替换，再将文件名改为core-1.2.1.jar即可连接至github。&lt;/p&gt;
-&lt;p&gt;（若账户已有github-copilot许可但提示无许可，打开https://github.com/settings/copilot选择allow保存，等2min~重新连接）&lt;/p&gt;
-&lt;p&gt;（IntelliJIdea2022.2、core-1.2.1.jar的版本按需修改。）&lt;/p&gt;
-&lt;p&gt;插件链接https://plugins.jetbrains.com/plugin/17718-github-copilot/versions/stable&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;idea安装最新版本github-copilot插件&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;下载github-copilot-intellij-1.1.24.1610版本的插件，&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;将包内lib目录下core-1.1.24.jar拷贝到~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib下替换，再将文件名改为core-1.2.1.jar即可连接至github。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;（若账户已有github-copilot许可但提示无许可，打开https://github.com/settings/copilot选择allow保存，等2min~重新连接）&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;（IntelliJIdea2022.2、core-1.2.1.jar的版本按需修改。）&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;插件链接https://plugins.jetbrains.com/plugin/17718-github-copilot/versions/stable&lt;/del&gt;&lt;/p&gt;
+&lt;h3 id=&#34;date2023年-2月-6日-週一-15時03分17秒-cst&#34;&gt;date：2023年 2月 6日 週一 15時03分17秒 CST&lt;/h3&gt;
+&lt;p&gt;亲测有效&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+1、下载github-copilot-intellij-1.1.35.2063（https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=243369）和1417版（https://plugins.jetbrains.com/plugin/download?rel=true&amp;amp;updateId=172765）
+2、idea正常安装2063版本的copilot
+3、关掉idea，将包内1417版本copilot内lib目录下core-1.1.20.jar拷贝到~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins/github-copilot-intellij/lib下替换，再将文件名改为core-1.1.35.jar
+4、进入idea插件设置，会提示要更新copilot，点击更新+重启后即可正常使用
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;重启后会提示下面这个：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202302061433333.png&#34; alt=&#34;image-20230206143308282&#34;&gt;&lt;/p&gt;
 </description>
                 
                 
@@ -1933,28 +1942,31 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
 &lt;p&gt;下载proxychains-ng &lt;a href=&#34;https://github.com/rofl0r/proxychains-ng&#34;&gt;https://github.com/rofl0r/proxychains-ng&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;解压　　tar -xvf proxychainsxxxxxx&lt;/p&gt;
 &lt;p&gt;重点来了 ，三次编译&lt;/p&gt;
-&lt;p&gt;第一次编译：&lt;/p&gt;
-&lt;p&gt;cd proxychains-ng-4.16
+&lt;p&gt;第一次编译：
+cd proxychains-ng-4.16
 make clean
-CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot; ./configure
-make&lt;/p&gt;
-&lt;p&gt;将libproxychains4.dylib复制到新建一个bak目录下&lt;/p&gt;
-&lt;p&gt;mkdir bak&lt;/p&gt;
-&lt;p&gt;cp libproxychains4.dylib ./bak&lt;/p&gt;
-&lt;p&gt;第二次编译：&lt;/p&gt;
-&lt;p&gt;make clean&lt;/p&gt;
-&lt;p&gt;CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot; ./configure&lt;/p&gt;
-&lt;p&gt;make&lt;/p&gt;
-&lt;p&gt;将libproxychains4.dylib复制到bak目录下，覆盖&lt;/p&gt;
-&lt;p&gt;cp libproxychains4.dylib ./bak&lt;/p&gt;
-&lt;p&gt;第三次编译：&lt;/p&gt;
-&lt;p&gt;make clean
-CFLAGS=&amp;quot;-arch arm64&amp;quot; LDFLAGS=&amp;quot;-arch arm64&amp;quot; ./configure
-sudo make install&lt;/p&gt;
-&lt;p&gt;使用install.sh复制./bak/libproxychains4.dylib 到/usr/local/lib/目录&lt;/p&gt;
-&lt;p&gt;sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
-&lt;p&gt;配置文件在/etc/proxychains.conf&lt;/p&gt;
-&lt;p&gt;sudo vi /etc/proxychains.conf&lt;/p&gt;
+CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
+./configure
+make
+将libproxychains4.dylib复制到新建一个bak目录下
+mkdir bak
+cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第二次编译：
+make clean
+CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
+./configure
+make
+将libproxychains4.dylib复制到bak目录下，覆盖
+cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第三次编译：
+make clean
+CFLAGS=&amp;quot;-arch arm64&amp;quot; LDFLAGS=&amp;quot;-arch arm64&amp;quot;
+./configure
+sudo make install
+使用install.sh复制./bak/libproxychains4.dylib 到/usr/local/lib/目录
+sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
+&lt;p&gt;配置文件在/etc/proxychains.conf
+sudo vi /etc/proxychains.conf&lt;/p&gt;
 </description>
                 
                 
