@@ -23,10 +23,62 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 06 Feb 2023 15:27:12 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 08 Mar 2023 18:33:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Vultr申请免费云主机</title>
+                <link>https://klearcc.github.io/post/vultr/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/vultr/</guid>
+                <pubDate>Wed, 08 Mar 2023 17:08:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h3 id=&#34;date-2023年-3月-8日-週三-18時31分44秒-cst&#34;&gt;date: 2023年 3月 8日 週三 18時31分44秒 CST&lt;/h3&gt;
+&lt;h3 id=&#34;知名云服务商-vultr-今天宣布推出一款免费云主机&#34;&gt;知名云服务商 Vultr 今天宣布推出一款免费云主机。&lt;/h3&gt;
+&lt;p&gt;该免费计划的规格为：1 vCPU，0.5 GB 内存，10GB 存储，2TB流量。用户可以用该虚拟云主机运行许多小型网站和 Web 应用程序。要获得免费云主机，需要绑定信用卡并且开启双因素认证。用户可以使用Google 身份验证器来开启双因素认证。消费过的老用户可以直接申请，不一定需要信用卡。用户在提交申请之后还需要经过审核，获准加入该计划后，用户将会通过电子邮件收到通知。&lt;/p&gt;
+&lt;p&gt;本人申请时候没有遇到要绑定信用卡，只是开启了二次认证。这个配置做科学上网服务端挺不错的。&lt;/p&gt;
+&lt;p&gt;申请地址：https://www.vultr.com/free-tier-program/&lt;/p&gt;
+&lt;p&gt;另外，点击&lt;a href=&#34;https://www.vultr.com/?ref=9200964-8H&#34;&gt;这里&lt;/a&gt;注册会有100美刀的赠金。&lt;/p&gt;
+&lt;p&gt;祝好运。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vultr.com/?ref=9200964-8H&#34;&gt;https://www.vultr.com/?ref=9200964-8H&lt;/a&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/vultr/">Vultr</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/%E4%BA%91%E4%B8%BB%E6%9C%BA/">云主机</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/vps/">vps</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>github-copilot报错、无法连接、不自动提示问题解决</title>
@@ -2534,6 +2586,32 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;20230212&#34;&gt;20230212&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kali安装
+&lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
                 

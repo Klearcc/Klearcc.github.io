@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-02-06T15:27:12&#43;08:00</updated>
+    <updated>2023-03-08T18:33:58&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -17,10 +17,65 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
+            <title type="text">Vultr申请免费云主机</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/vultr/" />
+            <id>https://klearcc.github.io/post/vultr/</id>
+            <updated>2023-03-08T18:33:54&#43;08:00</updated>
+            <published>2023-03-08T17:08:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">date: 2023年 3月 8日 週三 18時31分44……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;date-2023年-3月-8日-週三-18時31分44秒-cst&#34;&gt;date: 2023年 3月 8日 週三 18時31分44秒 CST&lt;/h3&gt;
+&lt;h3 id=&#34;知名云服务商-vultr-今天宣布推出一款免费云主机&#34;&gt;知名云服务商 Vultr 今天宣布推出一款免费云主机。&lt;/h3&gt;
+&lt;p&gt;该免费计划的规格为：1 vCPU，0.5 GB 内存，10GB 存储，2TB流量。用户可以用该虚拟云主机运行许多小型网站和 Web 应用程序。要获得免费云主机，需要绑定信用卡并且开启双因素认证。用户可以使用Google 身份验证器来开启双因素认证。消费过的老用户可以直接申请，不一定需要信用卡。用户在提交申请之后还需要经过审核，获准加入该计划后，用户将会通过电子邮件收到通知。&lt;/p&gt;
+&lt;p&gt;本人申请时候没有遇到要绑定信用卡，只是开启了二次认证。这个配置做科学上网服务端挺不错的。&lt;/p&gt;
+&lt;p&gt;申请地址：https://www.vultr.com/free-tier-program/&lt;/p&gt;
+&lt;p&gt;另外，点击&lt;a href=&#34;https://www.vultr.com/?ref=9200964-8H&#34;&gt;这里&lt;/a&gt;注册会有100美刀的赠金。&lt;/p&gt;
+&lt;p&gt;祝好运。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vultr.com/?ref=9200964-8H&#34;&gt;https://www.vultr.com/?ref=9200964-8H&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/vultr/" term="Vultr" label="Vultr" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E4%BA%91%E4%B8%BB%E6%9C%BA/" term="云主机" label="云主机" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/vps/" term="vps" label="vps" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">github-copilot报错、无法连接、不自动提示问题解决</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/github-copilot/" />
             <id>https://klearcc.github.io/post/github-copilot/</id>
-            <updated>2023-02-06T15:27:02&#43;08:00</updated>
+            <updated>2023-02-06T15:47:54&#43;08:00</updated>
             <published>2023-02-04T21:14:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -772,7 +827,7 @@ gofish使用可自己百度
             <title type="text">全版本fastjson反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/" />
             <id>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</id>
-            <updated>2022-12-13T17:47:39&#43;08:00</updated>
+            <updated>2023-02-13T15:12:09&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -2603,6 +2658,35 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
             
                 <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/" />
+            <id>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</id>
+            <updated>2023-02-12T22:55:52&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">20230212 kali安装</summary>
+            
+                <content type="html">&lt;h2 id=&#34;20230212&#34;&gt;20230212&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kali安装
+&lt;/code&gt;&lt;/pre&gt;</content>
             
             
             
