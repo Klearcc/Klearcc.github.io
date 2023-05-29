@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-03-09T09:22:54&#43;08:00</updated>
+    <updated>2023-05-29T14:39:22&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,142 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">fastjson</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/fastjson%E5%BB%B6%E4%BC%B8/" />
+            <id>https://klearcc.github.io/post/fastjson%E5%BB%B6%E4%BC%B8/</id>
+            <updated>2023-05-29T14:39:04&#43;08:00</updated>
+            <published>2023-05-09T17:46:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">鉴别 1、dnslog {&amp;#34;@type&amp;#34;:&amp;#34;java.net.Inet4Address&amp;#34;,&amp;#34;val&amp;#34;:&amp;#34;jbblr.safeveryday.cc&amp;#34;} {&amp;#34;@type&amp;#34;: &amp;#34;java.net.InetSocketAddress&amp;#34;{&amp;#34;address&amp;#34;:,&amp;#34;val&amp;#34;: &amp;#34;b.jbblr.safeveryday.cc&amp;#34;}}</summary>
+            
+                <content type="html">&lt;h2 id=&#34;鉴别&#34;&gt;鉴别&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1、dnslog
+{&amp;#34;@type&amp;#34;:&amp;#34;java.net.Inet4Address&amp;#34;,&amp;#34;val&amp;#34;:&amp;#34;jbblr.safeveryday.cc&amp;#34;}
+{&amp;#34;@type&amp;#34;: &amp;#34;java.net.InetSocketAddress&amp;#34;{&amp;#34;address&amp;#34;:,&amp;#34;val&amp;#34;: &amp;#34;b.jbblr.safeveryday.cc&amp;#34;}}
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/java/" term="java" label="java" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">autoBot</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/autobot/" />
+            <id>https://klearcc.github.io/post/autobot/</id>
+            <updated>2023-04-16T16:23:52&#43;08:00</updated>
+            <published>2023-04-14T19:46:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">AutoBot virtualenvwrapper &amp;gt;pip install virtualenv &amp;gt;pip install virtualenvwrapper &amp;gt;mkvirtualenv ##不出意外会报错no……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;autobot&#34;&gt;AutoBot&lt;/h2&gt;
+&lt;h5 id=&#34;virtualenvwrapper&#34;&gt;virtualenvwrapper&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt;pip install virtualenv
+&amp;gt;pip install virtualenvwrapper
+&amp;gt;mkvirtualenv	##不出意外会报错not found
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;不出意外会报错mkvirtualenv not found ,解决：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;找到python virtualenvwrapper.sh可执行文件
+    pip uninstall virtualenv
+    执行后会提示python路径。
+    根据路径后面接上需要的文件，
+	我的：/Users/baicai/.pyenv/versions/3.9.1/bin/python
+		 /Users/baicai/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
+复制下面到~/.zshrc或~/.bash_profile,其中python路径和.sh文件路径按需修改
+    export WORKON_HOME=$HOME/.virtualenvs
+    export VIRTUALENVWRAPPER_PYTHON=/Users/baicai/.pyenv/versions/3.9.1/bin/python
+    export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=&amp;#39; -p /Users/baicai/.pyenv/versions/3.9.1/bin/python &amp;#39;
+    export PROJECT_HOME=$HOME/Devel
+    source /Users/baicai/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;virtualenv使用&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkvirtualenv xxx	创建基本环境
+rmvirtualenv xxx	删除环境
+workon				列出所有环境
+workon xxx			激活环境
+deactivate			退出环境
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/ai/" term="AI" label="AI" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">docker&amp;&amp;OrbStack</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/" />
+            <id>https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/</id>
+            <updated>2023-05-29T14:38:57&#43;08:00</updated>
+            <published>2023-04-14T19:46:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Docker&amp;amp;&amp;amp;OrbStack Docker OrbStack</summary>
+            
+                <content type="html">&lt;h2 id=&#34;dockerorbstack&#34;&gt;Docker&amp;amp;&amp;amp;OrbStack&lt;/h2&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;orbstack&#34;&gt;OrbStack&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/ai/" term="AI" label="AI" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Vultr申请免费云主机</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/vultr/" />
@@ -74,7 +210,7 @@
             <title type="text">github-copilot报错、无法连接、不自动提示问题解决</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/github-copilot/" />
             <id>https://klearcc.github.io/post/github-copilot/</id>
-            <updated>2023-02-06T15:47:54&#43;08:00</updated>
+            <updated>2023-05-29T14:39:14&#43;08:00</updated>
             <published>2023-02-04T21:14:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -826,7 +962,7 @@ gofish使用可自己百度
             <title type="text">全版本fastjson反序列化漏洞分析</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/" />
             <id>https://klearcc.github.io/post/javasec_fastjson%E5%85%A8%E7%89%88%E6%9C%AC/</id>
-            <updated>2023-02-13T15:12:09&#43;08:00</updated>
+            <updated>2023-04-12T17:03:51&#43;08:00</updated>
             <published>2022-10-20T17:08:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -1297,7 +1433,14 @@ autoTypeSupport检测完后，现在clazz不为空，DedaultHSONParser#parseObje
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fastjsn&amp;lt;=1.2.68&lt;/p&gt;
-&lt;p&gt;mvn dependency:resolve -Dclassifier=sources&lt;/p&gt;
+&lt;h2 id=&#34;1276fastjson1283&#34;&gt;1.2.76&amp;lt;=Fastjson&amp;lt;=1.2.83&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;待&lt;/li&gt;
+&lt;li&gt;依赖groovy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;推荐&#34;&gt;推荐&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://github.com/safe6Sec/Fastjson
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;mvn dependency:resolve -Dclassifier=sources&lt;/p&gt;
 </content>
             
             
@@ -2126,7 +2269,7 @@ sudo vi /etc/proxychains.conf&lt;/p&gt;
             <title type="text">xray反连平台设置</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/xray%E5%8F%8D%E8%BF%9E%E5%B9%B3%E5%8F%B0/" />
             <id>https://klearcc.github.io/post/xray%E5%8F%8D%E8%BF%9E%E5%B9%B3%E5%8F%B0/</id>
-            <updated>2022-09-20T22:35:11&#43;08:00</updated>
+            <updated>2023-05-29T14:38:33&#43;08:00</updated>
             <published>2022-06-16T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -2143,9 +2286,9 @@ sudo vi /etc/proxychains.conf&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235610.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235644.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;修改dns服务器，填刚刚创建的两个dns服务器名：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143532153-439053999.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438753.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;添加两条A记录。主记录填ns1 ns2，就是刚刚创建的dns服务器，记录值填公网ip：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143724538-1597006301.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438947.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;xray服务端配置&#34;&gt;xray服务端配置：&lt;/h2&gt;
 &lt;p&gt;下载最新xray。https://github.com/chaitin/xray&lt;/p&gt;
 &lt;p&gt;./xray config&lt;/p&gt;
@@ -2208,7 +2351,7 @@ dns_server_ip: &amp;#34;xx.xx.xx.xx&amp;#34; # 自己公网ip。和 http_base_ur
 &lt;p&gt;访问web，输入token：&lt;/p&gt;
 &lt;h3 id=&#34;测试dns&#34;&gt;测试dns&lt;/h3&gt;
 &lt;h4 id=&#34;右边的dns点击生成一个域名&#34;&gt;右边的DNS，点击生成一个域名&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616144850460-928180663.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438591.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;直接ping，在dns一栏有记录就没问题。&lt;/p&gt;
 &lt;h3 id=&#34;测试http&#34;&gt;测试http&lt;/h3&gt;
 &lt;p&gt;右边的http，点击生成一个域名&lt;/p&gt;
@@ -2674,7 +2817,7 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/" />
             <id>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</id>
-            <updated>2023-02-12T22:55:52&#43;08:00</updated>
+            <updated>2023-05-29T14:39:08&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Klear</name>

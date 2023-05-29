@@ -23,10 +23,137 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 09 Mar 2023 09:22:54 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 29 May 2023 14:39:22 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>fastjson</title>
+                <link>https://klearcc.github.io/post/fastjson%E5%BB%B6%E4%BC%B8/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/fastjson%E5%BB%B6%E4%BC%B8/</guid>
+                <pubDate>Tue, 09 May 2023 17:46:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;鉴别&#34;&gt;鉴别&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1、dnslog
+{&amp;#34;@type&amp;#34;:&amp;#34;java.net.Inet4Address&amp;#34;,&amp;#34;val&amp;#34;:&amp;#34;jbblr.safeveryday.cc&amp;#34;}
+{&amp;#34;@type&amp;#34;: &amp;#34;java.net.InetSocketAddress&amp;#34;{&amp;#34;address&amp;#34;:,&amp;#34;val&amp;#34;: &amp;#34;b.jbblr.safeveryday.cc&amp;#34;}}
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/java/">java</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>autoBot</title>
+                <link>https://klearcc.github.io/post/autobot/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/autobot/</guid>
+                <pubDate>Fri, 14 Apr 2023 19:46:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;autobot&#34;&gt;AutoBot&lt;/h2&gt;
+&lt;h5 id=&#34;virtualenvwrapper&#34;&gt;virtualenvwrapper&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt;pip install virtualenv
+&amp;gt;pip install virtualenvwrapper
+&amp;gt;mkvirtualenv	##不出意外会报错not found
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;不出意外会报错mkvirtualenv not found ,解决：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;找到python virtualenvwrapper.sh可执行文件
+    pip uninstall virtualenv
+    执行后会提示python路径。
+    根据路径后面接上需要的文件，
+	我的：/Users/baicai/.pyenv/versions/3.9.1/bin/python
+		 /Users/baicai/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
+复制下面到~/.zshrc或~/.bash_profile,其中python路径和.sh文件路径按需修改
+    export WORKON_HOME=$HOME/.virtualenvs
+    export VIRTUALENVWRAPPER_PYTHON=/Users/baicai/.pyenv/versions/3.9.1/bin/python
+    export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=&amp;#39; -p /Users/baicai/.pyenv/versions/3.9.1/bin/python &amp;#39;
+    export PROJECT_HOME=$HOME/Devel
+    source /Users/baicai/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;virtualenv使用&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkvirtualenv xxx	创建基本环境
+rmvirtualenv xxx	删除环境
+workon				列出所有环境
+workon xxx			激活环境
+deactivate			退出环境
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/ai/">AI</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>docker&amp;&amp;OrbStack</title>
+                <link>https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/</guid>
+                <pubDate>Fri, 14 Apr 2023 19:46:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;dockerorbstack&#34;&gt;Docker&amp;amp;&amp;amp;OrbStack&lt;/h2&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;orbstack&#34;&gt;OrbStack&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/ai/">AI</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Vultr申请免费云主机</title>
@@ -1285,7 +1412,14 @@ autoTypeSupport检测完后，现在clazz不为空，DedaultHSONParser#parseObje
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fastjsn&amp;lt;=1.2.68&lt;/p&gt;
-&lt;p&gt;mvn dependency:resolve -Dclassifier=sources&lt;/p&gt;
+&lt;h2 id=&#34;1276fastjson1283&#34;&gt;1.2.76&amp;lt;=Fastjson&amp;lt;=1.2.83&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;待&lt;/li&gt;
+&lt;li&gt;依赖groovy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;推荐&#34;&gt;推荐&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://github.com/safe6Sec/Fastjson
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;mvn dependency:resolve -Dclassifier=sources&lt;/p&gt;
 </description>
                 
                 
@@ -2095,9 +2229,9 @@ sudo vi /etc/proxychains.conf&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235610.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202235644.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;修改dns服务器，填刚刚创建的两个dns服务器名：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143532153-439053999.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438753.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;添加两条A记录。主记录填ns1 ns2，就是刚刚创建的dns服务器，记录值填公网ip：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616143724538-1597006301.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438947.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;xray服务端配置&#34;&gt;xray服务端配置：&lt;/h2&gt;
 &lt;p&gt;下载最新xray。https://github.com/chaitin/xray&lt;/p&gt;
 &lt;p&gt;./xray config&lt;/p&gt;
@@ -2160,7 +2294,7 @@ dns_server_ip: &amp;#34;xx.xx.xx.xx&amp;#34; # 自己公网ip。和 http_base_ur
 &lt;p&gt;访问web，输入token：&lt;/p&gt;
 &lt;h3 id=&#34;测试dns&#34;&gt;测试dns&lt;/h3&gt;
 &lt;h4 id=&#34;右边的dns点击生成一个域名&#34;&gt;右边的DNS，点击生成一个域名&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2022.cnblogs.com/blog/2520529/202206/2520529-20220616144850460-928180663.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202305291438591.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;直接ping，在dns一栏有记录就没问题。&lt;/p&gt;
 &lt;h3 id=&#34;测试http&#34;&gt;测试http&lt;/h3&gt;
 &lt;p&gt;右边的http，点击生成一个域名&lt;/p&gt;
