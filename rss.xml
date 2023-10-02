@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 02 Oct 2023 23:06:48 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 02 Oct 2023 23:17:42 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -39,6 +39,7 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h1 id=&#34;此命令笔记只针对oscp考试不包括内容攻击方式随时更新&#34;&gt;此命令笔记只针对OSCP考试，不包括内容、攻击方式。随时更新&lt;/h1&gt;
+&lt;h2 id=&#34;httpsgithubcomklearccnotesblobmain组件攻击汇总md&#34;&gt;&lt;a href=&#34;https://github.com/Klearcc/Notes/blob/main/&#34;&gt;https://github.com/Klearcc/Notes/blob/main/&lt;/a&gt;组件攻击汇总.md&lt;/h2&gt;
 &lt;h2 id=&#34;信息收集&#34;&gt;信息收集&lt;/h2&gt;
 &lt;h3 id=&#34;nmap&#34;&gt;nmap&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
