@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 17 Oct 2023 11:10:33 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 17 Oct 2023 11:14:01 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -2294,7 +2294,7 @@ tide免杀平台
             </item>
         
             <item>
-                <title>m1 使用proxychains</title>
+                <title>ARM芯片下的proxychains</title>
                 <link>https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</link>
                 <guid isPermaLink="true">https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</guid>
                 <pubDate>Fri, 07 Jul 2023 20:53:48 &#43;0800</pubDate>
@@ -2303,7 +2303,9 @@ tide免杀平台
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h2 id=&#34;20230707修改&#34;&gt;20230707修改&lt;/h2&gt;
+                    <description>&lt;h2 id=&#34;20231002新增替代&#34;&gt;20231002新增替代&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nicocha30/ligolo-ng&#34;&gt;https://github.com/nicocha30/ligolo-ng&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;20230707修改&#34;&gt;20230707修改&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/rofl0r/proxychains-ng.git
 cd ./proxychains-ng
 
