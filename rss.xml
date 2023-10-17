@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 17 Oct 2023 11:06:30 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 17 Oct 2023 11:07:54 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -4515,7 +4515,9 @@ shift+enter&lt;/p&gt;
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
+                    <description>&lt;h2 id=&#34;202307-修改&#34;&gt;202307 修改&lt;/h2&gt;
+&lt;p&gt;直接使用yakit设置系统代理。&lt;/p&gt;
+&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
 &lt;p&gt;mac抓ios实体机app数据包。&lt;/p&gt;
 &lt;h3 id=&#34;流量&#34;&gt;流量&lt;/h3&gt;
 &lt;p&gt;app-&amp;gt;Charles-&amp;gt;yakit&lt;/p&gt;

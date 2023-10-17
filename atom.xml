@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-10-17T11:06:30&#43;08:00</updated>
+    <updated>2023-10-17T11:07:54&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">针对OSCP考试的命令笔记</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/" />
             <id>https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/</id>
-            <updated>2023-10-17T10:30:10&#43;08:00</updated>
+            <updated>2023-10-17T11:07:48&#43;08:00</updated>
             <published>2023-10-17T09:52:48&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -4560,16 +4560,18 @@ shift+enter&lt;/p&gt;
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2022-11-28T19:27:37&#43;08:00</updated>
+            <updated>2023-10-17T11:07:47&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前情提要 mac抓ios实体机app数据包……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">202307 修改 直接使用yakit设置系统代理。 前……</summary>
             
-                <content type="html">&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
+                <content type="html">&lt;h2 id=&#34;202307-修改&#34;&gt;202307 修改&lt;/h2&gt;
+&lt;p&gt;直接使用yakit设置系统代理。&lt;/p&gt;
+&lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
 &lt;p&gt;mac抓ios实体机app数据包。&lt;/p&gt;
 &lt;h3 id=&#34;流量&#34;&gt;流量&lt;/h3&gt;
 &lt;p&gt;app-&amp;gt;Charles-&amp;gt;yakit&lt;/p&gt;
