@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-10-17T10:00:34&#43;08:00</updated>
+    <updated>2023-10-17T10:30:20&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">针对OSCP考试的命令笔记</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/" />
             <id>https://klearcc.github.io/post/%E7%BB%84%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B1%87%E6%80%BB/</id>
-            <updated>2023-10-17T09:52:30&#43;08:00</updated>
+            <updated>2023-10-17T10:30:10&#43;08:00</updated>
             <published>2023-10-17T09:52:48&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -31,6 +31,7 @@
             
                 <content type="html">&lt;h1 id=&#34;此命令笔记只针对oscp考试不包括内容攻击方式随时更新&#34;&gt;此命令笔记只针对OSCP考试，不包括内容、攻击方式。随时更新&lt;/h1&gt;
 &lt;h2 id=&#34;httpsgithubcomklearccnotesblobmain组件攻击汇总md&#34;&gt;&lt;a href=&#34;https://github.com/Klearcc/Notes/blob/main/&#34;&gt;https://github.com/Klearcc/Notes/blob/main/&lt;/a&gt;组件攻击汇总.md&lt;/h2&gt;
+&lt;p&gt;详细笔记，如每章概念介绍、各钟攻击方式等，会稍后更新。&lt;/p&gt;
 &lt;h1 id=&#34;toc&#34;&gt;Toc&lt;/h1&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-table-of-contents&#34; data-lang=&#34;table-of-contents&#34;&gt;style: nestedList # TOC style (nestedList|inlineFirstLevel)
 maxLevel: 0 # Include headings up to the speficied level
