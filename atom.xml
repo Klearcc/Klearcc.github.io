@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2023-10-17T11:23:33&#43;08:00</updated>
+    <updated>2023-10-17T14:14:13&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -2582,7 +2582,7 @@ run -z -j
             <title type="text">ARM芯片下的proxychains</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/" />
             <id>https://klearcc.github.io/post/m1%E4%BD%BF%E7%94%A8proxychains/</id>
-            <updated>2023-10-17T11:13:58&#43;08:00</updated>
+            <updated>2023-10-17T13:55:51&#43;08:00</updated>
             <published>2023-07-07T20:53:48&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -2897,7 +2897,7 @@ powershell IEX (New-Object System.Net.Webclient).DownloadString(&amp;#39;https:/
             <title type="text">autoBot</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/autobot/" />
             <id>https://klearcc.github.io/post/autobot/</id>
-            <updated>2023-04-16T16:23:52&#43;08:00</updated>
+            <updated>2023-10-17T13:55:42&#43;08:00</updated>
             <published>2023-04-14T19:46:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -2931,44 +2931,6 @@ workon				列出所有环境
 workon xxx			激活环境
 deactivate			退出环境
 &lt;/code&gt;&lt;/pre&gt;</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/ai/" term="AI" label="AI" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">docker&amp;&amp;OrbStack</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/" />
-            <id>https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/</id>
-            <updated>2023-05-29T14:38:57&#43;08:00</updated>
-            <published>2023-04-14T19:46:27&#43;08:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Docker&amp;amp;&amp;amp;OrbStack Docker OrbStack</summary>
-            
-                <content type="html">&lt;h2 id=&#34;dockerorbstack&#34;&gt;Docker&amp;amp;&amp;amp;OrbStack&lt;/h2&gt;
-&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;orbstack&#34;&gt;OrbStack&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content>
             
             
             
@@ -3403,56 +3365,6 @@ yakit插件：Log4Shell 漏洞检测（自动检测版）&lt;/p&gt;
                             
                                 <category scheme="https://klearcc.github.io/tags/log4j2/" term="log4j2" label="log4j2" />
                             
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" term="java反序列化" label="java反序列化" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://klearcc.github.io/tags/java/" term="java" label="java" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">cc链分析</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/cc/" />
-            <id>https://klearcc.github.io/post/cc/</id>
-            <updated>2023-10-17T11:10:28&#43;08:00</updated>
-            <published>2022-12-03T15:14:27&#43;08:00</published>
-            <author>
-                    <name>Klear</name>
-                    <uri>https://klearcc.github.io/</uri>
-                    <email>baicaix86@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">bilibili 白日梦组长 没学懂</summary>
-            
-                <content type="html">&lt;h2 id=&#34;bilibili&#34;&gt;bilibili&lt;/h2&gt;
-&lt;p&gt;白日梦组长&lt;/p&gt;
-&lt;p&gt;没学懂&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
                         
                             
                             
@@ -4856,16 +4768,16 @@ shift+enter&lt;/p&gt;
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2023-10-17T11:07:47&#43;08:00</updated>
+            <updated>2023-10-17T14:13:56&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">202307 修改 直接使用yakit设置系统代理。 前……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">202310 修改 直接使用yakit设置系统代理。 前……</summary>
             
-                <content type="html">&lt;h2 id=&#34;202307-修改&#34;&gt;202307 修改&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;202310-修改&#34;&gt;202310 修改&lt;/h2&gt;
 &lt;p&gt;直接使用yakit设置系统代理。&lt;/p&gt;
 &lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
 &lt;p&gt;mac抓ios实体机app数据包。&lt;/p&gt;
@@ -5235,7 +5147,7 @@ passive scan client 监听&lt;/p&gt;
             <title type="text">记录：使用alias安装三版本jdk环境</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E5%A4%9Ajava%E7%8E%AF%E5%A2%83/" />
             <id>https://klearcc.github.io/post/%E5%A4%9Ajava%E7%8E%AF%E5%A2%83/</id>
-            <updated>2022-09-20T22:32:05&#43;08:00</updated>
+            <updated>2023-10-17T13:57:22&#43;08:00</updated>
             <published>2022-05-19T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -5450,6 +5362,67 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
                                 <category scheme="https://klearcc.github.io/tags/%E6%BC%8F%E6%B4%9E/" term="漏洞" label="漏洞" />
                             
                         
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/cc/" />
+            <id>https://klearcc.github.io/post/cc/</id>
+            <updated>2023-10-17T14:13:40&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">······ bilibili 白日梦组长 没学懂</summary>
+            
+                <content type="html">&lt;p&gt;······&lt;/p&gt;
+&lt;h2 id=&#34;bilibili&#34;&gt;bilibili&lt;/h2&gt;
+&lt;p&gt;白日梦组长&lt;/p&gt;
+&lt;p&gt;没学懂&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/" />
+            <id>https://klearcc.github.io/post/docker%E6%B1%87%E6%80%BB/</id>
+            <updated>2023-10-17T14:13:31&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Docker&amp;amp;&amp;amp;OrbStack Docker OrbStack </summary>
+            
+                <content type="html">&lt;h2 id=&#34;dockerorbstack&#34;&gt;Docker&amp;amp;&amp;amp;OrbStack&lt;/h2&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;orbstack&#34;&gt;OrbStack&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
                     
                 
             
@@ -5691,7 +5664,7 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/" />
             <id>https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/</id>
-            <updated>2023-10-17T11:06:24&#43;08:00</updated>
+            <updated>2023-10-17T14:14:10&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Klear</name>
