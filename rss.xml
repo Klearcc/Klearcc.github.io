@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 14 Dec 2023 10:05:52 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 16 Jan 2024 16:33:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
@@ -5706,17 +5706,15 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
         
             <item>
                 <title></title>
-                <link>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</link>
-                <guid isPermaLink="true">https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</guid>
+                <link>https://klearcc.github.io/post/untitled/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/untitled/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>baicaix86@gmail.com (Klear)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h2 id=&#34;20230212&#34;&gt;20230212&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kali安装
-&lt;/code&gt;&lt;/pre&gt;</description>
+                    <description></description>
                 
                 
                 
