@@ -23,10 +23,106 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 16 Jan 2024 16:53:47 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jan 2024 11:06:15 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://klearcc.github.io/rss.xml" />
         
+        
+            <item>
+                <title>OSCP经验分享</title>
+                <link>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</link>
+                <guid isPermaLink="true">https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</guid>
+                <pubDate>Tue, 16 Jan 2024 21:22:27 &#43;0800</pubDate>
+                
+                    <author>baicaix86@gmail.com (Klear)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h1 id=&#34;oscp经验分享&#34;&gt;OSCP经验分享&lt;/h1&gt;
+&lt;h2 id=&#34;起因&#34;&gt;&lt;strong&gt;起因&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;年龄与学习新事物的能力成反比。&lt;/p&gt;
+&lt;h2 id=&#34;考试介绍&#34;&gt;&lt;strong&gt;考试介绍&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;oscp也叫做pen-200，是xxxxxx，可以自行百度。这里有认证的介绍和课程大纲&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.offsec.com/courses/pen-200/&#34;&gt;PEN-200: Penetration Testing with Kali Linux | OffSec&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我比较感兴趣的点：体系化学习、考验实操能力、有挑战性、国际认证。&lt;/p&gt;
+&lt;p&gt;考试满分100分，70分通过。考试内容包括3台独立机器和一个域，独立机器中每台都有local和proof两个flag，每个flag10分；域中拿下dc的proof后得40分，没有拿到的话0分。&lt;/p&gt;
+&lt;p&gt;其中还有10分的奖励分，前提是每章的课后习题都完成80%并且在Challenge Lab中拿到30个proof。&lt;/p&gt;
+&lt;p&gt;课程pdf内容：涉及web、域。每章每节有不同数量的习题，需要耐心。&lt;/p&gt;
+&lt;p&gt;Challenge Lab内容：6个机器组，每个组内有很多机器。其中前三个组为练习组，机器之间互相有联系，比如从第一台机器上发现第二台机器的账号密码；后三个组为模拟考试，机器结构和exam一样，难度类似。&lt;/p&gt;
+&lt;h2 id=&#34;前期准备&#34;&gt;&lt;strong&gt;前期准备&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;在互联网找到了的课程pdf，看了60%左右。主要是对自己不自信，因为涉及不了解的域和没有概念的考试，一直在犹豫拖延。后来证明完全没有必要考虑这么多。想做的事情快去做，别再犹豫。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://music.apple.com/tr/album/%E4%B8%8D%E5%86%8D%E7%8C%B6%E8%B1%AB/1495765406?i=1495765409&#34;&gt;不再猶豫 by Beyond on Apple Music&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;备考过程&#34;&gt;&lt;strong&gt;备考过程&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;付款之后就可以开始练习了。*记得添加官方discord组，有什么问题可以在对应的组里讨论。&lt;/p&gt;
+&lt;p&gt;在和大家交流时候，我最深的感受是offsec在认真教会我，引导我们自己去解决问题，授人以渔的感觉。&lt;/p&gt;
+&lt;p&gt;课程教材建议还是看下，写得很好，像是手把手教学一样，从理论到实践。并且其中有些话激励了我很多次。虽然途中还是连续玩了好多天。&lt;/p&gt;
+&lt;p&gt;学习过程中建议做好*笔记，学到的用到的每一条命令，尤其是重复使用并且参数很多的。可以按照组件类型或者攻击方式等等分个类，写在同一文件内，以后搜索会很方便。最好支持云端同步，因为谁都不能确定没有意外发生。&lt;/p&gt;
+&lt;p&gt;课程看完后可以开始Lab了，先做12456最后做3。依然要做好笔记。截止日期前一个多月就可以约考试了，建议最初付款完时就考虑好哪一天约考试。&lt;/p&gt;
+&lt;p&gt;约好考试后官方会发一封邮件，考试前三天会再发一封邮件。里面会有监考平台账号、注意事项、考试流程等等。建议认真看Exam Guide，里面有各种自己想问的问题。&lt;/p&gt;
+&lt;p&gt;由于我在中国大陆，所以还需要一个vpn。但是考试时我尝试裸连成功，并且延迟没什么变化。但为了以防万一，还是搭建一个作为备用。一键搭建：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://discord.com/channels/1042075411934359594/1103972851301752872/1103972862278246500&#34;&gt;Discord - A New Way to Chat with Friends &amp;amp; Communities&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;考试过程&#34;&gt;考试过程&lt;/h2&gt;
+&lt;p&gt;提前15分钟登录监考平台，当时我进去后等了考官快20分钟了还没来..后来来了之后要求我提供英文有效证件并且看一圈室内和桌下，问了一下用的是什么系统的电脑。没问题后会发一封邮件过来，内容是考题、vpn、考试控制面板和一个sh脚本。连上vpn后告诉考官一声就可以开始操作了。&lt;/p&gt;
+&lt;p&gt;当时选了下午2点开始，先看的独立机器再看的域。&lt;/p&gt;
+&lt;p&gt;第一台udp161开着，有种直觉这里是突破口，并且涉及的内容我以前没有做过；还有一个匿名ftp，里面有一对数据库的密码，但没有头绪。没办法下一个，第二台开了445、3389，并且可以smb匿名登录，发现了xxbackupxx，其中有个zip，zip解密后有发现密码，我猜可能是3389登录了，并且80里有几个人名。但是尝试了几次smb提示密码对有效但是rdp不上去，没办法，做好笔记回过头来再看吧。第三台只有一个上传页面，没有头绪并且脑子里一直在想其他机器。然后来到了域，web的mssql注入用xp_cmdshell执行命令拿到了低权限，win特权提了权，从本机发现密码到了内网普通机器，这台机器发现密码到了dc，拿到了proof。&lt;/p&gt;
+&lt;p&gt;这时候快到下午67点了，和考官说要吃个饭。现在有了40+10=50分了，只要再拿下一台就结束了。&lt;/p&gt;
+&lt;p&gt;吃了个饭赶紧回来重新做独立机器，找snmp的利用方式，最终在hacktricks中的一个模块发现了利用方式，拿到了低权限，提权用的是disk组拿root的私钥登录成功。&lt;/p&gt;
+&lt;p&gt;然后重新看第二台机器，感觉这里的利用方式我没有遇到过，疯狂google 无果。这时候10点多了，不想做了，和考官说需要休息10个小时后就去睡觉了。&lt;/p&gt;
+&lt;p&gt;第二天8点起床，尝试了一会3389直觉告诉我这里进不去。所以重新做信息收集，扫目录时换了feroxbuster，发现了一个launch的301，进去之后发现是win Powershell Web。根据以前收集的信息感觉这台可能是以前考试的域的跳板机，现在来做独立机器了..用之前发现的账号密码对进去之后可以powershell反弹shell，拿到了低权限shell。提权没有成功，猜测可能是epowner。后来做到11点多检查了截图，确认没问题后和考官说了要结束考试。现在分数是70+10=80分&lt;/p&gt;
+&lt;p&gt;结束后吃了饭，到傍晚时开始写报告，写完后打包7z，提交。晚上8点结束了。&lt;/p&gt;
+&lt;p&gt;千等万等，结束后第三天早上收到了ofsec发来的邮件，看到&lt;code&gt;happy&lt;/code&gt;之后悬着的心终于落了地。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/klearcc/pic/img202401161633241.png&#34; alt=&#34;Untitled&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;考试经验&#34;&gt;&lt;strong&gt;考试经验&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;添加discord官方群组。&lt;/p&gt;
+&lt;p&gt;基础不牢固一定要认真做笔记，最好最后再做汇总。&lt;/p&gt;
+&lt;p&gt;拿到shell后先提交flag，再在交互式shell将ip、hostname、当前用户截到一张图中，再将flag和ip截到一张图中。&lt;/p&gt;
+&lt;h2 id=&#34;常用站&#34;&gt;常用站&lt;/h2&gt;
+&lt;p&gt;各种攻击方式&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.hacktricks.xyz/welcome/readme&#34;&gt;HackTricks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ntlm等等在线解密&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://crackstation.net/&#34;&gt;CrackStation - Online Password Hash Cracking - MD5, SHA1, Linux, Rainbow Tables, etc.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;反弹shell生成&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.revshells.com/&#34;&gt;Online - Reverse Shell Generator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以当做cme的官方文档使用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.netexec.wiki/&#34;&gt;Welcome&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;tunnel&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nicocha30/ligolo-ng&#34;&gt;GitHub - nicocha30/ligolo-ng: An advanced, yet simple, tunneling/pivoting tool that uses a TUN interface.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;笔记&#34;&gt;笔记&lt;/h2&gt;
+&lt;p&gt;我的命令笔记，比较乱。但是自己用很方便&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Klearcc/Notes/blob/main/oscp%E8%80%83%E8%AF%95%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0.md&#34;&gt;笔记&lt;/a&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/tips/">Tips</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/oscp/">OSCP</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://klearcc.github.io/tags/offsec/">offsec</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>仅针对OSCP考试的命令笔记</title>
