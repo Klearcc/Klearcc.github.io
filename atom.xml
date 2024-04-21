@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2024-04-21T16:23:15&#43;08:00</updated>
+    <updated>2024-04-21T17:24:55&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -746,9 +746,9 @@ use x
     
         <entry>
             <title type="text">自用gpt</title>
-            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%87%AA%E5%8A%A8gpt/" />
-            <id>https://klearcc.github.io/post/%E8%87%AA%E5%8A%A8gpt/</id>
-            <updated>2024-04-21T16:21:58&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%87%AA%E7%94%A8gpt/" />
+            <id>https://klearcc.github.io/post/%E8%87%AA%E7%94%A8gpt/</id>
+            <updated>2024-04-21T16:25:49&#43;08:00</updated>
             <published>2024-04-21T15:34:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
