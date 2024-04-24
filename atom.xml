@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2024-04-21T17:24:55&#43;08:00</updated>
+    <updated>2024-04-24T13:59:21&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -745,19 +745,19 @@ use x
         </entry>
     
         <entry>
-            <title type="text">自用gpt</title>
+            <title type="text">白嫖别人的ChatGPT</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%87%AA%E7%94%A8gpt/" />
             <id>https://klearcc.github.io/post/%E8%87%AA%E7%94%A8gpt/</id>
-            <updated>2024-04-21T16:25:49&#43;08:00</updated>
+            <updated>2024-04-24T11:19:59&#43;08:00</updated>
             <published>2024-04-21T15:34:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">自用gpt相关 白嫖 基于nextChat项……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">白嫖别人的ChatGPT相关 白嫖 基于ne……</summary>
             
-                <content type="html">&lt;h1 id=&#34;自用gpt相关&#34;&gt;自用gpt相关&lt;/h1&gt;
+                <content type="html">&lt;h1 id=&#34;白嫖别人的chatgpt相关&#34;&gt;白嫖别人的ChatGPT相关&lt;/h1&gt;
 &lt;h2 id=&#34;白嫖&#34;&gt;白嫖&lt;/h2&gt;
 &lt;p&gt;基于nextChat项目，但除此之外仍有很多好的项目&lt;/p&gt;
 &lt;p&gt;原理：此项目自己部署时可以内置key并且支持code验证，如果没有设置code或者设置的code比较简单。攻击者可以未授权直接使用部署成功的ai。&lt;/p&gt;
@@ -838,7 +838,7 @@ Content-Length: 401
             <title type="text">OSCP经验分享</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/" />
             <id>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</id>
-            <updated>2024-04-21T15:02:30&#43;08:00</updated>
+            <updated>2024-04-24T13:59:12&#43;08:00</updated>
             <published>2024-01-16T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -886,18 +886,18 @@ Content-Length: 401
 &lt;p&gt;基础不牢固一定要认真做笔记，最好最后再做汇总。&lt;/p&gt;
 &lt;p&gt;拿到shell后先提交flag，再在交互式shell将ip、hostname、当前用户截到一张图中，再将flag和ip截到一张图中。&lt;/p&gt;
 &lt;h2 id=&#34;常用站&#34;&gt;常用站&lt;/h2&gt;
-&lt;p&gt;各种攻击方式&lt;/p&gt;
+&lt;p&gt;各种攻击方式：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://book.hacktricks.xyz/welcome/readme&#34;&gt;HackTricks&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ntlm等等在线解密&lt;/p&gt;
+&lt;p&gt;ntlm等等在线解密：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://crackstation.net/&#34;&gt;CrackStation - Online Password Hash Cracking - MD5, SHA1, Linux, Rainbow Tables, etc.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;反弹shell生成&lt;/p&gt;
+&lt;p&gt;反弹shell生成：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.revshells.com/&#34;&gt;Online - Reverse Shell Generator&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;可以当做cme的官方文档使用&lt;/p&gt;
+&lt;p&gt;可以当做cme的官方文档使用：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.netexec.wiki/&#34;&gt;Welcome&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;tunnel&lt;/p&gt;
+&lt;p&gt;tunnel：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/nicocha30/ligolo-ng&#34;&gt;GitHub - nicocha30/ligolo-ng: An advanced, yet simple, tunneling/pivoting tool that uses a TUN interface.&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;笔记&#34;&gt;笔记&lt;/h2&gt;
-&lt;p&gt;我的命令笔记，比较乱。但是自己用很方便&lt;/p&gt;
+&lt;p&gt;以下是我的命令笔记，比较乱。但是做标注后自用很方便&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/Klearcc/Notes/blob/main/oscp%E8%80%83%E8%AF%95%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0.md&#34;&gt;笔记&lt;/a&gt;&lt;/p&gt;
 </content>
             
@@ -6926,7 +6926,7 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/" />
             <id>https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/</id>
-            <updated>2024-04-21T15:01:08&#43;08:00</updated>
+            <updated>2024-04-24T13:59:15&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Klear</name>
@@ -6940,7 +6940,7 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
 &lt;p&gt;走到他身边发现，猫猫的眼睛空洞无神。而且最奇怪的是黑色的瞳孔很大，并且喂他吃东西时好像他看不到食物的位置，只能依靠嗅觉来寻找。&lt;/p&gt;
 &lt;p&gt;由于以前没有遇到过这种情况，第一反应是可能睡觉时摔到或者撞到哪里了。因为以前也有过轻微四肢无力，但两三天后自己康复了。&lt;/p&gt;
 &lt;p&gt;看到猫猫迷失了方向而且全身无力跌跌撞撞的样子，不知道怎么做。上网查询后发现可能是中毒了。7月有一则新闻：猫猫舔到了体外驱虫药导致瞳孔放大四肢无力。这不是和我的猫猫症状一样吗！！回想这两天他吃了什么不正常的东西，第一个想到的就是昨晚喂他吃了一种消炎药，但这种药以前他也吃过，而且另一只猫昨晚也吃了，但她活蹦乱跳得没有一点问题。&lt;/p&gt;
-&lt;p&gt;问了朋友们这种情况应该怎么办，都说快去宠物医院，散瞳非常危险。但是听说这种神经性问题可能花费很高，而且前两天我刚刚报名一项学习计划，所以现在我并没有充足的现金来帮猫猫看病。&lt;/p&gt;
+&lt;p&gt;问了朋友们这种情况应该怎么办，都说快去宠物医院，散瞳非常危险。但是听说这种神经性问题可能花费很高，由于一些原因我现在没有大量现金帮猫猫看病。&lt;/p&gt;
 &lt;p&gt;想到这里我犹豫了。猫猫陪着我一年了，刚刚来时怕我不让抱、不吃东西、躲在床下。现在一到家坐下他就趴到我腿上要摸摸，每天晚上睡觉也要躺在我旁边睡，并且一定是在我脸朝向的一边。一旦叫他的名字，他都会翘着高高的尾巴走过来.....&lt;/p&gt;
 &lt;p&gt;想着想着睡着了，一直到下午5点左右。睡醒后躺在床上想着要不要去看医生？他会不会自己康复？如果到明天晚上还没有好转的话就去看医生吧？但又想到以前自己躺在病床上半个月、哪里也不能去的感受。如果失明了以后的世界将会是一片黑暗，再也不能看到我的样子，只能摸索着生活，我想他一定很难过很绝望。&lt;/p&gt;
 &lt;p&gt;想到这些，我不忍心他这样。马上穿上衣服带他去医院。到了医院后医生初步判定是中毒导致的视神经被脑积液压迫，并且医生说绝对不是这个消炎药导致的中毒。化验完后结论是中毒，并且肾脏现在已经有损伤了。所以说现在是视神经压迫和肾脏损伤的问题。今天先打点滴，缓解下这两个问题，明天做下X光，查看肾脏有没有历史疾病等。&lt;/p&gt;
@@ -6953,6 +6953,8 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
 &lt;h2 id=&#34;20230828-1248&#34;&gt;20230828 12:48&lt;/h2&gt;
 &lt;p&gt;昨晚一直睡在我旁边，不吵不闹，很虚弱的感觉。早上收拾时看到他走路更稳了，貌似眼睛比以前更能看清东西了，而且可以直接跳到阳台了，好开心。&lt;/p&gt;
 &lt;p&gt;打算今晚回去后再输最后一次液，以后就不打针了。买了些维生素b，据说有助于神经损伤的修复。&lt;/p&gt;
+&lt;h2 id=&#34;20240424&#34;&gt;20240424&lt;/h2&gt;
+&lt;p&gt;猫猫恢复得很好并且比以前更粘人了。&lt;/p&gt;
 </content>
             
             
